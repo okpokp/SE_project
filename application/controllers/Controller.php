@@ -37,6 +37,10 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('bin/ui_footer');
 	}
+	public function ui_tab()
+	{
+		$this->load->view('bin/ui_tab');
+	}
 
 
 
@@ -44,19 +48,19 @@ class Controller extends CI_Controller
 
 	public function home()
 	{
-		$this->load->view('teacher');
+		$this->load->view('teacher/home');
 	}
 	public function info()
 	{
-		$this->load->view('info');
+		$this->load->view('teacher/info');
 	}
 	public function consult()
 	{
-		$this->load->view('consult');
+		$this->load->view('teacher/consult');
 	}
 	public function commit()
 	{
-		$this->load->view('commit');
+		$this->load->view('teacher/commit');
 	}
 
 

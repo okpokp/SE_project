@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css">
+<div class="w3-container w3-red">
+    <div class="row">
+        <div class="col-sm-1">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/WPVG_icon_2016.svg/1024px-WPVG_icon_2016.svg.png" alt="" style="width:100px;">
+        </div>
+        <div class="col-sm-9">
+            <h3>COMPUTER ENGINEERING OF KASETSART SIRACHA CAMPUS</h3>
+            <h3>คณะวิศวะกรรมศาสตร์ สาขาคอมพิวเตอร์และสารสนเทศ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา</h3>
+        </div>
+        <div class="col-sm-1">
+            <h3>อติวิชญ์ ม่วงศร</h3>
+        </div>
+        <div class="col-sm-1">
+            <h3><a style="color: white" href="<?= base_url('Controller/index') ?>">ออกจากระบบ</a></h3>
+        </div>
+    </div>
+</div>
 
-<div class='container_left'>
+<!-- <div class='container_left'>
     <div style='line-height: 50px'>
         <div>
             <form action='<?= base_url('Controller/home') ?>' method='post'>
@@ -39,4 +55,4 @@
             </form>
         </div>
     </div>
-</div>
+</div> -->

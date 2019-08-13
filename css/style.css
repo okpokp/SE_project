@@ -78,6 +78,27 @@
 	background-color: rgb(250, 154, 9);
 } */
 
+
+.row>img {
+	height: 30px;
+}
+ 
+a:visited {
+	color: rgb(0, 0, 0);
+}
+
+a:hover {
+	color: rgb(0, 0, 0);
+}
+
+a:active {
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
 input {
 	float: left;
 	clear: both;
@@ -86,6 +107,23 @@ input {
 .crop_img {
 	width: 200px;
 	height: 200px;
+}
+
+/* label {
+	font-size: 20px;
+} */
+
+.size {
+	height: 970px;
+	border-width: 20px;
+	border-color: orange;
+}
+
+.size>img {
+	height: 30px;
+}
+.text-left>img {
+	height: 30px;
 }
 
 /*
@@ -131,9 +169,6 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
-img {
-	height: 180px;
-}
 
 /* Checking */
 

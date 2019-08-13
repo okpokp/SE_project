@@ -69,23 +69,27 @@
 
 
 
+				<?php
+				$a = array("นาย จิรพัชร์ เหลืองรุ่งเกียรติ", "นายอติวิชญ์ ม่วงศร", "นายเจตพล บุญลอย", "นางสาวกนิษฐา พุ่มผล", "นางสาวสวรรยา แสงบัวเผื่อน");
+				$count_proj = rand(2, 10);
+				// $r = array_rand($a, $count_proj);
+				$r = rand(0, 4);
+				$r_n = $r + 1;
+				for ($i = 0; $i < $count_proj; $i++) {
+					echo "
+				<a style='color: green' href='";
+					echo base_url('Controller/view_proj');
+					echo "'>				
+					<div>P$r_n...$a[$r]</div>
+				</a>";
+					$r = rand(0, 4);
+					$r_n = $r + 1;
+				}
+				?>
 
 
-				<div>
-					<form action='<?= base_url('Controller/Re') ?>' method='post'>
-						<div>
-							<input type='text' name='user' value='' placeholder='User or Email'>
-						</div>
-						<div>
-							<input type='text' name='pass' value='' placeholder='Password'>
-						</div>
-						<div>
-							<button type='submit' name='submit' value='submit'>
-								Accept
-							</button>
-						</div>
-					</form>
-				</div>
+
+
 
 
 
@@ -131,4 +135,43 @@
 
 </html>
 
-<!-- <img src='<?php echo base_url('src/b.png'); ?>' style = 'width: 250px'> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ==================== Insert Picture ==================== -->
+
+<!-- <?php
+		$a = array("นาย จิรพัชร์ เหลืองรุ่งเกียรติ", "นายอติวิชญ์ ม่วงศร", "นายเจตพล บุญลอย", "นางสาวกนิษฐา พุ่มผล", "นางสาวสวรรยา แสงบัวเผื่อน");
+		$count_proj = rand(2, 10);
+		// $r = array_rand($a, $count_proj);
+		$r = rand(0, 4);
+		$r_n = $r + 1;
+		for ($i = 0; $i < $count_proj; $i++) {
+			echo "
+				<button><a href='";
+			echo base_url('Controller/view_proj');
+			echo "'><div>
+					<img style='height: 10px' 
+					src=";
+			echo base_url('src/b.png');
+			$r = rand(0, 4);
+			$r_n = $r + 1;
+			echo "></div>					
+					<div>$a[$r]</div>
+					<div>P$r_n</div>
+				</a></button>";
+		}
+		?> -->
