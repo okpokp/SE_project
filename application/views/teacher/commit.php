@@ -28,7 +28,7 @@
 			$('#ui_tab').load('<?= base_url('Controller/ui_tab') ?>');
 		})
 	</script>
-	<title>Index</title>
+	<title>Commit</title>
 </head>
 <!--############################################## Header ###########################################################################-->
 
@@ -46,6 +46,9 @@
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size">
+				<div style="background-color: orange; padding: 10px">
+					<h2>รายชื่อโครงงานที่เป็นกรรมการ</h2>
+				</div>
 				<!-- Body -->
 
 

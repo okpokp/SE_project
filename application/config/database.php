@@ -78,7 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost', //dbname= กำหนดชื่อเองคือชื่อดาต้าเบส ตั้งให้ตรงกับชื่อ database ใน pgadmin เราใช้ pgsql
 	'username' => 'root', //ใช้ postgres
 	'password' => '', //รหัส ตรงกับตอนลง postgres
-	'database' => 'project',//เหมือน dbname เหมือนในdatabase
+	'database' => 'mydb',//เหมือน dbname เหมือนในdatabase
 	'dbdriver' => 'mysqli', //pdo เพราะใช้ postgre ต้องไปแก้ใน xampp ด้วย แก้ ตรง apache php.in.php เปิดคอมเม้น extension=php_pdo_mysql.dll
 	'dbprefix' => '',
 	'pconnect' => FALSE,

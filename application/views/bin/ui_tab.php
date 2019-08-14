@@ -13,19 +13,17 @@
     <div class="well">
         <p>
             <a style="color: black" href="<?= base_url('Controller/consult') ?>">
-                รายชื่อโครงงาที่เป็นที่ปรึกษา
+                รายชื่อโครงงานที่เป็นที่ปรึกษา
             </a>
         </p>
-        <!-- <img src="https://cdn3.iconfinder.com/data/icons/lifestyle/100/Noun_Project_20Icon_10px_grid-01-512.png" class="img-circle" height="65" width="65" alt="Avatar"> -->
     </div>
     <!-- 2 -->
     <div class="well">
         <p>
             <a style="color: black" href="<?= base_url('Controller/commit') ?>">
-                รายชื่อโครงงาที่เป็นที่ปรึกษากรรมการ
+                รายชื่อโครงงานที่เป็นกรรมการ
             </a>
         </p>
-        <!-- <img src="https://cdn3.iconfinder.com/data/icons/lifestyle/100/Noun_Project_20Icon_10px_grid-01-512.png" class="img-circle" height="65" width="65" alt="Avatar"> -->
     </div>
     <!-- 3 -->
     <div class="well">
@@ -34,7 +32,14 @@
                 db_user
             </a>
         </p>
-        <!-- <img src="https://cdn3.iconfinder.com/data/icons/lifestyle/100/Noun_Project_20Icon_10px_grid-01-512.png" class="img-circle" height="65" width="65" alt="Avatar"> -->
     </div>
     <!-- 4 -->
+    <div class="well">
+        <p>
+            <a style="color: black" href="<?= base_url('Controller/regist') ?>">
+                register
+            </a>
+        </p>
+    </div>
+    <!-- 5 -->
 </div>
