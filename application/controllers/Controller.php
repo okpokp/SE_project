@@ -46,6 +46,10 @@ class Controller extends CI_Controller
 
 
 
+	public function regist()
+	{
+		$this->load->view('teacher/register');
+	}
 	public function home()
 	{
 		$this->load->view('teacher/home');
@@ -73,7 +77,9 @@ class Controller extends CI_Controller
 
 	public function db_user()
 	{
-		$this->load->view('db/db_user');
+		$this->load->model('model');
+		$data['show'] = $this->model->show();
+		$this->load->view('db/db_user', $data);
 	}
 
 
@@ -90,35 +96,49 @@ class Controller extends CI_Controller
 
 
 
-	public function regist()
+	public function register()
 	{
-		// $btn = $this->input->post('submit');
-		// $user = $this->input->post('user');
-		// $pass = $this->input->post('pass');
-		// $data = array(
-		// 	'user' => $this->input->post('user'),
-		// 	'pass' => $this->input->post('pass')
-		// );
+		$btn = $this->input->post('submit');
+		$teacher_id = $this->input->post('teacher_id');
+		$type = $this->input->post('type');
+		$title = $this->input->post('title');
+		$fname = $this->input->post('fname');
+		$lname = $this->input->post('lname');
+		$ability = $this->input->post('ability');
+		$adviser = $this->input->post('adviser');
+		$committee = $this->input->post('committee');
+		$data = array(
+			'teacher_id' => $this->input->post('teacher_id'),
+			'type' => $this->input->post('type'),
+			'title' => $this->input->post('title'),
+			'fname' => $this->input->post('fname'),
+			'lname' => $this->input->post('lname'),
+			'ability' => $this->input->post('ability'),
+			'adviser' => $this->input->post('adviser'),
+			'committee' => $this->input->post('committee'),
+		);
+		$this->load->model('model');
+		$this->model->insert($data);
+		$this->load->view('teacher/home');
+	}
 
+	public function show()
+	{
 		$this->load->model('model');
 		// $this->model->insert($data);
-		$s = $this->model->get($data);
+		$s = $this->model->get();
 		echo "<pre>"; //print_r($s);
 		// print_r($data);
 		// echo $s->row('user') . "<br>";
 		foreach ($s->result() as $row) {
 			if ($row->user ==  'gill') {
 				echo "user is " . $row->user . "<br>";
-				$s['user'] = $s+1;
+				$s['user'] = $s + 1;
 				print_r($s);
 				$this->load->view('db/db_user', $s);
 			}
 			// echo "password is " . $row->pass . "<br>";
 		}
-		
-
-
-
 	}
 
 

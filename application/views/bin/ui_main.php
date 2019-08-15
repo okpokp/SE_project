@@ -10,10 +10,10 @@
             <h3>คณะวิศวะกรรมศาสตร์ สาขาคอมพิวเตอร์และสารสนเทศ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา</h3>
         </div>
         <div class="col-sm-1">
-            <h3>อติวิชญ์ ม่วงศร</h3>
+            <h3><a style="color: white" href="<?= base_url('Controller/info') ?>">อติวิชญ์ ม่วงศร</h3>
         </div>
         <div class="col-sm-1">
-            <h3><a style="color: white" href="<?= base_url('Controller/index') ?>">ออกจากระบบ</a></h3>
+            <h3><a style="color: white" href="<?= base_url('Controller/index') ?>">ออกจากระบบ</h3>
         </div>
     </div>
 </div>

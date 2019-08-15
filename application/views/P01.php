@@ -63,147 +63,45 @@
 
 
 
-				<div>
-					Description
-				</div>
+				<div><h3>รายละเอียด</h3></div>
 				<div>
 					Description is the pattern of narrative development that aims to make vivid a place, object,
 					character, or group.[1] Description is one of four rhetorical modes (also known as modes of discourse),
 					along with exposition, argumentation, and narration.[2] In practice it would be difficult to write
 					literature that drew on just one of the four basic modes.[3]
 				</div>
-				<div></div>
-				<div></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<div>Member</div>
+				<div><h3>สมาชิก</div>
 				<div>
 					<ul>
 						<li>นาย จิรพัชร์ เหลืองรุ่งเกียรติ</li>
 						<li>นาย เจตพล บุญลอย</li>
 					</ul>
 				</div>
-				<div></div>
-				<div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<div>Consultants</div>
+				<div><h3>อาจารย์ที่ปรึกษา</div>
 				<div>
 					<ul>
 						<li>อาจารย์ กาญจนา เอี่ยมสอาด</li>
 					</ul>
 				</div>
-				<div></div>
-				<div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<div>Committee</div>
+				<div><h3>กรรมการ</div>
 				<div>
 					<ul>
 						<li>อาจารย์ กาญจนา เอี่ยมสอาด</li>
 						<li>อาจารย์ กาญจนา เอี่ยมสอาด</li>
 					</ul>
 				</div>
-				<div></div>
-				<div></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<div>Document</div>
+				<div><h3>รายงาน</div>
 				<div>
 					<a href='#'>Document.doc</a>
 				</div>
-				<div></div>
-				<div></div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-				<div>Illustration 1</div>
-				<div><img src='<?php echo base_url('src/b.png'); ?>' class='crop_img'></div>
-				<div></div>
-				<div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<div>Illustration 2</div>
-				<div><img src='<?php echo base_url('src/a.jpg'); ?>' class='crop_img'></div>
-				<div></div>
-				<div></div>
 
 
 

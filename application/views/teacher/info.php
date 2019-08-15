@@ -46,6 +46,9 @@
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size">
+				<div style="background-color: orange; padding: 10px">
+					<h2>รายละเอียด</h2>
+				</div>
 				<!-- Body -->
 
 
@@ -76,72 +79,25 @@
 
 
 
-				<div>Info</div>
+				<div><h3>รายละเอียด ความสามารถเฉพาะ</h3></div>
 				<div>
-					<input style='height: 150px; width: 100%;text-align: left;' value='Description is the pattern of narrative development that aims to make vivid a place, object,character, or group.[1] Description is one of four rhetorical modes (also known as modes of discourse),along with exposition, argumentation, and narration.[2] In practice it would be difficult to write literature that drew on just one of the four basic modes.[3]'>
+					<!-- <input style='height: 150px; width: 100%;text-align: left;' value='Description is the pattern of narrative development that aims to make vivid a place, object,character, or group.[1] Description is one of four rhetorical modes (also known as modes of discourse),along with exposition, argumentation, and narration.[2] In practice it would be difficult to write literature that drew on just one of the four basic modes.[3]'> -->
+					<p>
+						Description is the pattern of narrative development that aims to make vivid a place,
+						object,character, or group.[1] Description is one of four rhetorical modes (also known
+						as modes of discourse),along with exposition, argumentation, and narration.[2] In practice
+						it would be difficult to write literature that drew on just one of the four basic modes.[3]
+					</p>
 				</div>
-				<div></div>
-				<div></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<div>Maximum Student Comsultance</div>
+				<div><h3>จำนวนนิสิตที่รับเป็นที่ปรึกษาสูงสุด</h3></div>
 				<div><input type='number' style='text-align: left;' value='2'></div>
-				<div></div>
-				<div></div>
 
 
+				<button class='btn btn-danger'>Reset</button>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<div><button class='btn btn-danger' value='2'>Reset</button></div>
-				<div></div>
-				<div></div>
-				<div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<div><button class='btn btn-success' value='2'>Accept</button></div>
-				<div></div>
-				<div></div>
-				<div></div>
-
+				<button class='btn btn-success'>Accept</button>
 
 
 

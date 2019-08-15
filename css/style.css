@@ -89,15 +89,13 @@ a:visited {
 
 a:hover {
 	color: rgb(0, 0, 0);
+	text-decoration: none;
 }
 
 a:active {
 	color: white;
 }
 
-a:hover {
-	text-decoration: none;
-}
 
 input {
 	float: left;
