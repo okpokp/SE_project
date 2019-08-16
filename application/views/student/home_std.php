@@ -25,18 +25,26 @@
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tab') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
 		})
 	</script>
+  <style media="screen">
+    label{
+      font-size: 20px;
+    }
+    .size{
+      height: 970px;
+      border-width: 20px;
+      border-color: orange;
+    }
+  </style>
 	<title>Index</title>
 </head>
 <!--############################################## Header ###########################################################################-->
-
 <header>
 	<div id='ui_main'></div>
 </header>
 <!--############################################## Body ###########################################################################-->
-
 <body>
 	<div class="container-fluid text-center">
 		<div class="row">
@@ -46,62 +54,39 @@
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size">
-				<div style="background-color: orange; padding: 10px">
-					<h2>หน้าหลัก</h2>
-				</div>
-				<!-- Body -->
-				<?php
-				$a = array("นาย จิรพัชร์ เหลืองรุ่งเกียรติ", "นายอติวิชญ์ ม่วงศร", "นายเจตพล บุญลอย", "นางสาวกนิษฐา พุ่มผล", "นางสาวสวรรยา แสงบัวเผื่อน");
-				$count_proj = rand(2, 10);
-				// $r = array_rand($a, $count_proj);
-				$r = rand(0, 4);
-				$r_n = $r + 1;
-				for ($i = 0; $i < $count_proj; $i++) {
-					echo "
-				<a style='color: green' href='";
-					echo base_url('Controller/view_proj');
-					echo "'>
-					<div>P$r_n...$a[$r]</div>
-				</a>";
-					$r = rand(0, 4);
-					$r_n = $r + 1;
-				}
-				?>
+        <form class="needs-validation" novalidate>
+
+              <div class="form-row">
+                <div class="col-sm-6">
+                  <h1>ข้อมูลนิสิต</h1>
+                  <label >ชื่อ : </label>
+                  <label >okpokp</label>
+                  <label >&nbsp; &nbsp;นามสกุล : </label>
+                  <label >booloi</label><br>
+                  <label>รหัสนิสิต : 5930300160 &nbsp;&nbsp;&nbsp;&nbsp; สาขา :  T12</label><br>
+
+                  <label>ชื่อโครงงาน : SE ZA eieieieiei</label><br>
+                  <label>หมายเลขโครงงาน : 1</label><br>
+                  <label>สมาชิกกลุ่ม : 1 .นายอำนวย โชคดี</label><br>
+                  <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 .นายอำนวย โชคดี</label><br>
+                  <label>อาจารย์ที่ปรึกษาโครงงาน : อาจารย์อำนวย ผ่านชัวร์</label><br>
+                  <label>จำนวนที่เข้าพบอาจารย์ที่ปรึกษา :  1/10</label><br>
+                  <label>อาจารย์กรรมการโครงงาน : อาจารย์เจษกา ประกันทรัพย์</label><br>
+                  <label>จำนวนการเข้าพบอาจารย์ที่ปรึกษา : 2/3</label>
+                </div>
+              </div>
+            </form>
 				<!-- End Body -->
 			</div>
 		</div>
 	</div>
 </body>
-<!--############################################## Footer ###########################################################################-->
+<!--#### Footer ####-->
 
 <footer>
 	<div id='ui_footer'></div>
 </footer>
-<!--############################################## End ###########################################################################-->
-
+<!--### End #-->
 </html>
 
 <!-- ==================== Insert Picture ==================== -->
-
-<!-- <?php
-		$a = array("นาย จิรพัชร์ เหลืองรุ่งเกียรติ", "นายอติวิชญ์ ม่วงศร", "นายเจตพล บุญลอย", "นางสาวกนิษฐา พุ่มผล", "นางสาวสวรรยา แสงบัวเผื่อน");
-		$count_proj = rand(2, 10);
-		// $r = array_rand($a, $count_proj);
-		$r = rand(0, 4);
-		$r_n = $r + 1;
-		for ($i = 0; $i < $count_proj; $i++) {
-			echo "
-				<button><a href='";
-			echo base_url('Controller/view_proj');
-			echo "'><div>
-					<img style='height: 10px'
-					src=";
-			echo base_url('src/b.png');
-			$r = rand(0, 4);
-			$r_n = $r + 1;
-			echo "></div>
-					<div>$a[$r]</div>
-					<div>P$r_n</div>
-				</a></button>";
-		}
-		?> -->

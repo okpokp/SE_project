@@ -8,23 +8,7 @@ class Controller extends CI_Controller
 		parent::__construct();
 		$this->load->helper('url');
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//////////////////////////////////////////////////////
 	public function index()
 	{
 		$this->load->view('index');
@@ -41,11 +25,7 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('bin/ui_tab');
 	}
-
-
-
-
-
+//////////end ขอบ///////////////////////////////
 	public function regist()
 	{
 		$this->load->view('teacher/register');
@@ -66,36 +46,19 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('teacher/commit');
 	}
-
-
-
-
-
-
-
-
-
+//////////////end body teacher////////////////////////////////////
 	public function db_user()
 	{
 		$this->load->model('model');
 		$data['show'] = $this->model->show();
 		$this->load->view('db/db_user', $data);
 	}
-
-
-
-
-
-
-
-
+//////////////////////////////////////////////////////////
 	public function view_proj()
 	{
 		$this->load->view('P01');
 	}
-
-
-
+//////////////////////////////////////////////////////////
 	public function register()
 	{
 		$btn = $this->input->post('submit');
@@ -121,7 +84,7 @@ class Controller extends CI_Controller
 		$this->model->insert($data);
 		$this->load->view('teacher/home');
 	}
-
+/////////////////////////////////////////////////////////////////
 	public function show()
 	{
 		$this->load->model('model');
@@ -140,28 +103,34 @@ class Controller extends CI_Controller
 			// echo "password is " . $row->pass . "<br>";
 		}
 	}
+//////////end teacher////////////////////////////////////////////////////
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	public function ui_tabstd()
+	{
+		$this->load->view('bin/ui_tabstd');
+	}
+	//ขอบนิสิต
+	public function home_std()
+	{
+		$this->load->view('student/home_std');
+	}
+	public function mange_project()
+	{
+		 $this->load->view('student/mange_project');
+	}
+	public function adviser()
+	{
+		$this->load->view('student/adviser');
+	}
+	public function progress_project()
+	{
+		$this->load->view('student/progress_project');
+	}
+	public function upload_photo()
+	{
+		$this->load->view('student/upload_photo');
+	}
+	// end tab_student
 
 
 	/*
