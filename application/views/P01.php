@@ -47,22 +47,6 @@
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size">
 				<!-- Body -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				<div><h3>รายละเอียด</h3></div>
 				<div>
 					Description is the pattern of narrative development that aims to make vivid a place, object,
@@ -91,37 +75,10 @@
 						<li>อาจารย์ กาญจนา เอี่ยมสอาด</li>
 					</ul>
 				</div>
-
-
 				<div><h3>รายงาน</div>
 				<div>
 					<a href='#'>Document.doc</a>
 				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				<!-- End Body -->
 			</div>
 		</div>

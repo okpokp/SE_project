@@ -47,30 +47,6 @@
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size">
 				<!-- Body -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				<div>
 					<form action='<?= base_url('Controller/Re') ?>' method='post'>
 						<div>
@@ -86,37 +62,6 @@
 						</div>
 					</form>
 				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				<!-- End Body -->
 			</div>
 		</div>
