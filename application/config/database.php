@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost:3300', //dbname= กำหนดชื่อเองคือชื่อดาต้าเบส ตั้งให้ตรงกับชื่อ database ใน pgadmin เราใช้ pgsql
+	'hostname' => 'localhost', //dbname= กำหนดชื่อเองคือชื่อดาต้าเบส ตั้งให้ตรงกับชื่อ database ใน pgadmin เราใช้ pgsql
 	'username' => 'root', //ใช้ postgres
 	'password' => '', //รหัส ตรงกับตอนลง postgres
 	'database' => 'mydb',//เหมือน dbname เหมือนในdatabase

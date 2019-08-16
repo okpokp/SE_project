@@ -8,7 +8,7 @@ class Controller extends CI_Controller
 		parent::__construct();
 		$this->load->helper('url');
 	}
-//////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////
 	public function index()
 	{
 		$this->load->view('index');
@@ -21,18 +21,18 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('bin/ui_footer');
 	}
-	public function ui_tab()
+	public function ui_tabtch()
 	{
-		$this->load->view('bin/ui_tab');
+		$this->load->view('bin/ui_tabtch');
 	}
-//////////end ขอบ///////////////////////////////
-	public function regist()
+	//////////end ขอบ///////////////////////////////
+	public function regist_tch()
 	{
 		$this->load->view('teacher/register');
 	}
-	public function home()
+	public function home_tch()
 	{
-		$this->load->view('teacher/home');
+		$this->load->view('teacher/home_tch');
 	}
 	public function info()
 	{
@@ -46,46 +46,92 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('teacher/commit');
 	}
-//////////////end body teacher////////////////////////////////////
+	//////////////end body teacher////////////////////////////////////
 	public function db_user()
 	{
 		$this->load->model('model');
-		$data['show'] = $this->model->show();
+		$data['show'] = $this->model->m_show_teacher();
 		$this->load->view('db/db_user', $data);
 	}
-//////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////
 	public function view_proj()
 	{
 		$this->load->view('P01');
 	}
-//////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////
 	public function register()
 	{
 		$btn = $this->input->post('submit');
-		$teacher_id = $this->input->post('teacher_id');
-		$type = $this->input->post('type');
-		$title = $this->input->post('title');
-		$fname = $this->input->post('fname');
-		$lname = $this->input->post('lname');
-		$ability = $this->input->post('ability');
-		$adviser = $this->input->post('adviser');
-		$committee = $this->input->post('committee');
-		$data = array(
-			'teacher_id' => $this->input->post('teacher_id'),
-			'type' => $this->input->post('type'),
-			'title' => $this->input->post('title'),
-			'fname' => $this->input->post('fname'),
-			'lname' => $this->input->post('lname'),
-			'ability' => $this->input->post('ability'),
-			'adviser' => $this->input->post('adviser'),
-			'committee' => $this->input->post('committee'),
-		);
-		$this->load->model('model');
-		$this->model->insert($data);
-		$this->load->view('teacher/home');
+		// echo $btn . '<br>'; // check
+		if ($btn == 'teacher') {
+			$type = $this->input->post('type');
+			$title = $this->input->post('title');
+			$fname = $this->input->post('fname');
+			$lname = $this->input->post('lname');
+			$ability = $this->input->post('ability');
+			$adviser = $this->input->post('adviser');
+			$committee = $this->input->post('committee');
+			$data = array(
+				'type' => $this->input->post('type'),
+				'title' => $this->input->post('title'),
+				'fname' => $this->input->post('fname'),
+				'lname' => $this->input->post('lname'),
+				'ability' => $this->input->post('ability'),
+				'adviser' => $this->input->post('adviser'),
+				'committee' => $this->input->post('committee'),
+			);
+			$this->load->model('model');
+			$this->model->insert_tch($data);
+			$this->load->view('teacher/home_tch');
+		} else if ($btn == 'student') {
+			// create lockbook
+			$type = $this->input->post('type');
+			$data = array(
+				'type' => $this->input->post('type'),
+			);
+			$this->load->model('model');
+			$this->model->insert_lockbook($data);
+			// find last no. lockbook
+			$this->load->model('model');
+			$show = $this->model->m_show_lockbook();
+			// create student
+			if ($show->num_rows() > 0) {
+				foreach ($show->result() as $row) { }
+				// echo $row->lock_id . '<br>'; // check
+			}
+			$title = $this->input->post('title');
+			$fname = $this->input->post('fname');
+			$lname = $this->input->post('lname');
+			$data = array(
+				'title' => $this->input->post('title'),
+				'fname' => $this->input->post('fname'),
+				'lname' => $this->input->post('lname'),
+				'lockbook_lock_id' => $row->lock_id,
+			);
+			$this->load->model('model');
+			$this->model->insert_std($data);
+			$this->load->view('student/home_std');
+		} else if ($btn == 'create_group') {
+			$name_project = $this->input->post('name_project');
+			$info_project = $this->input->post('info_project');
+			$data = array(
+				'data' => '99 Mb',
+				'name_project' => $this->input->post('name_project'),
+				'info_project' => $this->input->post('info_project'),
+				'data_project' => '99 Mb',
+				'check1' => 0,
+				'check2' => 0,
+				'teacher_teacher_id' => 99,
+				'student_student_id' => [99, 99],
+				'request_request_id1' => 99,
+			);
+			$this->load->model('model');
+			$this->model->insert_group($data);
+			$this->load->view('student/home_std');
+		}
 	}
-/////////////////////////////////////////////////////////////////
-	public function show()
+	/////////////////////////////////////////////////////////////////
+	public function c_show()
 	{
 		$this->load->model('model');
 		// $this->model->insert($data);
@@ -95,15 +141,15 @@ class Controller extends CI_Controller
 		// echo $s->row('user') . "<br>";
 		foreach ($s->result() as $row) {
 			if ($row->user ==  'gill') {
-				echo "user is " . $row->user . "<br>";
-				$s['user'] = $s + 1;
-				print_r($s);
+				// echo "user is " . $row->user . "<br>";
+				// $s['user'] = $s + 1;
+				// print_r($s);
 				$this->load->view('db/db_user', $s);
 			}
 			// echo "password is " . $row->pass . "<br>";
 		}
 	}
-//////////end teacher////////////////////////////////////////////////////
+	//////////end teacher////////////////////////////////////////////////////
 
 	public function ui_tabstd()
 	{
@@ -116,7 +162,7 @@ class Controller extends CI_Controller
 	}
 	public function mange_project()
 	{
-		 $this->load->view('student/mange_project');
+		$this->load->view('student/mange_project');
 	}
 	public function adviser()
 	{
@@ -129,6 +175,14 @@ class Controller extends CI_Controller
 	public function upload_photo()
 	{
 		$this->load->view('student/upload_photo');
+	}
+	public function regist_std()
+	{
+		$this->load->view('student/register');
+	}
+	public function create_group()
+	{
+		$this->load->view('student/create_group');
 	}
 	// end tab_student
 

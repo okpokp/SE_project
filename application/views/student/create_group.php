@@ -25,7 +25,7 @@
         $(function() {
             $('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
             $('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-            $('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
+            $('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
         })
     </script>
     <style media="screen">
@@ -42,7 +42,6 @@
     <title>Index</title>
 </head>
 <!--############################################## Header ###########################################################################-->
-
 <header>
     <div id='ui_main'></div>
 </header>
@@ -58,7 +57,7 @@
             <!-- End Bar -->
             <div class="col-sm-10 well text-left size">
                 <div style="background-color: orange; padding: 10px">
-                    <h2>ลงทะเบียน อาจารย์</h2>
+                    <h2>สร้างกลุ่ม</h2>
                 </div>
                 <!-- Body -->
 
@@ -79,31 +78,11 @@
 
 
 
-
-
-
-
-
                 <form action="<?= base_url('Controller/register') ?>" method='post'>
-                    <input type='text' name='type' value='' placeholder='type'>
-                    <input type='text' name='title' value='' placeholder='title'>
-                    <input type='text' name='fname' value='' placeholder='fname'>
-                    <input type='text' name='lname' value='' placeholder='lname'>
-                    <input type='text' name='ability' value='' placeholder='ability'>
-                    <input type='text' name='adviser' value='' placeholder='adviser'>
-                    <input type='text' name='committee' value='' placeholder='committee'>
-                    <button name='submit' value='teacher'>Register</button>
+                    <input type='text' name='name_project' value='' placeholder='name_project'>
+                    <input type='text' name='info_project' value='' placeholder='info_project'>
+                    <button name='submit' value='create_group'>Register</button>
                 </form>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -133,11 +112,13 @@
         </div>
     </div>
 </body>
-<!--############################################## Footer ###########################################################################-->
+<!--#### Footer ####-->
 
 <footer>
     <div id='ui_footer'></div>
 </footer>
-<!--############################################## End ###########################################################################-->
+<!--### End #-->
 
 </html>
+
+<!-- ==================== Insert Picture ==================== -->
