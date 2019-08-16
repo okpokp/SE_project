@@ -122,7 +122,9 @@ class Controller extends CI_Controller
 				'check1' => 0,
 				'check2' => 0,
 				'teacher_teacher_id' => 99,
-				'student_student_id' => [99, 99],
+				'student_student_id_1' => 99,
+				'student_student_id_2' => 99,
+				'student_student_id_3' => 99,
 				'request_request_id1' => 99,
 			);
 			$this->load->model('model');
