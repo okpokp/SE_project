@@ -64,7 +64,7 @@ class Controller extends CI_Controller
 		$btn = $this->input->post('submit');
 		// echo $btn . '<br>'; // check
 		if ($btn == 'teacher') {
-			$type = $this->input->post('type');
+			// $type = $this->input->post('type');
 			$title = $this->input->post('title');
 			$fname = $this->input->post('fname');
 			$lname = $this->input->post('lname');
@@ -72,13 +72,13 @@ class Controller extends CI_Controller
 			$adviser = $this->input->post('adviser');
 			$committee = $this->input->post('committee');
 			$data = array(
-				'type' => $this->input->post('type'),
+				// 'type' => $this->input->post('type'),
 				'title' => $this->input->post('title'),
-				'fname' => $this->input->post('fname'),
-				'lname' => $this->input->post('lname'),
-				'ability' => $this->input->post('ability'),
-				'adviser' => $this->input->post('adviser'),
-				'committee' => $this->input->post('committee'),
+				// 'fname' => $this->input->post('fname'),
+				// 'lname' => $this->input->post('lname'),
+				// 'ability' => $this->input->post('ability'),
+				// 'adviser' => $this->input->post('adviser'),
+				// 'committee' => $this->input->post('committee'),
 			);
 			$this->load->model('model');
 			$this->model->insert_tch($data);

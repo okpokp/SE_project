@@ -85,13 +85,13 @@
 
 
                 <form action="<?= base_url('Controller/register') ?>" method='post'>
-                    <input type='text' name='type' value='' placeholder='type'>
+                    <!-- <input type='text' name='type' value='' placeholder='type'> -->
                     <input type='text' name='title' value='' placeholder='title'>
-                    <input type='text' name='fname' value='' placeholder='fname'>
-                    <input type='text' name='lname' value='' placeholder='lname'>
+                    <!-- <input type='text' name='fname' value='' placeholder='fname'> -->
+                    <!-- <input type='text' name='lname' value='' placeholder='lname'> -->
                     <input type='text' name='ability' value='' placeholder='ability'>
-                    <input type='text' name='adviser' value='' placeholder='adviser'>
-                    <input type='text' name='committee' value='' placeholder='committee'>
+                    <!-- <input type='text' name='adviser' value='' placeholder='adviser'> -->
+                    <!-- <input type='text' name='committee' value='' placeholder='committee'> -->
                     <button name='submit' value='teacher'>Register</button>
                 </form>
 
