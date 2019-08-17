@@ -25,9 +25,20 @@
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tab') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})
 	</script>
+	<style media="screen">
+		label {
+			font-size: 20px;
+		}
+
+		.size {
+			height: 970px;
+			border-width: 20px;
+			border-color: orange;
+		}
+	</style>
 	<title>Index</title>
 </head>
 <!--############################################## Header ###########################################################################-->
@@ -47,30 +58,6 @@
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size">
 				<!-- Body -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				<div>
 					<form action='<?= base_url('Controller/Re') ?>' method='post'>
 						<div>
@@ -86,37 +73,6 @@
 						</div>
 					</form>
 				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 				<!-- End Body -->
 			</div>
 		</div>

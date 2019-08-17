@@ -25,10 +25,21 @@
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tab') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})
 	</script>
-	<title>Index</title>
+	<style media="screen">
+		label {
+			font-size: 20px;
+		}
+
+		.size {
+			height: 970px;
+			border-width: 20px;
+			border-color: orange;
+		}
+	</style>
+	<title>Commit</title>
 </head>
 <!--############################################## Header ###########################################################################-->
 
@@ -46,6 +57,9 @@
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size">
+				<div style="background-color: orange; padding: 10px">
+					<h2>รายชื่อโครงงานที่เป็นกรรมการ</h2>
+				</div>
 				<!-- Body -->
 
 
