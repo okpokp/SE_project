@@ -16,7 +16,7 @@
         </div>
         <div class="col-sm-2 w3-red ">
             <h3>อติวิชญ์ ม่วงศร</h3>
-            <a style="color: white" href="<?= base_url('Controller/info') ?>"><p>ออกจากระบบ</p></a>
+            <a style="color: white" href="<?= base_url('Controller/index') ?>"><p>ออกจากระบบ</p></a>
         </div>
     </div>
 
