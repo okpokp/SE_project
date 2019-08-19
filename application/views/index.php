@@ -59,7 +59,9 @@
 			<div class="col-sm-10 well text-left size">
 				<!-- Body -->
 				<div>
-					<form action='<?= base_url('Controller/Re') ?>' method='post'>
+					<h1>login with google </h1>
+					<a href="<?php echo $loginURL; ?>">login</a>
+					<!-- <form action='<?= base_url('Controller/Re') ?>' method='post'>
 						<div>
 							<input type='text' name='user' value='' placeholder='User or Email'>
 						</div>
@@ -71,7 +73,7 @@
 								Accept
 							</button>
 						</div>
-					</form>
+					</form> -->
 				</div>
 				<!-- End Body -->
 			</div>

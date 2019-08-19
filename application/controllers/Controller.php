@@ -11,7 +11,19 @@ class Controller extends CI_Controller
 	//////////////////////////////////////////////////////
 	public function index()
 	{
-		$this->load->view('index');
+		if(isset($_GET['code']))
+        {
+            $this->googleplus->getAuthenticate();
+            $this->session->set_userdata('login',true);
+            $this->session->set_userdata('userProfile',$this->googleplus->getUserInfo());
+            echo $this->session;
+            redirect('');
+            
+        }
+
+        $data['loginURL']=$this->googleplus->loginURL();
+        $this->load->view('index',$data);
+		// $this->load->view('index');
 	}
 	public function ui_main()
 	{
@@ -187,6 +199,26 @@ class Controller extends CI_Controller
 		$this->load->view('student/create_group');
 	}
 	// end tab_student
+
+
+    
+
+    public function profile(){
+
+        if($this->session->userdata('login') == true)
+        {
+            $data['profileData'] = $this->session->userdata('userProfile');
+            $this->load->view('profile',$data);
+            
+        }
+        else{
+            redirect('');
+            
+        }
+    }
+
+
+
 
 
 	/*
