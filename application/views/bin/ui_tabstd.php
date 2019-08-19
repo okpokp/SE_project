@@ -2,7 +2,7 @@
 
 <div>
   <p>
-    <a class="well btn container-fluid" style="color: black" href="<?= base_url('Controller/home_tch') ?>">
+    <a class="well btn container-fluid" style="color: black" href="<?= base_url('Controller/index') ?>">
       root_login
     </a>
   </p>
@@ -71,16 +71,6 @@
 </p>
 
 <!-- 5 -->
-
-<p>
-  <a class="well btn container-fluid" href="<?= base_url('Controller/index') ?>">
-    ออกจากระบบ
-    <br>
-    <!-- <img src="https://cdn4.iconfinder.com/data/icons/proglyphs-business-and-office/512/Door_Out-512.png" class="img-circle" height="65" width="65" alt="Avatar"> -->
-  </a>
-</p>
-
-<!-- 6 -->
 
 <p>
   <a class="well btn container-fluid" href="<?= base_url('Controller/regist_std') ?>">
