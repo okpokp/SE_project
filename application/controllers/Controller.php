@@ -11,8 +11,38 @@ class Controller extends CI_Controller
 	//////////////////////////////////////////////////////
 	public function index()
 	{
-		$this->load->view('index');
+		if (isset($_GET['code'])) {
+			$this->googleplus->getAuthenticate();
+			$this->session->set_userdata('login', true);
+			$this->session->set_userdata('userProfile', $this->googleplus->getUserInfo());
+			echo $this->session;
+			redirect('Controller/profile');
+		}
+
+		$data['loginURL'] = $this->googleplus->loginURL();
+		$this->load->view('index', $data);
 	}
+	// Login session
+	public function profile()
+	{
+		if ($this->session->userdata('login') == true) {
+			$data['profileData'] = $this->session->userdata('userProfile');
+			$this->load->view('teacher/register', $data);
+		} else {
+			redirect('');
+		}
+	}
+	// End Login session
+
+
+
+
+
+
+
+
+
+	
 	public function ui_main()
 	{
 		$this->load->view('bin/ui_main');
@@ -74,11 +104,11 @@ class Controller extends CI_Controller
 			$data = array(
 				// 'type' => $this->input->post('type'),
 				'title' => $this->input->post('title'),
-				// 'fname' => $this->input->post('fname'),
-				// 'lname' => $this->input->post('lname'),
-				// 'ability' => $this->input->post('ability'),
-				// 'adviser' => $this->input->post('adviser'),
-				// 'committee' => $this->input->post('committee'),
+				'fname' => $this->input->post('fname'),
+				'lname' => $this->input->post('lname'),
+				'ability' => $this->input->post('ability'),
+				'adviser' => $this->input->post('adviser'),
+				'committee' => $this->input->post('committee'),
 			);
 			$this->load->model('model');
 			$this->model->insert_tch($data);
@@ -187,6 +217,7 @@ class Controller extends CI_Controller
 		$this->load->view('student/create_group');
 	}
 	// end tab_student
+
 
 
 	/*

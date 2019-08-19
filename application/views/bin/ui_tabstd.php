@@ -3,6 +3,12 @@
 <div>
   <p>
     <a class="well btn container-fluid" style="color: black" href="<?= base_url('Controller/home_tch') ?>">
+      root_login
+    </a>
+  </p>
+
+  <p>
+    <a class="well btn container-fluid" style="color: black" href="<?= base_url('Controller/home_tch') ?>">
       root_home_teacher
     </a>
   </p>
