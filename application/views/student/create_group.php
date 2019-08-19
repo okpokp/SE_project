@@ -81,6 +81,11 @@
                 <form action="<?= base_url('Controller/register') ?>" method='post'>
                     <input type='text' name='name_project' value='' placeholder='name_project'>
                     <input type='text' name='info_project' value='' placeholder='info_project'>
+
+                    <input type='text' name='student_student_id_1' value='' placeholder='student_student_id_1'>
+                    <input type='text' name='student_student_id_2' value='' placeholder='student_student_id_2'>
+                    <input type='text' name='student_student_id_3' value='' placeholder='student_student_id_3'>
+
                     <button name='submit' value='create_group'>Register</button>
                 </form>
 
