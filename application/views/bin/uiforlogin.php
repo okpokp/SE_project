@@ -14,10 +14,6 @@
             <h3>COMPUTER ENGINEERING OF KASETSART SIRACHA CAMPUS</h3>
             <h3>คณะวิศวะกรรมศาสตร์ สาขาคอมพิวเตอร์และสารสนเทศ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา</h3>
         </div>
-        <div class="col-sm-2 w3-red ">
-            <h3>อติวิชญ์ ม่วงศร</h3>
-            <a style="color: white" href="<?= base_url('Controller/logout') ?>"><p>ออกจากระบบ</p></a>
-        </div>
     </div>
 
 

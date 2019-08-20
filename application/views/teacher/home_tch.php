@@ -72,8 +72,6 @@
 
 
 
-
-
 				<!-- Start Get DB_value -->
 				<?php
 				$count = 0;
@@ -87,13 +85,25 @@
 
 
 				<?php
-						echo "<form action='<?= ";echo base_url('Controller/view_proj');echo " ?>' method='post'>";
-						echo "<a style='color: green' href=' ";
+						echo "<form action='<?= ";
 						echo base_url('Controller/view_proj');
-						echo " '><div><input type='url' name='group_id' value='$row->group_id'>$row->group_id...$row->name_project</div></form>";
+						echo " ?>' method='post'>";
+
+						// echo "<a style='color: green' name='id' value=$row->group_id href='";
+						// echo base_url('Controller/view_proj');
+						// echo " '><div>$row->group_id...$row->name_project</div></form>";
+
+						echo "<button type='submit' name='id' value=$row->group_id ";
+						echo " ><div>$row->group_id...$row->name_project</div></form>";
+						// $o=(int)$row->group_id;
+						// echo 1;
+						// echo "<input type='submit' name='";
+						// echo "id' value='";
+						// echo "$o";
+						// echo "'>$o</p></form>";
 						?>
 
-
+						
 
 
 
@@ -103,7 +113,8 @@
 				}
 				?>
 				<!-- End Get DB_value -->
-
+				
+				
 
 
 
