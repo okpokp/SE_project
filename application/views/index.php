@@ -23,7 +23,7 @@
 	<meta charset='utf-8'>
 	<script>
 		$(function() {
-			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
+			$('#ui_main').load('<?= base_url('Controller/uilogin') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
 			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})
@@ -52,15 +52,20 @@
 	<div class="container-fluid text-center">
 		<div class="row">
 			<!-- Bar -->
-			<div class="col-sm-2 well w3-white">
+			<!-- <div class="col-sm-2 well w3-white">
 				<div id='ui_tab'></div>
-			</div>
+			</div> -->
 			<!-- End Bar -->
-			<div class="col-sm-10 well text-left size">
+			<div class="col-sm-12 text-center size">
 				<!-- Body -->
 				<div>
-					<h1>login with google </h1>
-					<a href="<?php echo $loginURL; ?>">login</a>
+					<h1>please login</h1>
+					<!-- <a href="<?php echo $loginURL; ?>">login</a> -->
+					<br>
+					<br>
+					
+					<p><a href="<?php echo $loginURL;?>"><img src="https://abeon-hosting.com/images/icon-google-png-1.png" width="150"></a></p>
+					
 					<!-- <form action='<?= base_url('Controller/Re') ?>' method='post'>
 						<div>
 							<input type='text' name='user' value='' placeholder='User or Email'>

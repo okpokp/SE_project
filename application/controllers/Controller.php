@@ -32,6 +32,13 @@ class Controller extends CI_Controller
 			redirect('');
 		}
 	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		$this->googleplus->revokeToken();
+		redirect('');
+	}
 	// End Login session
 
 
@@ -40,9 +47,12 @@ class Controller extends CI_Controller
 
 
 
-
-
 	
+
+	public function uilogin()
+	{
+		$this->load->view('bin/uiforlogin');
+	}
 	public function ui_main()
 	{
 		$this->load->view('bin/ui_main');
@@ -88,7 +98,8 @@ class Controller extends CI_Controller
 	//////////////////////////////////////////////////////////
 	public function view_proj()
 	{
-		$group_id = $this->input->post('group_id');
+		$group_id = $this->input->post('id');
+		echo $group_id;
 		$this->load->model('model');
 		$data['show'] = $this->model->m_show_group_select($group_id);
 		$this->load->view('P01', $data);
