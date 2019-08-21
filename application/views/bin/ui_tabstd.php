@@ -78,12 +78,5 @@
   </a>
 </p>
 
-<p>
-  <a class="well btn container-fluid" href="<?= base_url('Controller/create_group') ?>">
-    root_create_group
-  </a>
-</p>
-
-
 
 </div>

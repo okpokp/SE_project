@@ -68,68 +68,78 @@
 
 				<!-- Start Get DB_value -->
 				<?php
-				foreach ($show->result() as $row) {
+				// echo "<pre>";print_r($show_com[0];
+				$show_grp = $show_com[0];
+				$show_std = $show_com[1];
+				$show_tch = $show_com[2];
+				foreach ($show_grp->result() as $row_grp) {
 					?>
 				<!-- Start Body -->
 
 				<?php
 					echo "
+						<div>
+						<h3>หัวข้อ</h3>
+						</div>
+						<div>";
+					echo $row_grp->name_project;
+					echo "</div>
+						<div>
+						<h3>รายละเอียด</h3>
+						</div>
+						<div>";
+					echo $row_grp->info_project;
+					echo "</div>
+						<div>
+						<h3>สมาชิก</h3>
+				</div>
+				<div>";
+					foreach ($show_std->result() as $row_std) {
+						if ($row_grp->student_student_id_1 == $row_std->student_id) {
+							echo  $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "<br>";
+						}
+						if ($row_grp->student_student_id_2 == $row_std->student_id) {
+							echo  $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "<br>";
+						}
+						if ($row_grp->student_student_id_3 == $row_std->student_id) {
+							echo  $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "<br>";
+						}
+					}
+					echo "</div>
+						<div>
+							<h3>อาจารย์ที่ปรึกษา</h3>
+						</div>
+						<div>
+						";
+					foreach ($show_tch->result() as $row_tch) {
+						if ($row_grp->teacher_teacher_id == $row_tch->teacher_id) {
+							echo $row_tch->title . " " . $row_tch->fname . " " . $row_tch->lname . "<br>";
+						}
+					}
+					echo "</div>
 				<div>
-					<h3>หัวข้อ</h3>
+					<h3>กรรมการ</h3>
 				</div>
 				<div>
-					$row->name_project
-				</div>";
-					echo "
-				<div>
-					<h3>รายละเอียด</h3>
+					-<br>
+					-
 				</div>
 				<div>
-					$row->info_project
+					<h3>รายงาน</h3>
+				</div>
+				<div>
+					<a href='#'>Document.doc</a>
 				</div>";
-
 					?>
+
 				<!-- End Body -->
 				<?php
+					// }
 				}
 				?>
 				<!-- End Get DB_value -->
 
 
-
-
-				<div>
-					<h3>สมาชิก
-				</div>
-				<div>
-					<ul>
-						<li>นาย จิรพัชร์ เหลืองรุ่งเกียรติ</li>
-						<li>นาย เจตพล บุญลอย</li>
-					</ul>
-				</div>
-				<div>
-					<h3>อาจารย์ที่ปรึกษา
-				</div>
-				<div>
-					<ul>
-						<li>อาจารย์ กาญจนา เอี่ยมสอาด</li>
-					</ul>
-				</div>
-				<div>
-					<h3>กรรมการ
-				</div>
-				<div>
-					<ul>
-						<li>อาจารย์ กาญจนา เอี่ยมสอาด</li>
-						<li>อาจารย์ กาญจนา เอี่ยมสอาด</li>
-					</ul>
-				</div>
-				<div>
-					<h3>รายงาน
-				</div>
-				<div>
-					<a href='#'>Document.doc</a>
-				</div>
 
 
 

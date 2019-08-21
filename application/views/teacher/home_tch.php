@@ -72,49 +72,40 @@
 
 
 
+
+
+
 				<!-- Start Get DB_value -->
 				<?php
 				$count = 0;
-				if ($show->num_rows() > 0) {
-					foreach ($show->result() as $row) {
-						if ($row->group_id != null) {
+				foreach ($show->result() as $row) {
+					if ($row->group_id != null) {
+						if ($show->num_rows() > 0) {
 							$count += 1;
 						}
-						?>
+					}
+					?>
 				<!-- Start Body -->
 
-
-				<?php
-						echo "<form action='<?= ";
-						echo base_url('Controller/view_proj');
-						echo " ?>' method='post'>";
-
-						// echo "<a style='color: green' name='id' value=$row->group_id href='";
-						// echo base_url('Controller/view_proj');
-						// echo " '><div>$row->group_id...$row->name_project</div></form>";
-
-						echo "<button type='submit' name='id' value=$row->group_id ";
-						echo " ><div>$row->group_id...$row->name_project</div></form>";
-						// $o=(int)$row->group_id;
-						// echo 1;
-						// echo "<input type='submit' name='";
-						// echo "id' value='";
-						// echo "$o";
-						// echo "'>$o</p></form>";
-						?>
-
-						
-
-
+				<form action='<?= base_url('Controller/view_proj') ?>' method='post'>
+					<div>
+						<button type="submit" class="btn" name="group_id" value="<?php
+																		echo $row->group_id;
+																		?>"><?php echo $row->group_id." ".$row->name_project ?></button>
+					</div>
+				</form>
 
 				<!-- End Body -->
 				<?php
-					}
 				}
 				?>
 				<!-- End Get DB_value -->
-				
-				
+
+				<!-- <form action='<?= base_url('Controller/view_proj') ?>' method='post'>
+					<div>
+						<input type="submit" name="group_id" value="2">
+					</div>
+				</form> -->
 
 
 
@@ -127,23 +118,6 @@
 
 
 
-				<!-- <?php
-						$a = array("นาย จิรพัชร์ เหลืองรุ่งเกียรติ", "นายอติวิชญ์ ม่วงศร", "นายเจตพล บุญลอย", "นางสาวกนิษฐา พุ่มผล", "นางสาวสวรรยา แสงบัวเผื่อน");
-						$count_proj = rand(2, 10);
-						// $r = array_rand($a, $count_proj);
-						$r = rand(0, 4);
-						$r_n = $r + 1;
-						for ($i = 0; $i < $count_proj; $i++) {
-							echo "
-				<a style='color: green' href='";
-							echo base_url('Controller/view_proj');
-							echo "'>
-					<div>P$r_n...$a[$r]</div>
-				</a>";
-							$r = rand(0, 4);
-							$r_n = $r + 1;
-						}
-						?> -->
 
 
 
@@ -197,5 +171,23 @@
 					<div>$a[$r]</div>
 					<div>P$r_n</div>
 				</a></button>";
+		}
+		?> -->
+
+<!-- <?php
+		$a = array("นาย จิรพัชร์ เหลืองรุ่งเกียรติ", "นายอติวิชญ์ ม่วงศร", "นายเจตพล บุญลอย", "นางสาวกนิษฐา พุ่มผล", "นางสาวสวรรยา แสงบัวเผื่อน");
+		$count_proj = rand(2, 10);
+		// $r = array_rand($a, $count_proj);
+		$r = rand(0, 4);
+		$r_n = $r + 1;
+		for ($i = 0; $i < $count_proj; $i++) {
+			echo "
+				<a style='color: green' href='";
+			echo base_url('Controller/view_proj');
+			echo "'>
+					<div>P$r_n...$a[$r]</div>
+				</a>";
+			$r = rand(0, 4);
+			$r_n = $r + 1;
 		}
 		?> -->
