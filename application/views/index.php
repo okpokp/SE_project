@@ -23,7 +23,7 @@
 	<meta charset='utf-8'>
 	<script>
 		$(function() {
-			$('#ui_main').load('<?= base_url('Controller/uilogin') ?>');
+			$('#ui_main').load('<?= base_url('Controller/ui_login') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
 			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})

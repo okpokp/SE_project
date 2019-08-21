@@ -58,7 +58,7 @@
 
               <div class="form-row">
                 <div class="col-sm-6">
-                  <h1>ข้อมูลนิสิต</h1>
+                  <h1>ข้อมูลกลุ่ม</h1>
                   <label >ชื่อ : </label>
                   <label >okpokp</label>
                   <label >&nbsp; &nbsp;นามสกุล : </label>

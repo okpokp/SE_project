@@ -59,6 +59,7 @@ class model extends CI_model
     $this->db->select("*");
     $this->db->from("group");
     $this->db->where("group_id = $group_id");
+    // $this->db->join('student', 'student_student_id = student_id', 'right');
     $query = $this->db->get();
     return $query;
   }

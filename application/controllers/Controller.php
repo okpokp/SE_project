@@ -47,11 +47,11 @@ class Controller extends CI_Controller
 
 
 
-	
 
-	public function uilogin()
+
+	public function ui_login()
 	{
-		$this->load->view('bin/uiforlogin');
+		$this->load->view('bin/ui_login');
 	}
 	public function ui_main()
 	{
@@ -82,11 +82,21 @@ class Controller extends CI_Controller
 	}
 	public function consult()
 	{
-		$this->load->view('teacher/consult');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('teacher/consult', $data);
 	}
 	public function commit()
 	{
-		$this->load->view('teacher/commit');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('teacher/commit', $data);
+	}
+	public function create_group()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_student();
+		$this->load->view('teacher/create_group', $data);
 	}
 	//////////////end body teacher////////////////////////////////////
 	public function db_user()
@@ -98,11 +108,14 @@ class Controller extends CI_Controller
 	//////////////////////////////////////////////////////////
 	public function view_proj()
 	{
-		$group_id = $this->input->post('id');
-		echo $group_id;
+		// $group_id = 1;
+		$group_id = $this->input->post('group_id');
 		$this->load->model('model');
-		$data['show'] = $this->model->m_show_group_select($group_id);
-		$this->load->view('P01', $data);
+		$data_grp['show_grp'] = $this->model->m_show_group_select($group_id);
+		$data_std['show_std'] = $this->model->m_show_student();
+		$data_tch['show_std'] = $this->model->m_show_teacher();
+		$data_com['show_com'] = array($data_grp['show_grp'], $data_std['show_std'], $data_tch['show_std']);
+		$this->load->view('P01', $data_com);
 	}
 	//////////////////////////////////////////////////////////
 	public function register()
@@ -183,7 +196,7 @@ class Controller extends CI_Controller
 				'info_project' => $this->input->post('info_project'),
 				'check1' => false,
 				'check2' => false,
-				// 'teacher_teacher_id' => 99,
+				'teacher_teacher_id' => $this->input->post('teacher_teacher_id'),
 				'student_student_id_1' => $this->input->post('student_student_id_1'),
 				'student_student_id_2' => $this->input->post('student_student_id_2'),
 				'student_student_id_3' => $this->input->post('student_student_id_3'),
@@ -192,7 +205,8 @@ class Controller extends CI_Controller
 			);
 			$this->load->model('model');
 			$this->model->insert_group($data);
-			$this->load->view('student/home_std');
+			$data['show'] = $this->model->m_show_student();
+			$this->load->view('teacher/create_group', $data);
 		}
 	}
 	/////////////////////////////////////////////////////////////////
@@ -244,10 +258,6 @@ class Controller extends CI_Controller
 	public function regist_std()
 	{
 		$this->load->view('student/register');
-	}
-	public function create_group()
-	{
-		$this->load->view('student/create_group');
 	}
 	// end tab_student
 
