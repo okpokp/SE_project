@@ -64,6 +64,22 @@
     </a>
 </p>
 
+<p>
+    <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit_result') ?>">
+        เลือกกรรมการ
+        <br>
+        <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
+    </a>
+</p>
+
+<p>
+    <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit_show') ?>">
+        ผลการเลือกกรรมการ
+        <br>
+        <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
+    </a>
+</p>
+
 <!-- <p>
         <a class="well btn container-fluid colora" href="<?= base_url('Controller/db_user') ?>">
             root_db_user
