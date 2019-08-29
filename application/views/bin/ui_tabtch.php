@@ -26,7 +26,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/consult') ?>">
-        รายชื่อโครงงานที่เป็นที่ปรึกษา
+        สร้างกลุ่ม
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
@@ -34,7 +34,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit') ?>">
-        รายชื่อโครงงานที่เป็นกรรมการ
+        เลือกกรรมการ
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
@@ -42,7 +42,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/log_score') ?>">
-        คะแนนความสม่ำเสมอ
+        ให้คะแนน
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
@@ -50,7 +50,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/test_room') ?>">
-        ห้องสอบ
+        ผลจัดห้องสอบ
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
@@ -58,19 +58,19 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/test_score') ?>">
-        ลงคะแนน
+        คะแนนlogbook
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
 
-<!-- <p>
+<p>
         <a class="well btn container-fluid colora" href="<?= base_url('Controller/db_user') ?>">
-            root_db_user
+            จัดห้องสอบ
             <br>
             <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
         </a>
-    </p> -->
+    </p>
 
 <!-- <p>
         <a class="well btn container-fluid colora" href="<?= base_url('Controller/regist_tch') ?>">
