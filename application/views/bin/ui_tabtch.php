@@ -25,10 +25,14 @@
 </p>
 
 <p>
-
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/consult') ?>">
         สร้างกลุ่ม
-=======
+        <br>
+        <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
+    </a>
+</p>
+
+<p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/create_group') ?>">
         รายชื่อโครงงานที่เป็นที่ปรึกษา
 
@@ -57,7 +61,7 @@
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/test_room') ?>">
         ผลจัดห้องสอบ
         <br>
-        <span class="glyphicon glyphicon-calendar"></span>
+        <span class="glyphicon glyphicon-calendar" style="font-size: 65px"></span>
         <!-- <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar"> -->
     </a>
 </p>
