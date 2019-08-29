@@ -57,51 +57,43 @@
             <!-- End Bar -->
             <div class="col-sm-10 well text-left size bgimg">
                 <div style="background-color: orange; padding: 10px">
-                    <h2>ให้คะแนน</h2>
+                    <h2>เลือกกรรมการ</h2>
                 </div>
                 <!-- Body -->
 
 
-                <select>
-                    <?php
-                    $group_ids = array();
-                    $name_projects = array();
-                    foreach ($show->result() as $row) {
-                        array_push($group_ids, $row->group_id);
-                        array_push($name_projects, $row->name_project);
-                    }
-                    for ($i = 0; $i < sizeof($group_ids); $i++) {
-                        // echo "<option>" . $group_ids[$i] . "</option>";
-                        echo "<option>" . $name_projects[$i] . "</option>";
-                    }
-                    ?>
-                </select>
 
+                <?php
+                $show_grp = $show_com[0];
+                $show_tch = $show_com[1];
+                $name_projects = array();
+                $fnames = array();
+                foreach ($show_grp->result() as $row_grp) {
+                    array_push($name_projects, $row_grp->name_project);
+                }
+                foreach ($show_tch->result() as $row_tch) {
+                    array_push($fnames, $row_tch->fname);
+                }
+                ?>
                 <table class="table table-bordered table-striped">
                     <tr>
-                        <th>หัวข้อ</th>
-                        <th>คะแนน</th>
+                        <th>กลุ่ม</th>
+                        <th>กรรมการ</th>
+                        <th>กรรมการ</th>
                     </tr>
-                    <tr>
-                        <td>คะแนนเล่มโครงงาน</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>คะแนนความรู้ในโครงงาน</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>ความสมบูรณ์ของชิ</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>การนําเสนอ</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>
-                        <td>เกรดที</td>
-                        <td>A</td>
-                    </tr>
+                    <?php
+                    for ($i = 0; $i < sizeof($name_projects); $i++) {
+                        $c = $i;
+                        if ($c >= sizeof($fnames)-2) {
+                            $c = sizeof($fnames)-(sizeof($fnames)-2);
+                        }
+                        echo "<tr>
+                            <td>" . $name_projects[$i] . "</td>
+                            <td>" . $fnames[$c] . "</td>
+                            <td>" . $fnames[$c+1] . "</td>
+                        </tr>";
+                    }
+                    ?>
                 </table>
                 <button class="btn btn-success">Accept</button>
 
@@ -156,3 +148,5 @@
 <!--############################################## End ###########################################################################-->
 
 </html>
+
+<!-- ==================== Insert Picture ==================== -->
