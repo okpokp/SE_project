@@ -307,6 +307,19 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('test');
 	}
+	public function myGroub()
+	{
+		$this->load->view('student/myGroub');
+	}
+	public function showcommited()
+	{
+		$this->load->view('teacher/showcommited');
+	}
+	public function showconsult()
+	{
+		$this->load->view('teacher/showconsult');
+	}
+
 
 
 	/*
