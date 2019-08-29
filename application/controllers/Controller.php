@@ -131,7 +131,14 @@ class Controller extends CI_Controller
 		$this->load->view('student/upload_photo');
 	}
 	// end tab_student
-
+	public function news()
+	{
+		$this->load->view('student/news');
+	}
+	public function test()
+	{
+		$this->load->view('test');
+	}
 
 	/*
 	public function recieve()

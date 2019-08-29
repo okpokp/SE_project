@@ -82,7 +82,9 @@
 .row>img {
 	height: 30px;
 }
- 
+
+
+
 a:visited {
 	color: rgb(0, 0, 0);
 }
@@ -124,6 +126,7 @@ input {
 	height: 30px;
 }
 
+
 /*
   .grid_container_column {
       display: grid;
@@ -134,11 +137,11 @@ input {
           grid-gap: 1%;
           padding: 1%;
   }
-  
+
   .grid_container_column_content{
       line-height: 50px;
   }
-  
+
   .grid_container_row {
       display: grid;
       /*grid-template-columns: 270px 270px 270px 270px;
@@ -176,20 +179,7 @@ body {
   }
   */
 
-.footer {
-	font-family: Arial;
-	text-align: center;
-	background: #333;
-	color: #f2f2f2;
-	font-size: 11px;
-	letter-spacing: 3px;
-	/*position: absolute;*/
-	width: 100%;
-	float: left;
-	/*top: var(--main_height);*/
-	padding-top: 10px;
-	padding-bottom: 20px;
-}
+
 
 ::-webkit-scrollbar {
 	width: 10px;
