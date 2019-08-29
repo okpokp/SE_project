@@ -27,7 +27,7 @@
     <!-- ///////////////////////////////////// -->
       <p>
         <a class="well btn container-fluid colora" href="#">
-          ออกจากระบบ
+          ออกจากระบบ vbvb
           <br>
           <img src="<?= base_url('./image/img_logout.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
         </a>
