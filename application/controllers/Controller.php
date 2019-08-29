@@ -265,7 +265,7 @@ class Controller extends CI_Controller
 	}
 	//////////end teacher////////////////////////////////////////////////////
 
-	public function tabstd()
+	public function ui_tabstd()
 	{
 		$this->load->view('bin/ui_tabstd');
 	}
@@ -303,8 +303,37 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('test');
 	}
+	public function infotch_std()
+	{
+		$this->load->view('student/infotch_std');
+	}
 
-
+	//////////////Adimin_section////////////////
+	public function ui_tabadmin()
+	{
+		$this->load->view('bin/ui_tabadmin');
+	}
+	//tab_adimin
+	public function home_admin()
+	{
+		$this->load->view('admin/home_admin');
+	}
+	public function admin_commit_result()
+	{
+		$this->load->model('model');
+		$data_grp['show_grp'] = $this->model->m_show_group();
+		$data_tch['show_tch'] = $this->model->m_show_teacher();
+		$data_com['show_com'] = array($data_grp['show_grp'], $data_tch['show_tch']);
+		$this->load->view('admin/commit_result', $data_com);
+	}
+	public function admin_commit_show()
+	{
+		$this->load->model('model');
+		$data_grp['show_grp'] = $this->model->m_show_group();
+		$data_tch['show_tch'] = $this->model->m_show_teacher();
+		$data_com['show_com'] = array($data_grp['show_grp'], $data_tch['show_tch']);
+		$this->load->view('student/commit_show', $data_com);
+	}
 	/*
 	public function recieve()
 	{

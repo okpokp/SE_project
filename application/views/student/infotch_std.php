@@ -53,14 +53,69 @@
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size bgimg">
-				<div class="container">
-					<h1 style="font-size: 32px;"><u>ประกาศ</u></h1>
-						<div class="well">
-							<h1 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h1>
-						</div>
-					<!-- <div style=" padding: 10px">
-						<h2 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h2>
-					</div> -->
+				<div class="container well w3-white">
+					<h2 style="font-size: 32px;"><u>ข้อมูลอาจารย์</u></h2>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>ชื่อ - นามสกุล</th>
+                <th>ความถนัด</th>
+                <th>จำนวนที่รับได้</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ผศ.ดร.ประวิทย์ ชุมชู</td>
+                <td>Network</td>
+                <td>7/7</td>
+              </tr>
+              <tr>
+                <td>ผศ.ดร.อนันต์ บรรหารสกุล</td>
+                <td>Database</td>
+                <td>5/5</td>
+              </tr>
+              <tr>
+                <td>ผศ.ดร.กุลวดี สมบูรณ์วิวัฒน์</td>
+                <td>Everything</td>
+                <td>7/7</td>
+              </tr>
+              <tr>
+                <td>ผศ.เพ็ญพรรณ ใช้ฮวดเจริญ์</td>
+                <td>Abstack Datatype</td>
+                <td>5/5</td>
+              </tr>
+              <tr>
+                <td>ดร.นันทา จันทร์พิทักษ์</td>
+                <td>Security</td>
+                <td>7/7</td>
+              </tr>
+              <tr>
+                <td>อ.กาญจนา เอี่ยมสอาด์</td>
+                <td>Admin</td>
+                <td>7/7</td>
+              </tr>
+              <tr>
+                <td>อ.จิรวัฒน์ จิตประสูตรวิทย์</td>
+                <td>Everything</td>
+                <td>6/6</td>
+              </tr>
+              <tr>
+                <td>ดร.อดิศักดิ์ สุภีสุน์</td>
+                <td>Game</td>
+                <td>6/6</td>
+              </tr>
+              <tr>
+                <td>ดร.ณัฐพล พันนุรัตน์์</td>
+                <td>Everything</td>
+                <td>7/7</td>
+              </tr>
+              <tr>
+                <td>ดร.กรวิทย์ ออกผล์์</td>
+                <td>Everything</td>
+                <td>8/8</td>
+              </tr>
+            </tbody>
+          </table>
 				</div>
 			</div>
 		</div>

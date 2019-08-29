@@ -25,7 +25,7 @@
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabadmin') ?>');
 		})
 	</script>
     <style media="screen">

@@ -216,17 +216,23 @@ h1 {
 	color: red;
 }
 
+
 .footer {
 	font-family: Arial;
 	text-align: center;
-	background: #333;
-	color: #f2f2f2;
-	font-size: 11px;
-	letter-spacing: 3px;
+	background: #000000;
+	color: #ffffff;
+	font-size: 12px;
+	letter-spacing: 6px;
 	/*position: absolute;*/
 	width: 100%;
 	float: left;
 	/*top: var(--main_height);*/
 	padding-top: 10px;
 	padding-bottom: 20px;
+}
+.news {
+	font-family: Arial;
+	color: black;
+	font-size: 30px;
 }
