@@ -23,44 +23,39 @@
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
-
+<!-- /////////////////////////////////////////////////////////// -->
 <p>
-
-    <a class="well btn container-fluid colora" href="<?= base_url('Controller/consult') ?>">
-        สร้างกลุ่ม
-=======
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/create_group') ?>">
-        รายชื่อโครงงานที่เป็นที่ปรึกษา
-
+        สร้างกลุ่ม
+        <br>
+        <img src="<?= base_url('./image/create_group.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
+    </a>
+</p>
+<!-- /////////////////////////////////////////////////////////// -->
+<p>
+    <a class="well btn container-fluid colora" href="<?= base_url('Controller/create_group') ?>">
+        โปรเจกต์ในที่ปรึกษา
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
-
+<!-- /////////////////////////////////////////////////////////// -->
 <p>
-    <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit') ?>">
+    <a class="well btn container-fluid colora" href="<?= base_url('Controller/selcommit_tch') ?>">
         เลือกกรรมการ
         <br>
-        <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
+        <img src="<?= base_url('./image/selcommit-tch.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
-
+<!-- /////////////////////////////////////////////////////////// -->
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/log_score') ?>">
-        ให้คะแนน
+        คะแนนการเข้าพบ
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
-
-<p>
-    <a class="well btn container-fluid colora" href="<?= base_url('Controller/test_room') ?>">
-        ผลจัดห้องสอบ
-        <br>
-        <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
-    </a>
-</p>
-
+<!-- /////////////////////////////////////////////////////////// -->
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/test_score') ?>">
         คะแนนlogbook
@@ -68,17 +63,7 @@
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
-
-<p>
-
-
-    <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit_result') ?>">
-        เลือกกรรมการ
-        <br>
-        <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
-    </a>
-</p>
-
+<!-- /////////////////////////////////////////////////////////// -->
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit_show') ?>">
         ผลการเลือกกรรมการ
@@ -86,7 +71,23 @@
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
-
+<!-- /////////////////////////////////////////////////////////// -->
+<p>
+<a class="well btn container-fluid colora" href="<?= base_url('Controller/commit_result') ?>">
+        กรรมการ
+        <br>
+        <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
+    </a>
+</p>
+<!-- /////////////////////////////////////////////////////////// -->
+<p>
+    <a class="well btn container-fluid colora" href="<?= base_url('Controller/test_room') ?>">
+        ผลจัดห้องสอบ
+        <br>
+        <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
+    </a>
+</p>
+<!-- /////////////////////////////////////////////////////////// -->
 <!-- <p>
 
         <a class="well btn container-fluid colora" href="<?= base_url('Controller/db_user') ?>">

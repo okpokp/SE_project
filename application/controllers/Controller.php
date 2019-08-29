@@ -132,6 +132,10 @@ class Controller extends CI_Controller
 		$data_com['show_com'] = array($data_grp['show_grp'], $data_tch['show_tch']);
 		$this->load->view('student/commit_show', $data_com);
 	}
+	public function selcommit_tch()
+	{
+		$this->load->view('teacher/selcommit_tch');
+	}
 	//////////////end body teacher////////////////////////////////////
 	public function db_user()
 	{
@@ -265,7 +269,7 @@ class Controller extends CI_Controller
 	}
 	//////////end teacher////////////////////////////////////////////////////
 
-	public function tabstd()
+	public function ui_tabstd()
 	{
 		$this->load->view('bin/ui_tabstd');
 	}
