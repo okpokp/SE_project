@@ -25,7 +25,7 @@
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})
 	</script>
     <style media="screen">
@@ -36,6 +36,7 @@
             background-size: cover;
             /* z-index: -1; */
         }
+
     </style>
 	<title>Index</title>
 </head>
@@ -53,55 +54,85 @@
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size bgimg">
+				<div class="colora" style=" padding: 10px">
+						<h2>โปรเจกต์ในที่ปรึกษา</h2>
+				</div>
         <form class="needs-validation" novalidate>
 
               <div class="form-row">
                 <div class="col-sm-6">
+
+                	<!--g1-->
                  	<div>
                  		<table class="table table-bordered positionin">
                  			<tbody>
-                 					<tr class="success">
-							        <td class="h_table" style="background-color: #7C0000 ">ชื่อโปรเจค</td>
-							         <td >Defaultson</td>
-							    </tr>
-							    <tr class="success">
-							        <td class="h_table" style="background-color: #7C0000 ">ชื่อภาษาอังกฤษ</td>
-							         <td >Defaultson</td>
-							    </tr>
-                 		</table>
-
-                 		<table class="table table-bordered positionin">
-                 			<tbody>
-                 			
                  				<tr class="success">
-							        <td class="h_table" style="background-color: #7C0000">ที่ปรึกษา</td>
-							        <td >Defaultson</td>
-							        <td >def@somemail.com</td>
-						        </tr>
-						        <tr class="success">
-							        <td class="h_table" style="background-color: #7C0000">กรรมการ</td>
-							        <td>Defaultson</td>
-							        <td>def@somemail.com</td>
-						        </tr>
-						        <tr class="success">
-							        <td class="h_table" style="background-color: #7C0000">สมาชิก</td>
-							        <td>Defaultson</td>
-							        <td>def@somemail.com</td>
+							        <td class="h_table" style="background-color: #7C0000"> ชื่อโปรเจค</td>
+							        <td >
+							        	<table>
+								          <tr>
+								            <td>สมาชิก1</td>
+								          </tr>
+								           <tr>
+								            <td>สมาชิก2</td>
+								          </tr>
+								           <tr>
+								            <td>สมาชิก3</td>
+								          </tr>
+								        </table>
+							        </td>
+
 						        </tr>
                  			</tbody>
                  		</table>
                  	</div>
 
+                 	<!--g2-->
+                 	<div>
+                 		<table class="table table-bordered positionin">
+                 			<tbody>
+                 				<tr class="success">
+							        <td class="h_table" style="background-color: #7C0000">ที่ปรึกษา</td>
+							        <td >
+							        	<table>
+								          <tr>
+								            <td>Peter</td>
+								          </tr>
+								          <tr>
+								            <td>Peter</td>
+								          </tr>
 
-	                <div class="form-group  positionin">
-						<label for="comment">Info Project:</label>
-						<textarea class="form-control" rows="5" id="comment" placeholder="กรอกข้อมูล" style="width: 580px"></textarea>
-					</div>
-					<div>
-						<button class="btn btn-success positionin " style="margin-top: 20px ">ยืนยัน</button>
+								        </table>
+							        </td>
 
+						        </tr>
+                 			</tbody>
+                 		</table>
+                 	</div>
 
-					</div>
+                 	<!--g3-->
+                 	<div>
+                 		<table class="table table-bordered positionin">
+                 			<tbody>
+                 				<tr class="success">
+							        <td class="h_table" style="background-color: #7C0000">ที่ปรึกษา</td>
+							        <td >
+							        	<table>
+								          <tr>
+								            <td>Peter</td>
+								          </tr>
+								          <tr>
+								            <td>Peter</td>
+								          </tr>
+
+								        </table>
+							        </td>
+
+						        </tr>
+                 			</tbody>
+                 		</table>
+                 	</div>
+
                 </div>
               </div>
             </form>
