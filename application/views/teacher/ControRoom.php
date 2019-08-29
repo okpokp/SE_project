@@ -37,7 +37,7 @@
             background-size: cover;
             /* z-index: -1; */
         }
-        
+
         .button{
             background-color: #7C0000;
             color: black;
@@ -92,16 +92,10 @@
                         <input id="msg" type="text" class="form-control w3-light-gray" placeholder="30 นาที">
                         </div>
                 </div>
-                </div>
-
-                <br>
-                <br>
-                <br>
-
-
+                </div><br> <br>  <br>
                 <div class="input-group">
                         <label class="input-group-addon w3-white">อ.กาญจณา</label>
-                        
+
                         <input  type="text" class="w3-light-gray" placeholder="10.00-16.00" size="40">
                         </div>
                  <div class="input-group">
@@ -115,7 +109,15 @@
 
                 <br><br><br>
                 <button class="button">ยืนยัน</button>
-   
+                <div class="input-group">
+                        <span class="input-group-addon w3-white">อ.โก้</span>
+                        <input  type="text" class=" w3-light-gray" placeholder="10.00-16.00" size="40">
+                        </div>
+
+                <br><br><br>
+                <button class="button">ยืนยัน</button>
+
+
 
 
 
