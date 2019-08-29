@@ -36,6 +36,15 @@
             background-size: cover;
             /* z-index: -1; */
         }
+				.sty_pro{
+					border-color: black;
+					border-style: solid;
+					margin-left:15px;
+				}
+				.sty_member{
+						border-color: black; border-style: solid;margin-right:15px;padding-bottom: 30px;
+				}
+
     </style>
     <title>Index</title>
 </head>
@@ -44,129 +53,100 @@
     <div id='ui_main'></div>
 </header>
 <!--############################################## Body ###########################################################################-->
-
 <body>
-    <div class="container-fluid text-center">
-        <div class="row">
+  <div class="container-fluid text-center">
+    <div class="row">
             <!-- Bar -->
 			<div class="col-sm-2 well colora" style=" margin-top: 10px;">
-                <div id='ui_tab'></div>
-            </div>
+						<div class="row">
+							<div class="col-sm-12">
+									<div id='ui_tab'></div>
+							</div>
+
+						</div>
+
+      </div>
             <!-- End Bar -->
-            <div class="col-sm-10 well text-left size">
-                <div style="background-color: orange; padding: 10px">
-                    <h2>สร้างกลุ่ม</h2>
+      <div class="col-sm-10 well text-left size bgimg">
+                <div class="colora" style=" padding: 10px">
+                    <h2>Create Project</h2>
                 </div>
                 <!-- Body -->
 
+                <form action="<?= base_url('Controller/register') ?>" method='post' style="background-color:white;">
+                    <!-- <input type='text' name='teacher_teacher_id' value='' placeholder='teacher_teacher_id'> -->
+										<div class="row">
+												<div class="col sty_pro">
+																<br>
+																<p style="font-size:20px;"><b>ชื่อ project</b></p>
+																<input type='text' name='name_project' class="form-control"  value='' placeholder='name_project'>
+												</div>
 
+												<div class="col sty_member">
+													<!-- <input type='text' name='info_project' value='' placeholder='info_project'> -->
+																<br>
+																<p style="font-size:20px;"><b>ชื่อสมาชิก</b></p>
+																<input type='search' name='student_student_id_1' class="form-control" class="form-control" value='' placeholder='student_student_id_1' id="myInput_1" onclick="myShow_1()" onkeyup="myFunction_1()">
+																<table id="myTable_1" class="dropdown-content">
+																		<!-- Start Get DB_value -->
+																		<?php	foreach ($show->result() as $row) : ?>
+																		<!-- Start Body -->
+																		<tr>
+																				<!-- <td><?php echo "<button>" . $row->fname . " " . $row->lname . "</button>" ?></td> -->
+																				<td><?php echo $row->student_id . " " . $row->fname . " " . $row->lname ?></td>
+																		</tr>
+																		<!-- End Body -->
+																	<?php endforeach; ?>
+																		<!-- End Get DB_value -->
+																</table>
+																<input type='text' name='student_student_id_2'class="form-control"  value='' placeholder='student_student_id_2' id="myInput_2" onclick="myShow_2()" onkeyup="myFunction_2()">
+																<table id="myTable_2" class="dropdown-content">
+								                    <!-- Start Get DB_value -->
+								                    <?php foreach ($show->result() as $row) : ?>
+								                    <!-- Start Body -->
 
+								                    <tr>
+								                        <td><?php echo $row->student_id . " " . $row->fname . " " . $row->lname ?></td>
+								                    </tr>
 
+								                    <!-- End Body -->
+								                  <?php endforeach; ?>
+								                    <!-- End Get DB_value -->
+								                </table>
+																<input type='text' name='student_student_id_3' class="form-control" value='' placeholder='student_student_id_3' id="myInput_3" onclick="myShow_3()" onkeyup="myFunction_3()">
+																<table id="myTable_3" class="dropdown-content">
+																		<!-- Start Get DB_value -->
+																		<?php foreach ($show->result() as $row) : ?>
+																		<!-- Start Body -->
+																		<tr>
+																				<td><?php echo $row->student_id . " " . $row->fname . " " . $row->lname ?></td>
+																		</tr>
+																		<!-- End Body -->
+																	<?php endforeach; ?>
+																		<!-- End Get DB_value -->
+																</table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <form action="<?= base_url('Controller/register') ?>" method='post'>
-                    <input type='text' name='teacher_teacher_id' value='' placeholder='teacher_teacher_id'>
-                    <input type='text' name='name_project' value='' placeholder='name_project'>
-                    <input type='text' name='info_project' value='' placeholder='info_project'>
-                    <input type='text' name='student_student_id_1' value='' placeholder='student_student_id_1' id="myInput_1" onclick="myShow_1()" onkeyup="myFunction_1()">
-                    <input type='text' name='student_student_id_2' value='' placeholder='student_student_id_2' id="myInput_2" onclick="myShow_2()" onkeyup="myFunction_2()">
-                    <input type='text' name='student_student_id_3' value='' placeholder='student_student_id_3' id="myInput_3" onclick="myShow_3()" onkeyup="myFunction_3()">
-                    <button name='submit' value='create_group'>Register</button>
+												</div>
+										</div>
+										<div class="container" style="text-align:center;">
+												<br>
+												<button name='submit'class="btn colora" value='create_group'>ยืนยัน</button>
+											 	<button name='submit' class="btn colora " value='edit_group'>แก้ไข</button>
+										</div>
                 </form>
+								<!-- <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..">
+								  <option value="1">Option 1</option>
 
-                <!-- <table id="myTable" style="display: none;"> -->
-                <table id="myTable_1" class="dropdown-content">
-                    <!-- Start Get DB_value -->
-                    <?php
-                    foreach ($show->result() as $row) {
-                        ?>
-                    <!-- Start Body -->
+								</select> -->
 
-                    <tr>
-                        <!-- <td><?php echo "<button>" . $row->fname . " " . $row->lname . "</button>" ?></td> -->
-                        <td><?php echo $row->student_id . " " . $row->fname . " " . $row->lname ?></td>
-                    </tr>
-
-                    <!-- End Body -->
-                    <?php
-                    }
-                    ?>
-                    <!-- End Get DB_value -->
-                </table>
-                <table id="myTable_2" class="dropdown-content">
-                    <!-- Start Get DB_value -->
-                    <?php
-                    foreach ($show->result() as $row) {
-                        ?>
-                    <!-- Start Body -->
-
-                    <tr>
-                        <td><?php echo $row->student_id . " " . $row->fname . " " . $row->lname ?></td>
-                    </tr>
-
-                    <!-- End Body -->
-                    <?php
-                    }
-                    ?>
-                    <!-- End Get DB_value -->
-                </table>
-                <table id="myTable_3" class="dropdown-content">
-                    <!-- Start Get DB_value -->
-                    <?php
-                    foreach ($show->result() as $row) {
-                        ?>
-                    <!-- Start Body -->
-
-                    <tr>
-                        <td><?php echo $row->student_id . " " . $row->fname . " " . $row->lname ?></td>
-                    </tr>
-
-                    <!-- End Body -->
-                    <?php
-                    }
-                    ?>
-                    <!-- End Get DB_value -->
-                </table>
+              <!-- <table id="myTable" style="display: none;"> -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- End Body -->
-            </div>
-        </div>
-    </div>
+      </div>
+  </div>
+</div>
 </body>
 <!--#### Footer ####-->
 
@@ -178,6 +158,7 @@
 </html>
 
 <!-- ==================== Insert Picture ==================== -->
+
 
 <style>
     * {
@@ -280,4 +261,5 @@
             }
         }
     }
+
 </script>
