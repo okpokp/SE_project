@@ -8,27 +8,51 @@ class Controller extends CI_Controller
 		parent::__construct();
 		$this->load->helper('url');
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	//////////////////////////////////////////////////////
 	public function index()
 	{
-		$this->load->view('index');
+		if (isset($_GET['code'])) {
+			$this->googleplus->getAuthenticate();
+			$this->session->set_userdata('login', true);
+			$this->session->set_userdata('userProfile', $this->googleplus->getUserInfo());
+			echo $this->session;
+			redirect('Controller/profile');
+		}
+
+		$data['loginURL'] = $this->googleplus->loginURL();
+		$this->load->view('login/firstpage', $data);
 	}
+	// Login session
+	public function profile()
+	{
+		if ($this->session->userdata('login') == true) {
+			$data['profileData'] = $this->session->userdata('userProfile');
+			$this->load->view('teacher/register', $data);
+		} else {
+			redirect('');
+		}
+	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		$this->googleplus->revokeToken();
+		redirect('');
+	}
+	// End Login session
+
+
+
+
+
+
+
+
+
+	// public function ui_login()
+	// {
+	// 	$this->load->view('bin/ui_login');
+	// }
 	public function ui_main()
 	{
 		$this->load->view('bin/ui_main');
@@ -37,22 +61,20 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('bin/ui_footer');
 	}
-	public function ui_tab()
+	public function ui_tabtch()
 	{
-		$this->load->view('bin/ui_tab');
+		$this->load->view('bin/ui_tabtch');
 	}
-
-
-
-
-
-	public function regist()
+	//////////end ขอบ///////////////////////////////
+	public function regist_tch()
 	{
 		$this->load->view('teacher/register');
 	}
-	public function home()
+	public function home_tch()
 	{
-		$this->load->view('teacher/home');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('teacher/home_tch', $data);
 	}
 	public function info()
 	{
@@ -60,69 +82,170 @@ class Controller extends CI_Controller
 	}
 	public function consult()
 	{
-		$this->load->view('teacher/consult');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('teacher/consult', $data);
 	}
 	public function commit()
 	{
-		$this->load->view('teacher/commit');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('teacher/commit', $data);
 	}
-
-
-
-
-
-
-
-
-
-	public function db_user()
+	public function log_score()
 	{
 		$this->load->model('model');
-		$data['show'] = $this->model->show();
-		$this->load->view('db/db_user', $data);
+		$data['show'] = $this->model->m_show_student();
+		$this->load->view('teacher/log_score', $data);
 	}
-
-
-
-
-
-
-
-
+	public function test_room()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_teacher();
+		$this->load->view('teacher/test_room', $data);
+	}
+	public function test_score()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('teacher/test_score', $data);
+	}
+	public function create_group()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_student();
+		$this->load->view('teacher/create_group', $data);
+	}
+	public function commit_result()
+	{
+		$this->load->model('model');
+		$data_grp['show_grp'] = $this->model->m_show_group();
+		$data_tch['show_tch'] = $this->model->m_show_teacher();
+		$data_com['show_com'] = array($data_grp['show_grp'], $data_tch['show_tch']);
+		$this->load->view('teacher/commit_result', $data_com);
+	}
+	public function commit_show()
+	{
+		$this->load->model('model');
+		$data_grp['show_grp'] = $this->model->m_show_group();
+		$data_tch['show_tch'] = $this->model->m_show_teacher();
+		$data_com['show_com'] = array($data_grp['show_grp'], $data_tch['show_tch']);
+		$this->load->view('student/commit_show', $data_com);
+	}
+	//////////////end body teacher////////////////////////////////////
+	public function db_user()
+	{
+		// $this->load->model('model');
+		// $data['show'] = $this->model->m_show_teacher();
+		// $this->load->view('db/db_user', $data);
+		$this->load->view('teacher/ControRoom');
+	}
+	//////////////////////////////////////////////////////////
 	public function view_proj()
 	{
-		$this->load->view('P01');
+		// $group_id = 1;
+		$group_id = $this->input->post('group_id');
+		$this->load->model('model');
+		$data_grp['show_grp'] = $this->model->m_show_group_select($group_id);
+		$data_std['show_std'] = $this->model->m_show_student();
+		$data_tch['show_std'] = $this->model->m_show_teacher();
+		$data_com['show_com'] = array($data_grp['show_grp'], $data_std['show_std'], $data_tch['show_std']);
+		$this->load->view('P01', $data_com);
 	}
-
-
-
+	//////////////////////////////////////////////////////////
 	public function register()
 	{
 		$btn = $this->input->post('submit');
-		$teacher_id = $this->input->post('teacher_id');
-		$type = $this->input->post('type');
-		$title = $this->input->post('title');
-		$fname = $this->input->post('fname');
-		$lname = $this->input->post('lname');
-		$ability = $this->input->post('ability');
-		$adviser = $this->input->post('adviser');
-		$committee = $this->input->post('committee');
-		$data = array(
-			'teacher_id' => $this->input->post('teacher_id'),
-			'type' => $this->input->post('type'),
-			'title' => $this->input->post('title'),
-			'fname' => $this->input->post('fname'),
-			'lname' => $this->input->post('lname'),
-			'ability' => $this->input->post('ability'),
-			'adviser' => $this->input->post('adviser'),
-			'committee' => $this->input->post('committee'),
-		);
-		$this->load->model('model');
-		$this->model->insert($data);
-		$this->load->view('teacher/home');
-	}
+		// echo $btn . '<br>'; // check
+		if ($btn == 'teacher') {
+			// $type = $this->input->post('type');
+			$title = $this->input->post('title');
+			$fname = $this->input->post('fname');
+			$lname = $this->input->post('lname');
+			$ability = $this->input->post('ability');
+			$adviser = $this->input->post('adviser');
+			$committee = $this->input->post('committee');
+			$data = array(
+				// 'type' => $this->input->post('type'),
+				'title' => $this->input->post('title'),
+				'fname' => $this->input->post('fname'),
+				'lname' => $this->input->post('lname'),
+				'ability' => $this->input->post('ability'),
+				'adviser' => $this->input->post('adviser'),
+				'committee' => $this->input->post('committee'),
+			);
+			$this->load->model('model');
+			$this->model->insert_tch($data);
+			$this->load->view('teacher/home_tch');
+		} else if ($btn == 'student') {
+			// create lockbook
+			$type = $this->input->post('type');
+			$data = array(
+				'lock_adviser' => 'www.googledrive.com',
+				'lock_commit' => 'www.googledrive.com',
+			);
+			$this->load->model('model');
+			$this->model->insert_lockbook($data);
+			// find last no. lockbook
+			$this->load->model('model');
+			$show = $this->model->m_show_lockbook();
+			// create student
+			if ($show->num_rows() > 0) {
+				foreach ($show->result() as $row) { }
+				// echo $row->lock_id . '<br>'; // check
+			}
+			$title = $this->input->post('title');
+			$fname = $this->input->post('fname');
+			$lname = $this->input->post('lname');
+			$data = array(
+				'title' => $this->input->post('title'),
+				'fname' => $this->input->post('fname'),
+				'lname' => $this->input->post('lname'),
+				'lockbook_lock_id' => $row->lock_id,
+			);
+			$this->load->model('model');
+			$this->model->insert_std($data);
+			$this->load->view('student/home_std');
+		} else if ($btn == 'create_group') {
+			$data = array(
+				'req_1' => 1,
+				'req_2' => 2,
+				'req_3' => 3,
+				'req_4' => 4,
+			);
+			$this->load->model('model');
+			$this->model->insert_req($data);
+			// find last no. request
+			$this->load->model('model');
+			$show = $this->model->m_show_req();
+			// create request
+			if ($show->num_rows() > 0) {
+				foreach ($show->result() as $row) { }
+			}
 
-	public function show()
+			$name_project = $this->input->post('name_project');
+			$info_project = $this->input->post('info_project');
+			$data = array(
+				'data' => 'www.googledrive.com',
+				'name_project' => $this->input->post('name_project'),
+				'info_project' => $this->input->post('info_project'),
+				'check1' => false,
+				'check2' => false,
+				'teacher_teacher_id' => $this->input->post('teacher_teacher_id'),
+				'student_student_id_1' => $this->input->post('student_student_id_1'),
+				'student_student_id_2' => $this->input->post('student_student_id_2'),
+				'student_student_id_3' => $this->input->post('student_student_id_3'),
+
+				'request_request_id' => $row->request_id,
+			);
+			$this->load->model('model');
+			$this->model->insert_group($data);
+			$data['show'] = $this->model->m_show_student();
+			$this->load->view('teacher/create_group', $data);
+		}
+	}
+	/////////////////////////////////////////////////////////////////
+	public function c_show()
 	{
 		$this->load->model('model');
 		// $this->model->insert($data);
@@ -132,36 +255,54 @@ class Controller extends CI_Controller
 		// echo $s->row('user') . "<br>";
 		foreach ($s->result() as $row) {
 			if ($row->user ==  'gill') {
-				echo "user is " . $row->user . "<br>";
-				$s['user'] = $s + 1;
-				print_r($s);
+				// echo "user is " . $row->user . "<br>";
+				// $s['user'] = $s + 1;
+				// print_r($s);
 				$this->load->view('db/db_user', $s);
 			}
 			// echo "password is " . $row->pass . "<br>";
 		}
 	}
+	//////////end teacher////////////////////////////////////////////////////
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	public function tabstd()
+	{
+		$this->load->view('bin/ui_tabstd');
+	}
+	//ขอบนิสิต
+	public function home_std()
+	{
+		$this->load->view('student/home_std');
+	}
+	public function mange_project()
+	{
+		$this->load->view('student/mange_project');
+	}
+	public function adviser()
+	{
+		$this->load->view('student/adviser');
+	}
+	public function progress_project()
+	{
+		$this->load->view('student/progress_project');
+	}
+	public function upload_photo()
+	{
+		$this->load->view('student/upload_photo');
+	}
+	public function regist_std()
+	{
+		$this->load->view('student/register');
+	}
+	// end tab_student
+	public function news()
+	{
+		$this->load->view('student/news');
+	}
+	public function test()
+	{
+		$this->load->view('test');
+	}
 
 
 	/*
