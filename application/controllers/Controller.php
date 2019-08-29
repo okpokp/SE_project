@@ -106,13 +106,31 @@ class Controller extends CI_Controller
 	}
 	public function test_score()
 	{
-		$this->load->view('teacher/test_score');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('teacher/test_score', $data);
 	}
 	public function create_group()
 	{
 		$this->load->model('model');
 		$data['show'] = $this->model->m_show_student();
 		$this->load->view('teacher/create_group', $data);
+	}
+	public function commit_result()
+	{
+		$this->load->model('model');
+		$data_grp['show_grp'] = $this->model->m_show_group();
+		$data_tch['show_tch'] = $this->model->m_show_teacher();
+		$data_com['show_com'] = array($data_grp['show_grp'], $data_tch['show_tch']);
+		$this->load->view('teacher/commit_result', $data_com);
+	}
+	public function commit_show()
+	{
+		$this->load->model('model');
+		$data_grp['show_grp'] = $this->model->m_show_group();
+		$data_tch['show_tch'] = $this->model->m_show_teacher();
+		$data_com['show_com'] = array($data_grp['show_grp'], $data_tch['show_tch']);
+		$this->load->view('student/commit_show', $data_com);
 	}
 	//////////////end body teacher////////////////////////////////////
 	public function db_user()
