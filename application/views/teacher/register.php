@@ -25,9 +25,20 @@
         $(function() {
             $('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
             $('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-            $('#ui_tab').load('<?= base_url('Controller/ui_tab') ?>');
+            $('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
         })
     </script>
+    <style media="screen">
+        label {
+            font-size: 20px;
+        }
+
+        .size {
+            height: 970px;
+            border-width: 20px;
+            border-color: orange;
+        }
+    </style>
     <title>Index</title>
 </head>
 <!--############################################## Header ###########################################################################-->
@@ -47,7 +58,7 @@
             <!-- End Bar -->
             <div class="col-sm-10 well text-left size">
                 <div style="background-color: orange; padding: 10px">
-                    <h2>ลงทะเบียน</h2>
+                    <h2>ลงทะเบียน อาจารย์</h2>
                 </div>
                 <!-- Body -->
 
@@ -73,15 +84,14 @@
 
 
                 <form action="<?= base_url('Controller/register') ?>" method='post'>
-                    <input type='text' name='teacher_id' value='' placeholder='teacher_id'>
-                    <input type='text' name='type' value='' placeholder='type'>
+                    <!-- <input type='text' name='type' value='' placeholder='type'> -->
                     <input type='text' name='title' value='' placeholder='title'>
                     <input type='text' name='fname' value='' placeholder='fname'>
                     <input type='text' name='lname' value='' placeholder='lname'>
                     <input type='text' name='ability' value='' placeholder='ability'>
-                    <input type='text' name='adviser' value='' placeholder='adviser'>
+                    <input type='text' name='adviser' value='' placeholder='consult'>
                     <input type='text' name='committee' value='' placeholder='committee'>
-                    <button name='submit' value='submit'>Register</button>
+                    <button name='submit' value='teacher'>Register</button>
                 </form>
 
 
@@ -114,9 +124,7 @@
 
 
 
-
-
-
+               
 
                 <!-- End Body -->
             </div>

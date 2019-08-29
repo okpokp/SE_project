@@ -9,7 +9,7 @@
         </div>
         <div class="col-sm-2 " style="background-color: #7C0000;color : white;">
             <h3>อติวิชญ์ ม่วงศร</h3>
-            <a style="color: white" href="<?= base_url('Controller/info') ?>"><p>ออกจากระบบ</p></a>
+            <a style="color: white" href="<?= base_url('Controller/logout') ?>"><p>ออกจากระบบ</p></a>
         </div>
     </div>
 

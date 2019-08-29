@@ -66,50 +66,66 @@
 			<div class="col-sm-10 well text-left size bgimg">
 				<form class="needs-validation" novalidate>
 
-							<div class="form-row">
+							<div class="form-row" >
 								<div class="col-sm-12">
-										<h3>หัวข้อโปรเจค :</h3>
-										<input type="text" name="ProjectName">
-									</div>
-								</div>
 									<div class="form-row">
 										<div class="col-sm-12">
-													<div>
-															<h3>ผู้จัดทำ :</h3>
-												 </div>
-										<div>
-										<form>
-												<select name="Title" style="height: 30px">
-													<option value="volvo">นาย</option>
-													<option value="saab">นางสาว</option>
-												</select>
-											<input type="text" name="firstname1"style="height: 30px" placeholder="First Name" >
-											<input type="text" name="lasttname2"style="height: 30px" placeholder="Last Name">
-										</form>
+											<h3>หัวข้อโปรเจค :</h3>
+											<input type="text" name="ProjectName"><br>
+
+											<h3>ผู้จัดทำ :</h3>
 										</div>
-
-										<form>
-											<select name="Title" style="height: 30px">
-												<option value="volvo">นาย</option>
-												<option value="saab">นางสาว</option>
-											</select>
-											<input type="text" name="firstname1"style="height: 30px" placeholder="First Name" >
-											<input type="text" name="lasttname2"style="height: 30px" placeholder="Last Name">
-										</form>
-
-										<form>
-											<select name="Title" style="height: 30px">
-												<option value="volvo">นาย</option>
-												<option value="saab">นางสาว</option>
-											</select>
-											<input type="text" name="firstname1"style="height: 30px" placeholder="First Name" >
-											<input type="text" name="lasttname2"style="height: 30px" placeholder="Last Name">
-										</form>
 									</div>
-								</div>
-								<div class="form-row">
-										<div class="col-sm-12">
-										<label for="sel1"><h3>อาจารย์ที่ปรึกษา:</h3></label>
+
+									<div class="form-row" >
+										<div class="col-sm-1.5">
+
+											  <select name="title" style="height: 30px">
+											    <option value="male">นาย</option>
+											    <option value="female">นางสาว</option>
+											  </select>
+										</div>
+										<div class="col-md-1.5" >
+											<input type="text" name="f_name1" class="sizebox" placeholder="FirstName">
+										</div>
+										<div class="col-md-9">
+											<input type="text" name="l_name1" class="sizebox"placeholder="LastName"><br><br>
+										</div>
+									</div>
+
+									<div class="form-row" >
+										<div class="col-sm-1.5">
+
+											  <select name="title" style="height: 30px">
+											    <option value="male">นาย</option>
+											    <option value="female">นางสาว</option>
+											  </select>
+										</div>
+										<div class="col-md-1.5" >
+											<input type="text" name="f_name1" class="sizebox" placeholder="FirstName">
+										</div>
+										<div class="col-md-9">
+												<input type="text" name="l_name1" class="sizebox"placeholder="LastName"><br><br>
+										</div>
+									</div>
+
+									<div class="form-row" >
+										<div class="col-sm-1.5">
+
+											  <select name="title" style="height: 30px">
+											    <option value="male">นาย</option>
+											    <option value="female">นางสาว</option>
+											  </select>
+										</div>
+										<div class="col-md-1.5" >
+											<input type="text" name="f_name1" class="sizebox" placeholder="FirstName">
+										</div>
+										<div class="col-md-9">
+											<input type="text" name="l_name1" class="sizebox"placeholder="LastName"><br><br>
+										</div>
+									</div>
+
+										<h3>อาจารย์ที่ปรึกษา:</h3>
 										<select class="form-control" id="sel1"style="width: 300px">
 											<option>1</option>
 											<option>2</option>
@@ -134,15 +150,12 @@
 											<option>3</option>
 											<option>4</option>
 										</select>
-									</div>
-								</div>
-								<div class="form-row">
-										<div class="col-sm-12">
+
+
 										<h3>คำอธิบายโปรเจค :</h3>
-										<textarea class="form-control" rows="3" id="info"></textarea>
-										<a href="student.html" type="button" class="btn btn-success" >Submit</a>
-									</div>
-								</div>
+										<textarea class="form-control" rows="5" id="info" style="width: 500px"></textarea><br>
+										<a href="#" type="button" class="btn btn-success" >Submit</a>
+
 
 								</div>
 							</div>

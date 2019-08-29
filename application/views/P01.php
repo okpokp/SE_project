@@ -25,9 +25,20 @@
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tab') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})
 	</script>
+	<style media="screen">
+		label {
+			font-size: 20px;
+		}
+
+		.size {
+			height: 970px;
+			border-width: 20px;
+			border-color: orange;
+		}
+	</style>
 	<title>Index</title>
 </head>
 <!--############################################## Header ###########################################################################-->
@@ -47,38 +58,99 @@
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size">
 				<!-- Body -->
-				<div><h3>รายละเอียด</h3></div>
-				<div>
-					Description is the pattern of narrative development that aims to make vivid a place, object,
-					character, or group.[1] Description is one of four rhetorical modes (also known as modes of discourse),
-					along with exposition, argumentation, and narration.[2] In practice it would be difficult to write
-					literature that drew on just one of the four basic modes.[3]
-				</div>
 
-				<div><h3>สมาชิก</div>
-				<div>
-					<ul>
-						<li>นาย จิรพัชร์ เหลืองรุ่งเกียรติ</li>
-						<li>นาย เจตพล บุญลอย</li>
-					</ul>
+
+
+
+
+
+
+
+				<!-- Start Get DB_value -->
+				<?php
+				// echo "<pre>";print_r($show_com[0];
+				$show_grp = $show_com[0];
+				$show_std = $show_com[1];
+				$show_tch = $show_com[2];
+				foreach ($show_grp->result() as $row_grp) {
+					?>
+				<!-- Start Body -->
+
+				<?php
+					echo "
+						<div>
+						<h3>หัวข้อ</h3>
+						</div>
+						<div>";
+					echo $row_grp->name_project;
+					echo "</div>
+						<div>
+						<h3>รายละเอียด</h3>
+						</div>
+						<div>";
+					echo $row_grp->info_project;
+					echo "</div>
+						<div>
+						<h3>สมาชิก</h3>
 				</div>
-				<div><h3>อาจารย์ที่ปรึกษา</div>
+				<div>";
+					foreach ($show_std->result() as $row_std) {
+						if ($row_grp->student_student_id_1 == $row_std->student_id) {
+							echo  $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "<br>";
+						}
+						if ($row_grp->student_student_id_2 == $row_std->student_id) {
+							echo  $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "<br>";
+						}
+						if ($row_grp->student_student_id_3 == $row_std->student_id) {
+							echo  $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "<br>";
+						}
+					}
+					echo "</div>
+						<div>
+							<h3>อาจารย์ที่ปรึกษา</h3>
+						</div>
+						<div>
+						";
+					foreach ($show_tch->result() as $row_tch) {
+						if ($row_grp->teacher_teacher_id == $row_tch->teacher_id) {
+							echo $row_tch->title . " " . $row_tch->fname . " " . $row_tch->lname . "<br>";
+						}
+					}
+					echo "</div>
 				<div>
-					<ul>
-						<li>อาจารย์ กาญจนา เอี่ยมสอาด</li>
-					</ul>
+					<h3>กรรมการ</h3>
 				</div>
-				<div><h3>กรรมการ</div>
 				<div>
-					<ul>
-						<li>อาจารย์ กาญจนา เอี่ยมสอาด</li>
-						<li>อาจารย์ กาญจนา เอี่ยมสอาด</li>
-					</ul>
+					-<br>
+					-
 				</div>
-				<div><h3>รายงาน</div>
+				<div>
+					<h3>รายงาน</h3>
+				</div>
 				<div>
 					<a href='#'>Document.doc</a>
-				</div>
+				</div>";
+					?>
+
+				<!-- End Body -->
+				<?php
+					// }
+				}
+				?>
+				<!-- End Get DB_value -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 				<!-- End Body -->
 			</div>
 		</div>
