@@ -25,8 +25,13 @@
 </p>
 
 <p>
+
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/consult') ?>">
+        สร้างกลุ่ม
+=======
+    <a class="well btn container-fluid colora" href="<?= base_url('Controller/create_group') ?>">
         รายชื่อโครงงานที่เป็นที่ปรึกษา
+
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
@@ -34,7 +39,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit') ?>">
-        รายชื่อโครงงานที่เป็นกรรมการ
+        เลือกกรรมการ
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
@@ -42,7 +47,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/log_score') ?>">
-        คะแนนความสม่ำเสมอ
+        ให้คะแนน
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
@@ -50,7 +55,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/test_room') ?>">
-        ห้องสอบ
+        ผลจัดห้องสอบ
         <br>
         <span class="glyphicon glyphicon-calendar"></span>
         <!-- <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar"> -->
@@ -59,13 +64,15 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/test_score') ?>">
-        ลงคะแนน
+        คะแนนlogbook
         <br>
         <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
 
 <p>
+
+
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit_result') ?>">
         เลือกกรรมการ
         <br>
@@ -82,12 +89,13 @@
 </p>
 
 <!-- <p>
+
         <a class="well btn container-fluid colora" href="<?= base_url('Controller/db_user') ?>">
-            root_db_user
+            จัดห้องสอบ
             <br>
             <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
         </a>
-    </p> -->
+    </p>
 
 <!-- <p>
         <a class="well btn container-fluid colora" href="<?= base_url('Controller/regist_tch') ?>">

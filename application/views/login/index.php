@@ -21,13 +21,7 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta charset='utf-8'>
-	<script>
-		$(function() {
-			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
-			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
-		})
-	</script>
+	
     <style media="screen">
         .bgimg {
             background-image: url('<?= base_url('./image/back_inweb.jpg') ?>');
