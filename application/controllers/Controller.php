@@ -319,6 +319,11 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('teacher/showconsult');
 	}
+	public function infotch_std()
+	{
+		$this->load->view('student/infotch_std');
+	}
+
 
 
 

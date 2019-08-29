@@ -251,3 +251,8 @@ table ,tr,td{
   border-style: outset;*/
   text-align: center;
 }
+.news {
+	font-family: Arial;
+	color: black;
+	font-size: 30px;
+}
