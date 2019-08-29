@@ -1,22 +1,15 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-    <div class="w3-container w3-red row">
+    <div class="w3-container row" style="background-color: #7C0000;color : white;">
         <div class="col-sm-1">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/WPVG_icon_2016.svg/1024px-WPVG_icon_2016.svg.png" alt="" style="width:100px;">
+            <img src="<?= base_url('./image/img_logo.png') ?>" alt="" style="width:150px;" height="100px;">
         </div>
         <div class="col-sm-9">
-            <h3>COMPUTER ENGINEERING OF KASETSART SIRACHA CAMPUS</h3>
-            <h3>คณะวิศวะกรรมศาสตร์ สาขาคอมพิวเตอร์และสารสนเทศ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา</h3>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;COMPUTER ENGINEERING OF KASETSART SIRACHA CAMPUS</h3>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;คณะวิศวะกรรมศาสตร์ สาขาคอมพิวเตอร์และสารสนเทศ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตศรีราชา</h3>
         </div>
-        <div class="col-sm-2 w3-red ">
+        <div class="col-sm-2 " style="background-color: #7C0000;color : white;">
             <h3>อติวิชญ์ ม่วงศร</h3>
-            <a style="color: white" href="<?= base_url('Controller/info') ?>"><p>ออกจากระบบ</p></a>
+            <a style="color: white" href="<?= base_url('Controller/logout') ?>"><p>ออกจากระบบ</p></a>
         </div>
     </div>
 

@@ -11,7 +11,47 @@ class Controller extends CI_Controller
 	//////////////////////////////////////////////////////
 	public function index()
 	{
-		$this->load->view('index');
+		if (isset($_GET['code'])) {
+			$this->googleplus->getAuthenticate();
+			$this->session->set_userdata('login', true);
+			$this->session->set_userdata('userProfile', $this->googleplus->getUserInfo());
+			echo $this->session;
+			redirect('Controller/profile');
+		}
+
+		$data['loginURL'] = $this->googleplus->loginURL();
+		$this->load->view('index', $data);
+	}
+	// Login session
+	public function profile()
+	{
+		if ($this->session->userdata('login') == true) {
+			$data['profileData'] = $this->session->userdata('userProfile');
+			$this->load->view('teacher/register', $data);
+		} else {
+			redirect('');
+		}
+	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		$this->googleplus->revokeToken();
+		redirect('');
+	}
+	// End Login session
+
+
+
+
+
+
+
+
+
+	public function ui_login()
+	{
+		$this->load->view('bin/ui_login');
 	}
 	public function ui_main()
 	{
@@ -32,7 +72,9 @@ class Controller extends CI_Controller
 	}
 	public function home_tch()
 	{
-		$this->load->view('teacher/home_tch');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('teacher/home_tch', $data);
 	}
 	public function info()
 	{
@@ -40,11 +82,37 @@ class Controller extends CI_Controller
 	}
 	public function consult()
 	{
-		$this->load->view('teacher/consult');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('teacher/consult', $data);
 	}
 	public function commit()
 	{
-		$this->load->view('teacher/commit');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('teacher/commit', $data);
+	}
+	public function log_score()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_student();
+		$this->load->view('teacher/log_score', $data);
+	}
+	public function test_room()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_teacher();
+		$this->load->view('teacher/test_room', $data);
+	}
+	public function test_score()
+	{
+		$this->load->view('teacher/test_score');
+	}
+	public function create_group()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_student();
+		$this->load->view('teacher/create_group', $data);
 	}
 	//////////////end body teacher////////////////////////////////////
 	public function db_user()
@@ -56,7 +124,14 @@ class Controller extends CI_Controller
 	//////////////////////////////////////////////////////////
 	public function view_proj()
 	{
-		$this->load->view('P01');
+		// $group_id = 1;
+		$group_id = $this->input->post('group_id');
+		$this->load->model('model');
+		$data_grp['show_grp'] = $this->model->m_show_group_select($group_id);
+		$data_std['show_std'] = $this->model->m_show_student();
+		$data_tch['show_std'] = $this->model->m_show_teacher();
+		$data_com['show_com'] = array($data_grp['show_grp'], $data_std['show_std'], $data_tch['show_std']);
+		$this->load->view('P01', $data_com);
 	}
 	//////////////////////////////////////////////////////////
 	public function register()
@@ -64,7 +139,7 @@ class Controller extends CI_Controller
 		$btn = $this->input->post('submit');
 		// echo $btn . '<br>'; // check
 		if ($btn == 'teacher') {
-			$type = $this->input->post('type');
+			// $type = $this->input->post('type');
 			$title = $this->input->post('title');
 			$fname = $this->input->post('fname');
 			$lname = $this->input->post('lname');
@@ -72,7 +147,7 @@ class Controller extends CI_Controller
 			$adviser = $this->input->post('adviser');
 			$committee = $this->input->post('committee');
 			$data = array(
-				'type' => $this->input->post('type'),
+				// 'type' => $this->input->post('type'),
 				'title' => $this->input->post('title'),
 				'fname' => $this->input->post('fname'),
 				'lname' => $this->input->post('lname'),
@@ -87,7 +162,8 @@ class Controller extends CI_Controller
 			// create lockbook
 			$type = $this->input->post('type');
 			$data = array(
-				'type' => $this->input->post('type'),
+				'lock_adviser' => 'www.googledrive.com',
+				'lock_commit' => 'www.googledrive.com',
 			);
 			$this->load->model('model');
 			$this->model->insert_lockbook($data);
@@ -112,24 +188,41 @@ class Controller extends CI_Controller
 			$this->model->insert_std($data);
 			$this->load->view('student/home_std');
 		} else if ($btn == 'create_group') {
+			$data = array(
+				'req_1' => 1,
+				'req_2' => 2,
+				'req_3' => 3,
+				'req_4' => 4,
+			);
+			$this->load->model('model');
+			$this->model->insert_req($data);
+			// find last no. request
+			$this->load->model('model');
+			$show = $this->model->m_show_req();
+			// create request
+			if ($show->num_rows() > 0) {
+				foreach ($show->result() as $row) { }
+			}
+
 			$name_project = $this->input->post('name_project');
 			$info_project = $this->input->post('info_project');
 			$data = array(
-				'data' => '99 Mb',
+				'data' => 'www.googledrive.com',
 				'name_project' => $this->input->post('name_project'),
 				'info_project' => $this->input->post('info_project'),
-				'data_project' => '99 Mb',
-				'check1' => 0,
-				'check2' => 0,
-				'teacher_teacher_id' => 99,
-				'student_student_id_1' => 99,
-				'student_student_id_2' => 99,
-				'student_student_id_3' => 99,
-				'request_request_id1' => 99,
+				'check1' => false,
+				'check2' => false,
+				'teacher_teacher_id' => $this->input->post('teacher_teacher_id'),
+				'student_student_id_1' => $this->input->post('student_student_id_1'),
+				'student_student_id_2' => $this->input->post('student_student_id_2'),
+				'student_student_id_3' => $this->input->post('student_student_id_3'),
+
+				'request_request_id' => $row->request_id,
 			);
 			$this->load->model('model');
 			$this->model->insert_group($data);
-			$this->load->view('student/home_std');
+			$data['show'] = $this->model->m_show_student();
+			$this->load->view('teacher/create_group', $data);
 		}
 	}
 	/////////////////////////////////////////////////////////////////
@@ -182,11 +275,15 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('student/register');
 	}
-	public function create_group()
-	{
-		$this->load->view('student/create_group');
-	}
 	// end tab_student
+	public function news()
+	{
+		$this->load->view('student/news');
+	}
+	public function test()
+	{
+		$this->load->view('test');
+	}
 
 
 	/*
