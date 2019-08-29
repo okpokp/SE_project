@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Load style.css file, which store in css folder -->
-    <link rel='stylesheet' type='text/css' href='<?php echo base_url(); ?>css/style.css'>
+
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
@@ -26,7 +26,7 @@
         $(function() {
             $('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
             $('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-            $('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
+            $('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
         })
     </script>
     <style media="screen">
@@ -41,6 +41,7 @@
     <title>Index</title>
 </head>
 <!--############################################## Header ###########################################################################-->
+
 <header>
     <div id='ui_main'></div>
 </header>
@@ -50,17 +51,28 @@
     <div class="container-fluid text-center">
         <div class="row">
             <!-- Bar -->
-            <div class="col-sm-2 well w3-white">
+            <div class="col-sm-2 well colora" style=" margin-top: 10px;">
                 <div id='ui_tab'></div>
             </div>
             <!-- End Bar -->
-            <div class="col-sm-10 well text-left size">
+            <div class="col-sm-10 well text-left size bgimg">
                 <div style="background-color: orange; padding: 10px">
-                    <h2>ลงทะเบียน นักเรียน</h2>
+                    <h2>ให้คะแนน</h2>
                 </div>
                 <!-- Body -->
 
 
+                <
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>หัวข้อ</th>
+                        <th>คะแนน</th>
+                    </tr>
+                    <tr>
+                        <td>A</td>
+                        <td>1</td>
+                    </tr>
+                </table>
 
 
 
@@ -76,13 +88,6 @@
 
 
 
-
-                <form action="<?= base_url('Controller/register') ?>" method='post'>
-                    <input type='text' name='title' value='' placeholder='title'>
-                    <input type='text' name='fname' value='' placeholder='fname'>
-                    <input type='text' name='lname' value='' placeholder='lname'>
-                    <button name='submit' value='student'>Register</button>
-                </form>
 
 
 
@@ -112,13 +117,54 @@
         </div>
     </div>
 </body>
-<!--#### Footer ####-->
+<!--############################################## Footer ###########################################################################-->
 
 <footer>
     <div id='ui_footer'></div>
 </footer>
-<!--### End #-->
+<!--############################################## End ###########################################################################-->
 
 </html>
 
 <!-- ==================== Insert Picture ==================== -->
+
+<!-- <?php
+        $a = array("นาย จิรพัชร์ เหลืองรุ่งเกียรติ", "นายอติวิชญ์ ม่วงศร", "นายเจตพล บุญลอย", "นางสาวกนิษฐา พุ่มผล", "นางสาวสวรรยา แสงบัวเผื่อน");
+        $count_proj = rand(2, 10);
+        // $r = array_rand($a, $count_proj);
+        $r = rand(0, 4);
+        $r_n = $r + 1;
+        for ($i = 0; $i < $count_proj; $i++) {
+            echo "
+				<button><a href='";
+            echo base_url('Controller/view_proj');
+            echo "'><div>
+					<img style='height: 10px'
+					src=";
+            echo base_url('src/b.png');
+            $r = rand(0, 4);
+            $r_n = $r + 1;
+            echo "></div>
+					<div>$a[$r]</div>
+					<div>P$r_n</div>
+				</a></button>";
+        }
+        ?> -->
+
+<!-- <?php
+        $a = array("นาย จิรพัชร์ เหลืองรุ่งเกียรติ", "นายอติวิชญ์ ม่วงศร", "นายเจตพล บุญลอย", "นางสาวกนิษฐา พุ่มผล", "นางสาวสวรรยา แสงบัวเผื่อน");
+        $count_proj = rand(2, 10);
+        // $r = array_rand($a, $count_proj);
+        $r = rand(0, 4);
+        $r_n = $r + 1;
+        for ($i = 0; $i < $count_proj; $i++) {
+            echo "
+				<a style='color: green' href='";
+            echo base_url('Controller/view_proj');
+            echo "'>
+					<div>P$r_n...$a[$r]</div>
+				</a>";
+            $r = rand(0, 4);
+            $r_n = $r + 1;
+        }
+        ?> -->

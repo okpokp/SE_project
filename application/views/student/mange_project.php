@@ -19,7 +19,7 @@
 	<!-- Latest compiled JavaScript -->
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
-	<link rel="stylesheet" href="<?php echo base_url() ?>cssstd/stylestd.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta charset='utf-8'>
 	<script>
@@ -29,25 +29,15 @@
 			$('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
 		})
 	</script>
-  <style media="screen">
-	label{
-		font-size: 20px;
-	}
-	.size{
-		height: 970px;
-		border-width: 20px;
-		border-color: orange;
-	}
-	body,h1 {font-family: "Raleway", sans-serif}
-	body, html {height: 100%}
-	.bgimg {
-		background-image: url('<?=base_url('./image/back_inweb.jpg') ?>');
-		min-height: 100%;
-		background-position: center;
-		background-size: cover;
-		/* z-index: -1; */
-	}
-  </style>
+    <style media="screen">
+        .bgimg {
+            background-image: url('<?= base_url('./image/back_inweb.jpg') ?>');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+            /* z-index: -1; */
+        }
+    </style>
 	<title>Index</title>
 </head>
 <!--############################################## Header ###########################################################################-->

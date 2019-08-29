@@ -92,6 +92,22 @@ class Controller extends CI_Controller
 		$data['show'] = $this->model->m_show_group();
 		$this->load->view('teacher/commit', $data);
 	}
+	public function log_score()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_student();
+		$this->load->view('teacher/log_score', $data);
+	}
+	public function test_room()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_teacher();
+		$this->load->view('teacher/test_room', $data);
+	}
+	public function test_score()
+	{
+		$this->load->view('teacher/test_score');
+	}
 	public function create_group()
 	{
 		$this->load->model('model');
