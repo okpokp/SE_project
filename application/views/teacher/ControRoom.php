@@ -24,19 +24,29 @@
     <meta charset='utf-8'>
     <script>
         $(function() {
-            $('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
-            $('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-            $('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
+            $('#ui_main').load('<?=base_url('Controller/ui_main')?>');
+            $('#ui_footer').load('<?=base_url('Controller/ui_footer')?>');
+            $('#ui_tab').load('<?=base_url('Controller/ui_tabtch')?>');
         })
     </script>
     <style media="screen">
         .bgimg {
-            background-image: url('<?= base_url('./image/back_inweb.jpg') ?>');
+            background-image: url('<?=base_url('./image/back_inweb.jpg')?>');
             min-height: 100%;
             background-position: center;
             background-size: cover;
             /* z-index: -1; */
         }
+        
+        .button{
+            background-color: #7C0000;
+            color: black;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            cursor: pointer;
+        }
+
     </style>
     <title>Index</title>
 </head>
@@ -57,12 +67,57 @@
             <!-- End Bar -->
             <div class="col-sm-10 white text-left size bgimg">
                 <div style="background-color: white; padding: 10px">
-                    
+
                 </div>
                 <!-- Body -->
 
 
-               
+
+                <div class="w3-row ">
+                <div class="w3-third w3-container ">
+                        <div class="input-group">
+                        <span class="input-group-addon w3-white">จำนวนห้อง</span>
+                        <input id="msg" type="text" class="form-control w3-light-gray" placeholder="3">
+                        </div>
+                </div>
+                <div class="w3-third w3-container">
+                        <div class="input-group">
+                        <span class="input-group-addon w3-white">เวลาเริ่ม</span>
+                        <input id="msg" type="text" class="form-control w3-light-gray" placeholder="9.00">
+                        </div>
+                </div>
+                <div class="w3-third w3-container">
+                        <div class="input-group">
+                        <span class="input-group-addon w3-white">เวลาแต่ละกลุ่ม</span>
+                        <input id="msg" type="text" class="form-control w3-light-gray" placeholder="30 นาที">
+                        </div>
+                </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+
+                <div class="input-group">
+                        <label class="input-group-addon w3-white">อ.กาญจณา</label>
+                        
+                        <input  type="text" class="w3-light-gray" placeholder="10.00-16.00" size="40">
+                        </div>
+                 <div class="input-group">
+                        <span class="input-group-addon w3-white">อ.สายฟ้า</span>
+                        <input  type="text" class=" w3-light-gray" placeholder="10.00-16.00" size="40">
+                        </div>
+                <div class="input-group">
+                        <span class="input-group-addon w3-white">อ.โก้</span>
+                        <input  type="text" class=" w3-light-gray" placeholder="10.00-16.00" size="40">
+                        </div>
+
+                <br><br><br>
+                <button class="button">ยืนยัน</button>
+   
+
+
 
 
 
