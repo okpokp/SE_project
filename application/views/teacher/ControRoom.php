@@ -46,10 +46,6 @@
             cursor: pointer;
         }
 
-        .text-rig {
-        text-align: left;
-    }
-
     </style>
     <title>Index</title>
 </head>
@@ -85,38 +81,38 @@
                 <div class="w3-third w3-container ">
                         <div class="input-group">
                         <span class="input-group-addon w3-white">จำนวนห้อง</span>
-                        <input id="msg" type="text" class="form-control w3-light-gray text-rig" placeholder="3" >
+                        <input id="msg" type="text" class="form-control w3-light-gray" placeholder="3">
                         </div>
                 </div>
                 <div class="w3-third w3-container">
                         <div class="input-group">
                         <span class="input-group-addon w3-white">เวลาเริ่ม</span>
-                        <input id="msg" type="text" class="form-control w3-light-gray text-rig" placeholder="9.00">
+                        <input id="msg" type="text" class="form-control w3-light-gray" placeholder="9.00">
                         </div>
                 </div>
                 <div class="w3-third w3-container">
                         <div class="input-group">
                         <span class="input-group-addon w3-white">เวลาแต่ละกลุ่ม</span>
-                        <input id="msg" type="text" class="form-control w3-light-gray .ext-rig" placeholder="30 นาที">
+                        <input id="msg" type="text" class="form-control w3-light-gray" placeholder="30 นาที">
                         </div>
                 </div>
                 </div><br> <br>  <br>
                 <div class="input-group">
-                        <label class="input-group-addon w3-white" >อ.กาญจณา</label>
+                        <label class="input-group-addon w3-white">อ.กาญจณา</label>
 
-                        <input  type="text" class=" w3-light-gray text-rig" placeholder="10.00-16.00" size="40">
+                        <input  type="text" class="w3-light-gray" placeholder="10.00-16.00" size="40">
                         </div>
                  <div class="input-group">
                         <span class="input-group-addon w3-white">อ.สายฟ้า</span>
-                        <input  type="text" class="w3-light-gray  text-rig" placeholder="10.00-16.00" size="40">
+                        <input  type="text" class=" w3-light-gray" placeholder="10.00-16.00" size="40">
                         </div>
                 <div class="input-group">
                         <span class="input-group-addon w3-white">อ.โก้</span>
-                        <input  type="text" class="w3-light-gray text-rig" placeholder="10.00-16.00" size="40">
+                        <input  type="text" class=" w3-light-gray" placeholder="10.00-16.00" size="40">
                         </div>
 
                 <br><br><br>
-                <button class="btn colora" >ยืนยัน</button>
+                <button class="button colora">ยืนยัน</button>
 
 
 

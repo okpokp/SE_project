@@ -23,11 +23,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+<<<<<<< HEAD
 
 $config['base_url'] = 'http://localhost:8080/SE_project';//หรือ 127.0.0.1
 
 
 
+=======
+$config['base_url'] = 'http://localhost:/SE_project';//หรือ 127.0.0.1
+>>>>>>> parent of 90ae698... Merge pull request #21 from winjirapat/master
 
 /*
 |--------------------------------------------------------------------------
