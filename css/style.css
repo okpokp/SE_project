@@ -230,3 +230,29 @@ h1 {
 	padding-top: 10px;
 	padding-bottom: 20px;
 }
+/*mygroub*/
+.h_table{
+	background-color: #7C0000;
+	font-weight:bold;
+	font-size: 20px;
+	color: white;
+	width: 170px;
+
+
+}
+.positionin{
+	margin-top: 50px;
+	margin-left: 50px;
+
+}
+
+table ,tr,td{
+  /*border: 5px ;
+  border-style: outset;*/
+  text-align: center;
+}
+.news {
+	font-family: Arial;
+	color: black;
+	font-size: 30px;
+}

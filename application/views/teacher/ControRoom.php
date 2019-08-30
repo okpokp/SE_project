@@ -39,8 +39,7 @@
         }
 
         .button{
-            background-color: #7C0000;
-            color: black;
+
             border: none;
             padding: 15px 32px;
             text-align: center;
@@ -59,13 +58,18 @@
 
 <body>
     <div class="container-fluid text-center">
+
         <div class="row">
             <!-- Bar -->
             <div class="col-sm-2 well colora" style=" margin-top: 10px;">
                 <div id='ui_tab'></div>
             </div>
             <!-- End Bar -->
-            <div class="col-sm-10 white text-left size bgimg">
+
+            <div class="col-sm-10 well swhite text-left size bgimg">
+              <div class="colora" style=" padding: 10px">
+                  <h2>จัดห้องสอบ(admin)</h2>
+              </div>
                 <div style="background-color: white; padding: 10px">
 
                 </div>
@@ -108,14 +112,7 @@
                         </div>
 
                 <br><br><br>
-                <button class="button">ยืนยัน</button>
-                <div class="input-group">
-                        <span class="input-group-addon w3-white">อ.โก้</span>
-                        <input  type="text" class=" w3-light-gray" placeholder="10.00-16.00" size="40">
-                        </div>
-
-                <br><br><br>
-                <button class="button">ยืนยัน</button>
+                <button class="button colora">ยืนยัน</button>
 
 
 
@@ -172,4 +169,3 @@
 <!--############################################## End ###########################################################################-->
 
 </html>
-
