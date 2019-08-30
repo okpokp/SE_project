@@ -2,6 +2,7 @@
 <html lang='en' dir='ltr'>
 
 <!--############################################## Head ###########################################################################-->
+
 <head>
 	<!-- Okp config -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -36,7 +37,6 @@
             background-size: cover;
             /* z-index: -1; */
         }
-
     </style>
 	<title>Index</title>
 </head>
@@ -54,94 +54,51 @@
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size bgimg">
-				<div class="colora" style=" padding: 10px">
-						<h2>โปรเจกต์ในที่ปรึกษา</h2>
-				</div>
-        <form class="needs-validation" novalidate>
+        <div class="colora"style="padding: 10px">
+            <h2>นำข้อมูลเข้า</h2>
+        </div>
+				<form class="needs-validation" novalidate>
+						<div class="row">
+							<div class="col-sm-4"></div>
+              <!-- ///////////////////////////////////////////////// -->
+							<div class="col-sm-4" style="text-align: center;">
+								<label ><h1 style="color:black;">ปีการศึกษา</h1> <input type="text"></label>
+								<!-- <label><h2>นำข้อมูลเข้านิสิต</h2> </label> -->
+							</div>
+							<div class="col-sm-4"></div>
+						</div>
+						<!--//////////////////////////////////////////////////-->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="panel panel-default">
+									<div class="panel-body">
 
-              <div class="form-row">
-                <div class="col-sm-6">
+										<div class="col-sm-6">
+                      <h2>นำข้อมูลเข้านิสิต</h2>
+											<input type="file" class="colora" name="" value=""  >
+                      <div>
+                        <br><br>
+                        <button type="submit" name="" value=""><b>upload</b></button>
+                      </div>
+										</div>
 
-                	<!--g1-->
-                 	<div>
-                 		<table class="table table-bordered positionin">
-                 			<tbody>
-                 				<tr class="success">
-							        <td class="h_table" style="background-color: #7C0000"> ชื่อโปรเจค</td>
-							        <td >
-							        	<table>
-								          <tr>
-								            <td>สมาชิก1</td>
-								          </tr>
-								           <tr>
-								            <td>สมาชิก2</td>
-								          </tr>
-								           <tr>
-								            <td>สมาชิก3</td>
-								          </tr>
-								        </table>
-							        </td>
+										<div class="col-sm-6">
+                      <h2>นำข้อมูลเข้าอาจารย์</h2>
+                        <input type="file" class="colora" name="" value="">
+                        <div>
+                          <br><br>
+                          <button type="submit" name="" value=""><b>upload</b></button>
+                        </div>
+                    </div>
 
-						        </tr>
-                 			</tbody>
-                 		</table>
-                 	</div>
+									</div>
+								</div>
+						  </div>
+					</div>
+				</form>
 
-                 	<!--g2-->
-                 	<div>
-                 		<table class="table table-bordered positionin">
-                 			<tbody>
-                 				<tr class="success">
-							        <td class="h_table" style="background-color: #7C0000"> ชื่อโปรเจค</td>
-							        <td >
-							        	<table>
-								          <tr>
-								            <td>สมาชิก1</td>
-								          </tr>
-								           <tr>
-								            <td>สมาชิก2</td>
-								          </tr>
-								           <tr>
-								            <td>สมาชิก3</td>
-								          </tr>
-								        </table>
-							        </td>
 
-						        </tr>
-                 			</tbody>
-                 		</table>
-                 	</div>
-
-                 	<!--g3-->
-                 	<div>
-                 		<table class="table table-bordered positionin">
-                 			<tbody>
-                 				<tr class="success">
-							        <td class="h_table" style="background-color: #7C0000"> ชื่อโปรเจค</td>
-							        <td >
-							        	<table>
-								          <tr>
-								            <td>สมาชิก1</td>
-								          </tr>
-								           <tr>
-								            <td>สมาชิก2</td>
-								          </tr>
-								           <tr>
-								            <td>สมาชิก3</td>
-								          </tr>
-								        </table>
-							        </td>
-
-						        </tr>
-                 			</tbody>
-                 		</table>
-                 	</div>
-                 	
-                </div>
-              </div>
-            </form>
-				<!-- End Body -->
-			</div>
+		</div>
 		</div>
 	</div>
 </body>
@@ -151,6 +108,7 @@
 	<div id='ui_footer'></div>
 </footer>
 <!--### End #-->
+
 </html>
 
 <!-- ==================== Insert Picture ==================== -->
