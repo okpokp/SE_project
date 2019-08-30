@@ -60,12 +60,18 @@
 				</div>
 				<div class="container-fluid">
 
-						<div class="well">
+						<div class="container well">
 							<h1 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h1>
 						</div>
-            <button type="button" class="btn btn-info"><h2>เพิ่มประกาศ</h2></button>
-            <button type="button" class="btn btn-default"><h2>แก้ไข</h2></button>
-            <button type="button" class="btn btn-danger"><h2>ลบ</h2></button>
+            <div class="container well">
+							<div class="form-group">
+							  <label for="comment"></label>
+							  <textarea class="form-control" rows="5" id="comment"></textarea>
+							</div>
+							<button type="button" class="btn btn-success"><h3>เพิ่มประกาศ</h3></button> &nbsp;
+							<button type="button" class="btn btn-default"><h3>แก้ไข</h3></button> &nbsp;
+							<button type="button" class="btn btn-danger"><h3>ลบ</h3></button>
+						</div>
 					<!-- <div style=" padding: 10px">
 						<h2 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h2>
 					</div> -->
