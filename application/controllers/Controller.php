@@ -327,7 +327,10 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('teacher/importdata_admin');
 	}
-
+	public function home_admin()
+	{
+		$this->load->view('teacher/home_admin');
+	}
 
 
 
