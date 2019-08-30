@@ -18,7 +18,7 @@
 	<!-- Latest compiled JavaScript -->
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
-  <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta charset='utf-8'>
 	<script>
@@ -49,22 +49,88 @@
 		<div class="row">
 			<!-- Bar -->
 			<div class="col-sm-2 well colora" style=" margin-top: 10px;">
-				<div id='ui_tab'></div> <!--Tab side -->
+				<div id='ui_tab'></div>
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size bgimg">
-				<div class="colora"style="padding: 10px">
-						<h2>ประกาศ</h2>
-				</div>
-				<div class="container-fluid">
-					<br><br>
-							<div class="well">
-								<h1 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h1>
-							</div>
-					<!-- <div style=" padding: 10px">
-						<h2 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h2>
-					</div> -->
-				</div>
+        <form class="needs-validation" novalidate>
+
+              <div class="form-row">
+                <div class="col-sm-6">
+
+                	<!--g1-->
+                 	<div>
+                 		<table class="table table-bordered positionin">
+                 			<tbody>
+                 				<tr class="success">
+							        <td class="h_table" style="background-color: #7C0000">ที่ปรึกษา</td>
+							        <td >
+							        	<table>
+								          <tr>
+								            <td>Peter</td>
+								          </tr>
+								          <tr>
+								            <td>Peter</td>
+								          </tr>
+
+								        </table>
+							        </td>
+							      
+						        </tr>
+                 			</tbody>
+                 		</table>
+                 	</div>
+
+                 	<!--g2-->
+                 	<div>
+                 		<table class="table table-bordered positionin">
+                 			<tbody>
+                 				<tr class="success">
+							        <td class="h_table" style="background-color: #7C0000">กรรมการ</td>
+							        <td >
+							        	<table>
+								          <tr>
+								            <td>Peter</td>
+								          </tr>
+								          <tr>
+								            <td>Peter</td>
+								          </tr>
+
+								        </table>
+							        </td>
+							      
+						        </tr>
+                 			</tbody>
+                 		</table>
+                 	</div>
+                 	
+                 	<!--g3-->
+                 	<div>
+                 		<table class="table table-bordered positionin">
+                 			<tbody>
+                 				<tr class="success">
+							        <td class="h_table" style="background-color: #7C0000">กรรมการ</td>
+							        <td >
+							        	<table>
+								          <tr>
+								            <td>Peter</td>
+								          </tr>
+								          <tr>
+								            <td>Peter</td>
+								          </tr>
+
+								        </table>
+							        </td>
+							      
+						        </tr>
+                 			</tbody>
+                 		</table>
+                 	</div>
+
+                </div>
+              </div>
+            </form>
+				<!-- End Body -->
 			</div>
 		</div>
 	</div>

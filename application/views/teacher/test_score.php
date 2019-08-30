@@ -56,7 +56,7 @@
             </div>
             <!-- End Bar -->
             <div class="col-sm-10 well text-left size bgimg">
-                <div style="background-color: orange; padding: 10px">
+                <div class="colora" style=" padding: 10px">
                     <h2>ให้คะแนน</h2>
                 </div>
                 <!-- Body -->

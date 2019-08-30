@@ -18,7 +18,7 @@
 	<!-- Latest compiled JavaScript -->
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
-    <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta charset='utf-8'>
 	<script>
@@ -51,89 +51,22 @@
 		<div class="row">
 			<!-- Bar -->
 			<div class="col-sm-2 well colora" style=" margin-top: 10px;">
-				<div id='ui_tab'></div>
+				<div id='ui_tab'></div> <!--Tab side -->
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size bgimg">
-				<div style="background-color: orange; padding: 10px">
-					<h2>หน้าหลัก</h2>
+				<div class="colora"style="padding: 10px">
+						<h2>ประกาศ</h2>
 				</div>
-				<!-- Body -->
+				<div class="container-fluid">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<!-- Start Get DB_value -->
-				<?php
-				$count = 0;
-				foreach ($show->result() as $row) {
-					if ($row->group_id != null) {
-						if ($show->num_rows() > 0) {
-							$count += 1;
-						}
-					}
-					?>
-				<!-- Start Body -->
-
-				<form action='<?= base_url('Controller/view_proj') ?>' method='post'>
-					<div>
-						<button type="submit" class="btn" name="group_id" value="<?php
-																		echo $row->group_id;
-																		?>"><?php echo $row->group_id." ".$row->name_project ?></button>
-					</div>
-				</form>
-
-				<!-- End Body -->
-				<?php
-				}
-				?>
-				<!-- End Get DB_value -->
-
-				<!-- <form action='<?= base_url('Controller/view_proj') ?>' method='post'>
-					<div>
-						<input type="submit" name="group_id" value="2">
-					</div>
-				</form> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<!-- End Body -->
+						<div class="well">
+							<h1 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h1>
+						</div>
+					<!-- <div style=" padding: 10px">
+						<h2 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h2>
+					</div> -->
+				</div>
 			</div>
 		</div>
 	</div>
@@ -146,46 +79,3 @@
 <!--############################################## End ###########################################################################-->
 
 </html>
-
-<!-- ==================== Insert Picture ==================== -->
-
-<!-- <?php
-		$a = array("นาย จิรพัชร์ เหลืองรุ่งเกียรติ", "นายอติวิชญ์ ม่วงศร", "นายเจตพล บุญลอย", "นางสาวกนิษฐา พุ่มผล", "นางสาวสวรรยา แสงบัวเผื่อน");
-		$count_proj = rand(2, 10);
-		// $r = array_rand($a, $count_proj);
-		$r = rand(0, 4);
-		$r_n = $r + 1;
-		for ($i = 0; $i < $count_proj; $i++) {
-			echo "
-				<button><a href='";
-			echo base_url('Controller/view_proj');
-			echo "'><div>
-					<img style='height: 10px'
-					src=";
-			echo base_url('src/b.png');
-			$r = rand(0, 4);
-			$r_n = $r + 1;
-			echo "></div>
-					<div>$a[$r]</div>
-					<div>P$r_n</div>
-				</a></button>";
-		}
-		?> -->
-
-<!-- <?php
-		$a = array("นาย จิรพัชร์ เหลืองรุ่งเกียรติ", "นายอติวิชญ์ ม่วงศร", "นายเจตพล บุญลอย", "นางสาวกนิษฐา พุ่มผล", "นางสาวสวรรยา แสงบัวเผื่อน");
-		$count_proj = rand(2, 10);
-		// $r = array_rand($a, $count_proj);
-		$r = rand(0, 4);
-		$r_n = $r + 1;
-		for ($i = 0; $i < $count_proj; $i++) {
-			echo "
-				<a style='color: green' href='";
-			echo base_url('Controller/view_proj');
-			echo "'>
-					<div>P$r_n...$a[$r]</div>
-				</a>";
-			$r = rand(0, 4);
-			$r_n = $r + 1;
-		}
-		?> -->
