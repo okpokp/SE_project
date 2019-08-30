@@ -20,7 +20,7 @@ class Controller extends CI_Controller
 		}
 
 		$data['loginURL'] = $this->googleplus->loginURL();
-		$this->load->view('login/firstpage', $data);
+		$this->load->view('index', $data);
 	}
 	// Login session
 	public function profile()
@@ -49,10 +49,10 @@ class Controller extends CI_Controller
 
 
 
-	// public function ui_login()
-	// {
-	// 	$this->load->view('bin/ui_login');
-	// }
+	public function ui_login()
+	{
+		$this->load->view('bin/ui_login');
+	}
 	public function ui_main()
 	{
 		$this->load->view('bin/ui_main');
@@ -135,10 +135,9 @@ class Controller extends CI_Controller
 	//////////////end body teacher////////////////////////////////////
 	public function db_user()
 	{
-		// $this->load->model('model');
-		// $data['show'] = $this->model->m_show_teacher();
-		// $this->load->view('db/db_user', $data);
-		$this->load->view('teacher/ControRoom');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_teacher();
+		$this->load->view('db/db_user', $data);
 	}
 	//////////////////////////////////////////////////////////
 	public function view_proj()

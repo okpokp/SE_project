@@ -2,6 +2,7 @@
 <html lang='en' dir='ltr'>
 
 <!--############################################## Head ###########################################################################-->
+
 <head>
 	<!-- Okp config -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -21,7 +22,13 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta charset='utf-8'>
-	
+	<script>
+		$(function() {
+			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
+			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
+		})
+	</script>
     <style media="screen">
         .bgimg {
             background-image: url('<?= base_url('./image/back_inweb.jpg') ?>');
@@ -34,56 +41,74 @@
 	<title>Index</title>
 </head>
 <!--############################################## Header ###########################################################################-->
-
 <header>
 	<div id='ui_main'></div>
 </header>
 <!--############################################## Body ###########################################################################-->
-
 <body>
 	<div class="container-fluid text-center">
 		<div class="row">
 			<!-- Bar -->
-			<!-- <div class="col-sm-2 well w3-white">
+			<div class="col-sm-2 well colora" style=" margin-top: 10px;">
 				<div id='ui_tab'></div>
-			</div> -->
-			<!-- End Bar -->
-			<div class="col-sm-12 text-center size">
-				<!-- Body -->
-				<div>
-					<h1>please login</h1>
-					<!-- <a href="<?php echo $loginURL; ?>">login</a> -->
-					<br>
-					<br>
-					
-					<p><a href="<?php echo $loginURL;?>"><img src="https://abeon-hosting.com/images/icon-google-png-1.png" width="150"></a></p>
-					
-					<!-- <form action='<?= base_url('Controller/Re') ?>' method='post'>
-						<div>
-							<input type='text' name='user' value='' placeholder='User or Email'>
-						</div>
-						<div>
-							<input type='text' name='pass' value='' placeholder='Password'>
-						</div>
-						<div>
-							<button type='submit' name='submit' value='submit'>
-								Accept
-							</button>
-						</div>
-					</form> -->
-				</div>
-				<!-- End Body -->
 			</div>
+			<!-- End Bar -->
+			<div class="col-sm-10 well text-left size bgimg">
+        <div class="colora"style="padding: 10px">
+            <h2>นำข้อมูลเข้า</h2>
+        </div>
+				<form class="needs-validation" novalidate>
+						<div class="row">
+							<div class="col-sm-4"></div>
+              <!-- ///////////////////////////////////////////////// -->
+							<div class="col-sm-4" style="text-align: center;">
+								<label ><h1 style="color:black;">ปีการศึกษา</h1> <input type="text"></label>
+								<!-- <label><h2>นำข้อมูลเข้านิสิต</h2> </label> -->
+							</div>
+							<div class="col-sm-4"></div>
+						</div>
+						<!--//////////////////////////////////////////////////-->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="panel panel-default">
+									<div class="panel-body">
+
+										<div class="col-sm-6">
+                      <h2>นำข้อมูลเข้านิสิต</h2>
+											<input type="file" class="colora" name="" value=""  >
+                      <div>
+                        <br><br>
+                        <button type="submit" name="" value=""><b>upload</b></button>
+                      </div>
+										</div>
+
+										<div class="col-sm-6">
+                      <h2>นำข้อมูลเข้าอาจารย์</h2>
+                        <input type="file" class="colora" name="" value="">
+                        <div>
+                          <br><br>
+                          <button type="submit" name="" value=""><b>upload</b></button>
+                        </div>
+                    </div>
+
+									</div>
+								</div>
+						  </div>
+					</div>
+				</form>
+
+
+		</div>
 		</div>
 	</div>
 </body>
-<!--############################################## Footer ###########################################################################-->
+<!--#### Footer ####-->
 
 <footer>
 	<div id='ui_footer'></div>
 </footer>
-<!--############################################## End ###########################################################################-->
+<!--### End #-->
 
 </html>
 
-<!-- <img src='<?php echo base_url('src/b.png'); ?>' style = 'width: 250px'> -->
+<!-- ==================== Insert Picture ==================== -->

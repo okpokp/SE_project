@@ -25,12 +25,17 @@
 </p>
 
 <p>
+<<<<<<< HEAD
 
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/consult') ?>">
         สร้างกลุ่ม
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/create_group') ?>">
         ที่ปรึกษา
 
+=======
+    <a class="well btn container-fluid colora" href="<?= base_url('Controller/create_group') ?>">
+        รายชื่อโครงงานที่เป็นที่ปรึกษา
+>>>>>>> parent of 0b28b31... Merge pull request #17 from winjirapat/master
         <br>
         <!-- <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar"> -->
     </a>
@@ -38,7 +43,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit') ?>">
-        เลือกกรรมการ
+        รายชื่อโครงงานที่เป็นกรรมการ
         <br>
         <!-- <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar"> -->
     </a>
@@ -46,7 +51,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/log_score') ?>">
-        ให้คะแนน
+        คะแนนความสม่ำเสมอ
         <br>
         <!-- <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar"> -->
     </a>
@@ -54,7 +59,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/test_room') ?>">
-        ผลจัดห้องสอบ
+        ห้องสอบ
         <br>
         <!-- <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar"> -->
     </a>
@@ -62,12 +67,22 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/test_score') ?>">
-        คะแนนlogbook
+        ลงคะแนน
         <br>
         <!-- <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar"> -->
     </a>
 </p>
 
+<<<<<<< HEAD
+=======
+<p>
+    <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit_result') ?>">
+        เลือกกรรมการ
+        <br>
+        <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
+    </a>
+</p>
+>>>>>>> parent of 0b28b31... Merge pull request #17 from winjirapat/master
 
 <p>
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/commit_show') ?>">
@@ -78,13 +93,12 @@
 </p>
 
 <!-- <p>
-
         <a class="well btn container-fluid colora" href="<?= base_url('Controller/db_user') ?>">
-            จัดห้องสอบ
+            root_db_user
             <br>
             <img src="<?= base_url('./image/img_home.png') ?>" class="img-circle" height="65" width="65" alt="Avatar">
         </a>
-    </p>
+    </p> -->
 
 <!-- <p>
         <a class="well btn container-fluid colora" href="<?= base_url('Controller/regist_tch') ?>">
