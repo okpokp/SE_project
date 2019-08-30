@@ -26,12 +26,17 @@
 
 <p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/consult') ?>">
         สร้างกลุ่ม
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/create_group') ?>">
         ที่ปรึกษา
 
+=======
+    <a class="well btn container-fluid colora" href="<?= base_url('Controller/create_group') ?>">
+        รายชื่อโครงงานที่เป็นที่ปรึกษา
+>>>>>>> parent of 0b28b31... Merge pull request #17 from winjirapat/master
 =======
     <a class="well btn container-fluid colora" href="<?= base_url('Controller/create_group') ?>">
         รายชื่อโครงงานที่เป็นที่ปรึกษา
