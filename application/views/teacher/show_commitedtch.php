@@ -92,16 +92,18 @@
                  		<table class="table table-bordered positionin">
                  			<tbody>
                  				<tr class="success">
-							        <td class="h_table" style="background-color: #7C0000">ที่ปรึกษา</td>
+							        <td class="h_table" style="background-color: #7C0000"> ชื่อโปรเจค</td>
 							        <td >
 							        	<table>
 								          <tr>
-								            <td>Peter</td>
+								            <td>สมาชิก1</td>
 								          </tr>
-								          <tr>
-								            <td>Peter</td>
+								           <tr>
+								            <td>สมาชิก2</td>
 								          </tr>
-
+								           <tr>
+								            <td>สมาชิก3</td>
+								          </tr>
 								        </table>
 							        </td>
 
@@ -115,16 +117,18 @@
                  		<table class="table table-bordered positionin">
                  			<tbody>
                  				<tr class="success">
-							        <td class="h_table" style="background-color: #7C0000">ที่ปรึกษา</td>
+							        <td class="h_table" style="background-color: #7C0000"> ชื่อโปรเจค</td>
 							        <td >
 							        	<table>
 								          <tr>
-								            <td>Peter</td>
+								            <td>สมาชิก1</td>
 								          </tr>
-								          <tr>
-								            <td>Peter</td>
+								           <tr>
+								            <td>สมาชิก2</td>
 								          </tr>
-
+								           <tr>
+								            <td>สมาชิก3</td>
+								          </tr>
 								        </table>
 							        </td>
 
@@ -132,7 +136,7 @@
                  			</tbody>
                  		</table>
                  	</div>
-
+                 	
                 </div>
               </div>
             </form>
