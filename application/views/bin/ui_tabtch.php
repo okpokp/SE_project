@@ -111,11 +111,7 @@
             <br>
             <img src="<?=base_url('./image/img_home.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
         </a>
-<<<<<<< HEAD
     </p>
-=======
-    </p> -->
->>>>>>> parent of 90ae698... Merge pull request #21 from winjirapat/master
 
 <!-- <p>
         <a class="well btn container-fluid colora" href="<?=base_url('Controller/create_group')?>">
