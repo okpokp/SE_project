@@ -18,7 +18,7 @@
 
 <p>
     <a class="well btn container-fluid colora" href="<?=base_url('Controller/home_tch')?>">
-        หน้าหลัก
+        ประกาศ
         <br>
         <img src="<?=base_url('./image/img_home.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
@@ -33,15 +33,15 @@
 </p>
 <!-- /////////////////////////////////////////////////////////// -->
 <p>
-    <a class="well btn container-fluid colora" href="<?= base_url('Controller/create_group') ?>">
-        โปรเจกต์ในที่ปรึกษา
+    <a class="well btn container-fluid colora" href="<?= base_url('Controller/show_commitedtch') ?>">
+        ที่ปรึกษา
         <br>
         <img src="<?=base_url('./image/img_home.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
 <!-- /////////////////////////////////////////////////////////// -->
 <p>
-    <a class="well btn container-fluid colora" href="<?=base_url('Controller/commit')?>">
+    <a class="well btn container-fluid colora" href="<?=base_url('Controller/selcommit_tch')?>">
         เลือกกรรมการ
         <br>
         <img src="<?=base_url('./image/img_home.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
@@ -49,7 +49,7 @@
 </p>
 <!-- /////////////////////////////////////////////////////////// -->
 <p>
-    <a class="well btn container-fluid colora" href="<?=base_url('Controller/log_score')?>">
+    <a class="well btn container-fluid colora" href="<?=base_url('Controller/test_score')?>">
         ให้คะแนน
         <br>
         <img src="<?=base_url('./image/img_home.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
@@ -58,14 +58,14 @@
 <!-- /////////////////////////////////////////////////////////// -->
 <p>
     <a class="well btn container-fluid colora" href="<?=base_url('Controller/test_room')?>">
-        ผลจัดห้องสอบ
+        ผลจัดห้องสอบ(ส่วนรวม)
         <br>
         <img src="<?=base_url('./image/img_home.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
 <!-- /////////////////////////////////////////////////////////// -->
 <p>
-    <a class="well btn container-fluid colora" href="<?=base_url('Controller/test_score')?>">
+    <a class="well btn container-fluid colora" href="<?=base_url('Controller/log_score')?>">
         คะแนนlogbook
         <br>
         <img src="<?=base_url('./image/img_home.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
@@ -76,7 +76,7 @@
 
 
     <a class="well btn container-fluid colora" href="<?=base_url('Controller/commit_result')?>">
-        เลือกกรรมการ
+        ผลการเลือกกรรมการ(admin)
         <br>
         <img src="<?=base_url('./image/img_home.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
@@ -84,16 +84,16 @@
 <!-- /////////////////////////////////////////////////////////// -->
 <p>
     <a class="well btn container-fluid colora" href="<?=base_url('Controller/commit_show')?>">
-        ผลการเลือกกรรมการ
+        กรรมการ(ส่วนรวม)
         <br>
         <img src="<?=base_url('./image/img_home.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
     </a>
 </p>
-
+<!-- //////////////////////////////////////////////////////////////////// -->
  <p>
 
-        <a class="well btn container-fluid colora" href="<?=base_url('Controller/db_user')?>">
-            จัดห้องสอบ
+        <a class="well btn container-fluid colora" href="<?=base_url('Controller/ControRoom')?>">
+            จัดห้องสอบ(admin)
             <br>
             <img src="<?=base_url('./image/img_home.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
         </a>

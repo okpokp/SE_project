@@ -137,7 +137,7 @@ class Controller extends CI_Controller
 		$this->load->view('teacher/selcommit_tch');
 	}
 	//////////////end body teacher////////////////////////////////////
-	public function db_user()
+	public function ControRoom()
 	{
 		// $this->load->model('model');
 		// $data['show'] = $this->model->m_show_teacher();
@@ -307,18 +307,23 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('test');
 	}
-	public function myGroub()
+	public function myGroup()
 	{
-		$this->load->view('student/myGroub');
+		$this->load->view('student/myGroup');
 	}
-	public function showcommited()
+	public function show_commitedtch()
 	{
-		$this->load->view('teacher/showcommited');
+		$this->load->view('teacher/show_commitedtch');
 	}
 	public function showconsult()
 	{
 		$this->load->view('teacher/showconsult');
 	}
+	public function infotch_std()
+	{
+		$this->load->view('student/infotch_std');
+	}
+
 
 
 

@@ -18,7 +18,7 @@
 	<!-- Latest compiled JavaScript -->
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
-    <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
+  <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta charset='utf-8'>
 	<script>
@@ -49,63 +49,77 @@
 		<div class="row">
 			<!-- Bar -->
 			<div class="col-sm-2 well colora" style=" margin-top: 10px;">
-				<div id='ui_tab'></div>
+				<div id='ui_tab'></div> <!--Tab side -->
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size bgimg">
-        <form class="needs-validation" novalidate>
-
-              <div class="form-row">
-                <div class="col-sm-6">
-                 	<div>
-                 		<table class="table table-bordered positionin">
-                 			<tbody>
-                 					<tr class="success">
-							        <td class="h_table" style="background-color: #7C0000 ">ชื่อโปรเจค</td>
-							         <td >Defaultson</td>
-							    </tr>
-							    <tr class="success">
-							        <td class="h_table" style="background-color: #7C0000 ">ชื่อภาษาอังกฤษ</td>
-							         <td >Defaultson</td>
-							    </tr>
-                 		</table>
-
-                 		<table class="table table-bordered positionin">
-                 			<tbody>
-                 			
-                 				<tr class="success">
-							        <td class="h_table" style="background-color: #7C0000">ที่ปรึกษา</td>
-							        <td >Defaultson</td>
-							        <td >def@somemail.com</td>
-						        </tr>
-						        <tr class="success">
-							        <td class="h_table" style="background-color: #7C0000">กรรมการ</td>
-							        <td>Defaultson</td>
-							        <td>def@somemail.com</td>
-						        </tr>
-						        <tr class="success">
-							        <td class="h_table" style="background-color: #7C0000">สมาชิก</td>
-							        <td>Defaultson</td>
-							        <td>def@somemail.com</td>
-						        </tr>
-                 			</tbody>
-                 		</table>
-                 	</div>
-
-
-	                <div class="form-group  positionin">
-						<label for="comment">Info Project:</label>
-						<textarea class="form-control" rows="5" id="comment" placeholder="กรอกข้อมูล" style="width: 580px"></textarea>
-					</div>
-					<div>
-						<button class="btn btn-success positionin " style="margin-top: 20px ">ยืนยัน</button>
-
-
-					</div>
-                </div>
-              </div>
-            </form>
-				<!-- End Body -->
+				<div class="colora"style="padding: 10px">
+						<h2>ข้อมูลอาจารย์</h2>
+				</div>
+				<div class="container well w3-white">
+					<h2 style="font-size: 32px;"><u>ข้อมูลอาจารย์</u></h2>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>ชื่อ - นามสกุล</th>
+                <th>ความถนัด</th>
+                <th>จำนวนที่รับได้</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ผศ.ดร.ประวิทย์ ชุมชู</td>
+                <td>Network</td>
+                <td>7/7</td>
+              </tr>
+              <tr>
+                <td>ผศ.ดร.อนันต์ บรรหารสกุล</td>
+                <td>Database</td>
+                <td>5/5</td>
+              </tr>
+              <tr>
+                <td>ผศ.ดร.กุลวดี สมบูรณ์วิวัฒน์</td>
+                <td>Everything</td>
+                <td>7/7</td>
+              </tr>
+              <tr>
+                <td>ผศ.เพ็ญพรรณ ใช้ฮวดเจริญ์</td>
+                <td>Abstack Datatype</td>
+                <td>5/5</td>
+              </tr>
+              <tr>
+                <td>ดร.นันทา จันทร์พิทักษ์</td>
+                <td>Security</td>
+                <td>7/7</td>
+              </tr>
+              <tr>
+                <td>อ.กาญจนา เอี่ยมสอาด์</td>
+                <td>Admin</td>
+                <td>7/7</td>
+              </tr>
+              <tr>
+                <td>อ.จิรวัฒน์ จิตประสูตรวิทย์</td>
+                <td>Everything</td>
+                <td>6/6</td>
+              </tr>
+              <tr>
+                <td>ดร.อดิศักดิ์ สุภีสุน์</td>
+                <td>Game</td>
+                <td>6/6</td>
+              </tr>
+              <tr>
+                <td>ดร.ณัฐพล พันนุรัตน์์</td>
+                <td>Everything</td>
+                <td>7/7</td>
+              </tr>
+              <tr>
+                <td>ดร.กรวิทย์ ออกผล์์</td>
+                <td>Everything</td>
+                <td>8/8</td>
+              </tr>
+            </tbody>
+          </table>
+				</div>
 			</div>
 		</div>
 	</div>

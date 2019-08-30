@@ -25,7 +25,7 @@
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})
 	</script>
     <style media="screen">
@@ -36,6 +36,7 @@
             background-size: cover;
             /* z-index: -1; */
         }
+
     </style>
 	<title>Index</title>
 </head>
@@ -53,6 +54,9 @@
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size bgimg">
+				<div class="colora" style=" padding: 10px">
+						<h2>โปรเจกต์ในที่ปรึกษา</h2>
+				</div>
         <form class="needs-validation" novalidate>
 
               <div class="form-row">
@@ -77,7 +81,7 @@
 								          </tr>
 								        </table>
 							        </td>
-							      
+
 						        </tr>
                  			</tbody>
                  		</table>
@@ -100,7 +104,7 @@
 
 								        </table>
 							        </td>
-							      
+
 						        </tr>
                  			</tbody>
                  		</table>
@@ -123,7 +127,7 @@
 
 								        </table>
 							        </td>
-							      
+
 						        </tr>
                  			</tbody>
                  		</table>
