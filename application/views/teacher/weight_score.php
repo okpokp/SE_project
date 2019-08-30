@@ -29,14 +29,14 @@
    <style>
     .center {
             margin: auto;
-            width: 50%;
-            
+            width: 100%;
             padding: 10px;
+
             }
     .text-cen {
         text-align: center;
     }
-   
+
    </style>
 </head>
 
@@ -98,25 +98,25 @@
 
                         <br><br><br>
 
-                    
+
                     <button class="btn colora" >ยืนยัน</button>
-               
+
                 </div>
 
-                
-
-                
-                
 
 
 
 
-               
-                   
 
-                    
-                    
-                    
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>
