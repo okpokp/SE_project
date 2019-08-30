@@ -40,7 +40,10 @@ class Controller extends CI_Controller
 		redirect('');
 	}
 	// End Login session
-
+	public function weight()
+	{
+		$this->load->view("teacher/weight_score");
+	}
 
 
 
