@@ -73,8 +73,6 @@
 </p>
 <!-- /////////////////////////////////////////////////////////// -->
 <p>
-
-
     <a class="well btn container-fluid colora" href="<?=base_url('Controller/commit_result')?>">
         ผลการเลือกกรรมการ(admin)
         <br>
@@ -82,6 +80,14 @@
     </a>
 </p>
 <!-- /////////////////////////////////////////////////////////// -->
+<p>
+    <a class="well btn container-fluid colora" href="<?=base_url('Controller/importdata_admin')?>">
+        นำข้อมูลเข้า
+        <br>
+        <img src="<?=base_url('./image/importdata_admin.png')?>" class="img-circle" height="65" width="65" alt="Avatar">
+    </a>
+</p>
+<!-- //////////////////////////////////////////////////////////////// -->
 <p>
     <a class="well btn container-fluid colora" href="<?=base_url('Controller/commit_show')?>">
         กรรมการ(ส่วนรวม)
