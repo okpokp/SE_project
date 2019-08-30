@@ -40,7 +40,10 @@ class Controller extends CI_Controller
 		redirect('');
 	}
 	// End Login session
-
+	public function weight()
+	{
+		$this->load->view("teacher/weight_score");
+	}
 
 
 
@@ -315,9 +318,9 @@ class Controller extends CI_Controller
 	{
 		$this->load->view('teacher/show_commitedtch');
 	}
-	public function showconsult()
+	public function show_consult()
 	{
-		$this->load->view('teacher/showconsult');
+		$this->load->view('student/commit_show');
 	}
 	public function infotch_std()
 	{
