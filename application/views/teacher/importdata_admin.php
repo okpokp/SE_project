@@ -2,6 +2,7 @@
 <html lang='en' dir='ltr'>
 
 <!--############################################## Head ###########################################################################-->
+
 <head>
 	<!-- Okp config -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -18,14 +19,14 @@
 	<!-- Latest compiled JavaScript -->
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
-  <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta charset='utf-8'>
 	<script>
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})
 	</script>
     <style media="screen">
@@ -49,23 +50,55 @@
 		<div class="row">
 			<!-- Bar -->
 			<div class="col-sm-2 well colora" style=" margin-top: 10px;">
-				<div id='ui_tab'></div> <!--Tab side -->
+				<div id='ui_tab'></div>
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size bgimg">
-				<div class="colora"style="padding: 10px">
-						<h2>ประกาศ</h2>
-				</div>
-				<div class="container-fluid">
-				
-							<div class="well">
-								<h1 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h1>
+        <div class="colora"style="padding: 10px">
+            <h2>นำข้อมูลเข้า</h2>
+        </div>
+				<form class="needs-validation" novalidate>
+						<div class="row">
+							<div class="col-sm-4"></div>
+              <!-- ///////////////////////////////////////////////// -->
+							<div class="col-sm-4" style="text-align: center;">
+								<label ><h1 style="color:black;">ปีการศึกษา</h1> <input type="text"></label>
+								<!-- <label><h2>นำข้อมูลเข้านิสิต</h2> </label> -->
 							</div>
-					<!-- <div style=" padding: 10px">
-						<h2 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h2>
-					</div> -->
-				</div>
-			</div>
+							<div class="col-sm-4"></div>
+						</div>
+						<!--//////////////////////////////////////////////////-->
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="panel panel-default">
+									<div class="panel-body">
+
+										<div class="col-sm-6">
+                      <h2>นำข้อมูลเข้านิสิต</h2>
+											<input type="file" class="colora" name="" value=""  >
+                      <div>
+                        <br><br>
+                        <button type="submit" name="" value=""><b>upload</b></button>
+                      </div>
+										</div>
+
+										<div class="col-sm-6">
+                      <h2>นำข้อมูลเข้าอาจารย์</h2>
+                        <input type="file" class="colora" name="" value="">
+                        <div>
+                          <br><br>
+                          <button type="submit" name="" value=""><b>upload</b></button>
+                        </div>
+                    </div>
+
+									</div>
+								</div>
+						  </div>
+					</div>
+				</form>
+
+
+		</div>
 		</div>
 	</div>
 </body>
@@ -75,6 +108,7 @@
 	<div id='ui_footer'></div>
 </footer>
 <!--### End #-->
+
 </html>
 
 <!-- ==================== Insert Picture ==================== -->

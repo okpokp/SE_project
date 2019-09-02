@@ -25,7 +25,7 @@
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})
 	</script>
     <style media="screen">
@@ -40,10 +40,12 @@
 	<title>Index</title>
 </head>
 <!--############################################## Header ###########################################################################-->
+
 <header>
 	<div id='ui_main'></div>
 </header>
 <!--############################################## Body ###########################################################################-->
+
 <body>
 	<div class="container-fluid text-center">
 		<div class="row">
@@ -57,10 +59,19 @@
 						<h2>ประกาศ</h2>
 				</div>
 				<div class="container-fluid">
-				
-							<div class="well">
-								<h1 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h1>
+
+						<div class="container well">
+							<h1 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h1>
+						</div>
+            <div class="container well">
+							<div class="form-group">
+							  <label for="comment"></label>
+							  <textarea class="form-control" rows="5" id="comment"></textarea>
 							</div>
+							<button type="button" class="btn btn-success"><h3>เพิ่มประกาศ</h3></button> &nbsp;
+							<button type="button" class="btn btn-default"><h3>แก้ไข</h3></button> &nbsp;
+							<button type="button" class="btn btn-danger"><h3>ลบ</h3></button>
+						</div>
 					<!-- <div style=" padding: 10px">
 						<h2 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h2>
 					</div> -->
@@ -69,12 +80,11 @@
 		</div>
 	</div>
 </body>
-<!--#### Footer ####-->
+<!--############################################## Footer ###########################################################################-->
 
 <footer>
 	<div id='ui_footer'></div>
 </footer>
-<!--### End #-->
-</html>
+<!--############################################## End ###########################################################################-->
 
-<!-- ==================== Insert Picture ==================== -->
+</html>
