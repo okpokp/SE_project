@@ -95,11 +95,23 @@
                  		</table>
                  	</div>
 
+									<div>
+										<label class="positionin" for="">Info Project</label>
+										<table class="table table-bordered positionin" style="margin-top:0px">
+                 			<tbody>
+                 					<tr class="success" style="height: 100px">
+							         			<td >Defaultson</td>
+							    				</tr>
+                 		</table>
+									</div>
 
-	                <div class="form-group  positionin">
-						<label for="comment">Info Project:</label>
-						<textarea class="form-control" rows="5" id="comment" placeholder="กรอกข้อมูล" style="width: 580px"></textarea>
-					</div>
+	                <div class="form-group  form-group-lg positionin">
+
+										<input  class="form-control" type="text" style="width : 750px " placeholder="แก้ไข ข้อมูลโปรเจค">
+										<br>
+										<!-- <label for="comment">Info Project:</label>
+										<textarea class="form-control" rows="5" id="comment" placeholder="กรอกข้อมูล" style="width: 580px"></textarea> -->
+									</div>
 					<div>
 						<button class="btn btn-success positionin " style="margin-top: 20px ">ยืนยัน</button>
 

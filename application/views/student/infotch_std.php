@@ -56,14 +56,14 @@
 				<div class="colora"style="padding: 10px">
 						<h2>ข้อมูลอาจารย์</h2>
 				</div>
-				<div class="container well w3-white">
-					<h2 style="font-size: 32px;"><u>ข้อมูลอาจารย์</u></h2>
-          <table class="table table-bordered table-striped">
+				<!-- <div class="container well w3-white"> -->
+					<!-- <h2 style="font-size: 32px;"><u>ข้อมูลอาจารย์</u></h2> -->
+          <table class="table table-bordered table-striped well">
             <thead>
               <tr>
-                <th>ชื่อ - นามสกุล</th>
-                <th>ความถนัด</th>
-                <th>จำนวนที่รับได้</th>
+                <th><center>ชื่อ - นามสกุล</center></th>
+                <th><center>ความถนัด</center></th>
+                <th><center>จำนวนที่รับได้</center></th>
               </tr>
             </thead>
             <tbody>
@@ -119,7 +119,7 @@
               </tr>
             </tbody>
           </table>
-				</div>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>

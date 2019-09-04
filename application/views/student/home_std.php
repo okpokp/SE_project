@@ -56,15 +56,15 @@
 				<div class="colora"style="padding: 10px">
 						<h2>ประกาศ</h2>
 				</div>
-				<div class="container-fluid">
-					<br><br>
+				<!-- <div class="container-fluid"> -->
+
 							<div class="well">
 								<h1 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h1>
 							</div>
 					<!-- <div style=" padding: 10px">
 						<h2 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h2>
 					</div> -->
-				</div>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>
