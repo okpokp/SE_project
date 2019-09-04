@@ -58,20 +58,17 @@
 				<div class="colora"style="padding: 10px">
 						<h2>ประกาศ</h2>
 				</div>
-				<div class="container-fluid">
-
-						<div class="container well">
-							<h1 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h1>
+				<div class="container-fluid well">
+						<h1 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h1>
+            <!-- <div class="container"> -->
+						<div class="form-group">
+							 <label for="comment"></label>
+							 <textarea class="form-control" rows="5" id="comment"></textarea>
 						</div>
-            <div class="container well">
-							<div class="form-group">
-							  <label for="comment"></label>
-							  <textarea class="form-control" rows="5" id="comment"></textarea>
-							</div>
-							<button type="button" class="btn btn-success"><h3>เพิ่มประกาศ</h3></button> &nbsp;
-							<button type="button" class="btn btn-default"><h3>แก้ไข</h3></button> &nbsp;
-							<button type="button" class="btn btn-danger"><h3>ลบ</h3></button>
-						</div>
+						<button type="button" class="btn btn-success"><b style="font-size: 20px">เพิ่มประกาศ</b></button> &nbsp;
+						<button type="button" class="btn btn-default"><b style="font-size: 20px">แก้ไข</b></button> &nbsp;
+						<button type="button" class="btn btn-danger"><b style="font-size: 20px">ลบ</b></button>
+						<!-- </div> -->
 					<!-- <div style=" padding: 10px">
 						<h2 class="news">นิสิตสามารถเริ่มหาอาจารย์ที่ปรึกษาระหว่างวันที่ 20 ม.ค. - 20 ก.พ. </h2>
 					</div> -->

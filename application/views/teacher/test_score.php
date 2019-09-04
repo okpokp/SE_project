@@ -77,26 +77,26 @@
                     ?>
                 </select>
 
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped ">
                     <tr>
                         <th>หัวข้อ</th>
                         <th>คะแนน</th>
                     </tr>
                     <tr>
                         <td>คะแนนเล่มโครงงาน</td>
-                        <td>25</td>
+                        <td><input type="text" name="" value="25"></td>
                     </tr>
                     <tr>
                         <td>คะแนนความรู้ในโครงงาน</td>
-                        <td>25</td>
+                        <td><input type="text" name="" value="25"></td>
                     </tr>
                     <tr>
                         <td>ความสมบูรณ์ของชิ</td>
-                        <td>25</td>
+                        <td><input type="text" name="" value="25"></td>
                     </tr>
                     <tr>
                         <td>การนําเสนอ</td>
-                        <td>25</td>
+                        <td><input type="text" name="" value="25"></td>
                     </tr>
                     <tr>
                         <td>เกรดที</td>
