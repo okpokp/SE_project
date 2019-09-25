@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en' dir='ltr'>
 
 <?php
 $web = "KUCPE";
-$topic = "ประกาศ(teacher)";
+$topic = "สร้างประกาศ(admin)";
 
 ?>
 
@@ -25,46 +25,64 @@ $topic = "ประกาศ(teacher)";
     <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta charset='utf-8'>
-    <!-- Win config -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style>
-        body {
-            background-image: url('<?= base_url('./image/back_login.jpg') ?>');
-        }
-
-        #buttonCPE {
-            margin-left: 200px;
-        }
-
-        #buttonlogin {
-            margin-left: 300px;
-            margin-top: 50px;
+    <script>
+        $(function() {
+            $('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
+            $('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
+            $('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
+        })
+    </script>
+    <style media="screen">
+        .bgimg {
+            background-image: url('<?= base_url('./image/back_inweb.jpg') ?>');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+            /* z-index: -1; */
         }
     </style>
     <title><?php echo $web ?></title>
 </head>
 
 <!--############################################## Header ###########################################################################-->
-<header>
+<header style="height: 12.7vh">
+	<div id='ui_main'></div>
 </header>
 
 <!--############################################## Body ###########################################################################-->
 
 <body>
-    <img src="<?= base_url('./image/CPE_login.png') ?>" width="450" id="buttonCPE">
-    <a class="colora" type="button" href="<?= base_url('Controller/home_tch') ?>">TEACHER</a>
-    <a class="colora" type="button" href="<?= base_url('Controller/home_std') ?>">STUDENT</a>
-    <p>
-        <a href="<?php echo $loginURL; ?>">
-            <img src="<?= base_url('./image/icon-google.png') ?>" width="250" id="buttonlogin">
-        </a>
-    </p>
+	<div class="container-fluid text-center">
+		<div class="row">
+			<!-- Bar -->
+			<div class="col-sm-2 colora" style="min-height: 87.3vh">
+				<div id='ui_tab'></div>
+			</div>
+			<!-- End Bar -->
+            <div class="col-sm-10 text-left bgimg">
+                <div class="colora" style="padding: 10px">
+                    <h2><?php echo $topic ?></h2>
+                </div>
+                <div class="container-fluid well">
+                    <!-- Body -->
+                    <form action="<?= base_url('Controller/register_notice') ?>" method='post'>
+                        <h3>เรื่อง</h3>
+                        <input type='text' name='topic' class="form-control" value='' placeholder='topic'>
+                        <h3>รายละเอียด</h3>
+                        <input type='text' name='info_notice' class="form-control" value='' placeholder='info_notice'> <br>
+                        <button name='submit' class="btn colora" value='' >ยืนยัน</button>
+                    </form>
+                    <!-- Body -->
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <!--############################################## Footer ###########################################################################-->
+
 <footer>
     <div id='ui_footer'></div>
 </footer>
-
 <!--############################################## End ###########################################################################-->
 
 </html>

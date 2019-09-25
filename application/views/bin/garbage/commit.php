@@ -2,6 +2,7 @@
 <html lang='en' dir='ltr'>
 
 <!--############################################## Head ###########################################################################-->
+
 <head>
 	<!-- Okp config -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -18,26 +19,26 @@
 	<!-- Latest compiled JavaScript -->
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
-    <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta charset='utf-8'>
 	<script>
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})
 	</script>
-    <style media="screen">
-        .bgimg {
-            background-image: url('<?= base_url('./image/back_inweb.jpg') ?>');
-            min-height: 100%;
-            background-position: center;
-            background-size: cover;
-            /* z-index: -1; */
-        }
-    </style>
-	<title>Index</title>
+	<style media="screen">
+		.bgimg {
+			background-image: url('<?= base_url('./image/back_inweb.jpg') ?>');
+			min-height: 100%;
+			background-position: center;
+			background-size: cover;
+			/* z-index: -1; */
+		}
+	</style>
+	<title>Commit</title>
 </head>
 <!--############################################## Header ###########################################################################-->
 
@@ -55,7 +56,17 @@
 			</div>
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size">
+				<div style="background-color: orange; padding: 10px">
+					<h2>รายชื่อโครงงานที่เป็นกรรมการ</h2>
+				</div>
 				<!-- Body -->
+
+
+
+
+
+
+
 
 
 
@@ -77,49 +88,29 @@
 
 				<!-- Start Get DB_value -->
 				<?php
-				if ($show->num_rows() > 0) {
-					foreach ($show->result() as $row) {
-						if ($row->teacher_id == 2) {
-							?>
-				<!-- Start Body -->
-
-
-
-				<div>Teacher ID: <?php echo $row->teacher_id; ?></div>
-				<div>Teacher Type: <?php echo $row->type; ?></div>
-				<div>Teacher Title: <?php echo $row->title; ?></div>
-				<div>Teacher First Name: <?php echo $row->fname; ?></div>
-				<div>Teacher Last Name: <?php echo $row->lname; ?></div>
-				<div>Teacher Ability: <?php echo $row->ability; ?></div>
-				<div>Teacher Adviser: <?php echo $row->adviser; ?></div>
-				<div>Teacher Committee: <?php echo $row->committee; ?></div>
-
-
-				<div>
-					My name is <?php echo $row->title; ?><?php echo $row->fname; ?><?php echo $row->lname; ?>.
-					I can <?php echo $row->ability; ?>
-					and <?php echo $row->adviser; ?>.
-					My student in Committee <?php echo $row->committee; ?>.
-					My ID is <?php echo $row->teacher_id; ?>.
-				</div>
-
-
-
-
-				<!-- End Body -->
-				<?php
+				$count = 0;
+				foreach ($show->result() as $row) {
+					if ($row->group_id != null) {
+						if ($show->num_rows() > 0) {
+							$count += 1;
 						}
 					}
+					?>
+					<!-- Start Body -->
+
+					<form action='<?= base_url('Controller/view_proj') ?>' method='post'>
+						<div>
+							<button type="submit" class="btn" name="group_id" value="<?php
+																							echo $row->group_id;
+																							?>"><?php echo $row->group_id . " " . $row->name_project ?></button>
+						</div>
+					</form>
+
+					<!-- End Body -->
+				<?php
 				}
 				?>
 				<!-- End Get DB_value -->
-
-
-
-
-
-
-
 
 
 
@@ -156,29 +147,3 @@
 <!--############################################## End ###########################################################################-->
 
 </html>
-
-
-
-
-
-
-
-
-
-<!-- ==================== Original Show Databases ==================== -->
-<!-- <?php
-		if ($show->num_rows() > 0) {
-			foreach ($show->result() as $row) {
-				?>
-				<?php echo $row->teacher_id; ?>
-				<?php echo $row->type; ?>
-				<?php echo $row->title; ?>
-				<?php echo $row->fname; ?>
-				<?php echo $row->lname; ?>
-				<?php echo $row->ability; ?>
-				<?php echo $row->adviser; ?>
-				<?php echo $row->committee; ?>
-				<?php
-					}
-				}
-				?> -->
