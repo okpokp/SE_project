@@ -5,7 +5,9 @@ class model extends CI_model
   private $db_student = 'student';
   private $db_lockbook = 'lockbook';
   private $db_group = 'group';
-  private $db_req = 'request';
+  private $db_request = 'request';
+  private $db_score = 'score';
+  private $db_notice = 'notice';
 
   public function insert_tch($data)
   {
@@ -23,9 +25,17 @@ class model extends CI_model
   {
     $this->db->insert($this->db_group, $data);
   }
-  public function insert_req($data)
+  public function insert_request($data)
   {
-    $this->db->insert($this->db_req, $data);
+    $this->db->insert($this->db_request, $data);
+  }
+  public function insert_score($data)
+  {
+    $this->db->insert($this->db_score, $data);
+  }
+  public function insert_notice($data)
+  {
+    $this->db->insert($this->db_notice, $data);
   }
 
   public function m_show_teacher()
@@ -72,10 +82,36 @@ class model extends CI_model
     return $query;
   }
 
-  public function m_show_req()
+  public function m_show_request()
   {
     $this->db->select("*");
     $this->db->from("request");
+    $query = $this->db->get();
+    return $query;
+  }
+
+  public function m_show_score()
+  {
+    $this->db->select("*");
+    $this->db->from("score");
+    $query = $this->db->get();
+    return $query;
+  }
+
+  public function m_show_notice()
+  {
+    $this->db->select("*");
+    $this->db->from("notice");
+    $query = $this->db->get();
+    return $query;
+  }
+
+  public function m_show_notice_select($notice_id)
+  {
+    $this->db->select("*");
+    $this->db->from("notice");
+    $this->db->where("notice_id = $notice_id");
+    // $this->db->join('student', 'student_student_id = student_id', 'right');
     $query = $this->db->get();
     return $query;
   }

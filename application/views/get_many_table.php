@@ -56,14 +56,6 @@
 			<!-- End Bar -->
 			<div class="col-sm-10 well text-left size">
 				<!-- Body -->
-
-
-
-
-
-
-
-
 				<!-- Start Get DB_value -->
 				<?php
 				// echo "<pre>";print_r($show_com[0];
@@ -72,8 +64,6 @@
 				$show_tch = $show_com[2];
 				foreach ($show_grp->result() as $row_grp) {
 					?>
-				<!-- Start Body -->
-
 				<?php
 					echo "
 						<div>
@@ -129,26 +119,32 @@
 					<a href='#'>Document.doc</a>
 				</div>";
 					?>
-
-				<!-- End Body -->
 				<?php
 					// }
 				}
 				?>
+				<!-- USE ARRAY TO STORE -->
+				<?php
+                        $count = 0;
+                        $student = array();
+                        foreach ($show->result() as $row) {
+                            array_push($student, $row->fname);
+                            $count++;
+                            // echo $row->fname;
+                        }
+                        for ($i = 0; $i < $count; $i++) {
+                            $s = $i + 1;
+                            echo "<tr>
+                                <td>
+                                    " . $student[$i] . "
+                                </td>
+                                <td>
+                                    <input value='5'>
+                                </td>
+                            </tr>";
+                        }
+                        ?>
 				<!-- End Get DB_value -->
-
-
-
-
-
-
-
-
-
-
-
-
-
 				<!-- End Body -->
 			</div>
 		</div>
