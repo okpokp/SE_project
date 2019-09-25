@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang='en' dir='ltr'>
 
-<!--############################################## Head ###########################################################################-->
+<?php
+$web = "KUCPE";
+$topic = "ผลจัดห้องสอบ(other)";
+
+?>
 
 <head>
     <!-- Okp config -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Load style.css file, which store in css folder -->
-
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
@@ -38,53 +41,52 @@
             /* z-index: -1; */
         }
     </style>
-    <title>Index</title>
+    <title><?php echo $web ?></title>
 </head>
-<!--############################################## Header ###########################################################################-->
 
-<header>
-    <div id='ui_main'></div>
+<!--############################################## Header ###########################################################################-->
+<header style="height: 12.7vh">
+	<div id='ui_main'></div>
 </header>
+
 <!--############################################## Body ###########################################################################-->
 
 <body>
-    <div class="container-fluid text-center">
-        <div class="row">
-            <!-- Bar -->
-            <div class="col-sm-2 well colora" style=" margin-top: 10px;">
-                <div id='ui_tab'></div>
-            </div>
-            <!-- End Bar -->
-            <div class="col-sm-10 well text-left size bgimg">
-                <div class="colora" style=" padding: 10px">
-                    <h2>ผลการจัดห้องสอบ(ส่วนรวม)</h2>
-                </div>
-                <!-- Body -->
-
-
-
-                <table class="table table-bordered table-striped">
-                    <tr>
-                        <th>เวลา</th>
-                        <th>ห้อง 1</th>
-                        <th>ห้อง 2</th>
-                        <th>ห้อง 3</th>
-                    </tr>
-                    <?php
-                    $count = 0;
-                    $teacher = array();
-                    foreach ($show->result() as $row) {
-                        array_push($teacher, $row->fname);
-                        $count++;
-                        // echo $row->fname;
-                    }
-                    for ($i = 0; $i < $count; $i++) {
-                        $s = $i + 9;
-                        $c = $i;
-                        if ($c >= sizeof($teacher)-2) {
-                            $c = sizeof($teacher)-(sizeof($teacher)-2);
+	<div class="container-fluid text-center">
+		<div class="row">
+			<!-- Bar -->
+			<div class="col-sm-2 colora" style="min-height: 87.3vh">
+				<div id='ui_tab'></div>
+			</div>
+			<!-- End Bar -->
+			<div class="col-sm-10 text-left bgimg">
+				<div class="colora" style="padding: 10px">
+					<h2><?php echo $topic ?></h2>
+				</div>
+				<div class="container-fluid well">
+					<!-- Body -->
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>เวลา</th>
+                            <th>ห้อง 1</th>
+                            <th>ห้อง 2</th>
+                            <th>ห้อง 3</th>
+                        </tr>
+                        <?php
+                        $count = 0;
+                        $teacher = array();
+                        foreach ($show->result() as $row) {
+                            array_push($teacher, $row->fname);
+                            $count++;
+                            // echo $row->fname;
                         }
-                        echo "<tr>
+                        for ($i = 0; $i < $count; $i++) {
+                            $s = $i + 9;
+                            $c = $i;
+                            if ($c >= sizeof($teacher) - 2) {
+                                $c = sizeof($teacher) - (sizeof($teacher) - 2);
+                            }
+                            echo "<tr>
                                 <td>
                                     $s.00 AM.
                                 </td>
@@ -92,55 +94,17 @@
                                     " . $teacher[$c] . "
                                 </td>
                                 <td>
-                                    " . $teacher[$c+1] . "
+                                    " . $teacher[$c + 1] . "
                                 </td>
                                 <td>
-                                    " . $teacher[$c+2] . "
+                                    " . $teacher[$c + 2] . "
                                 </td>
                             </tr>";
-                    }
-                    ?>
-                </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- End Body -->
+                        }
+                        ?>
+                    </table>
+                    <!-- Body -->
+                </div>
             </div>
         </div>
     </div>

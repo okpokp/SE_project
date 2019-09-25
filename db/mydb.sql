@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2019 at 08:26 AM
+-- Generation Time: Sep 16, 2019 at 05:47 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -35,27 +35,13 @@ CREATE TABLE `group` (
   `info_project` text NOT NULL,
   `check1` tinyint(1) NOT NULL,
   `check2` tinyint(1) NOT NULL,
-  `teacher_teacher_id` int(11) DEFAULT NULL,
-  `student_student_id_1` int(11) NOT NULL,
-  `student_student_id_2` int(11) NOT NULL,
-  `student_student_id_3` int(11) NOT NULL,
-  `request_request_id` int(11) NOT NULL
+  `teacher_teacher_id` int(11) NOT NULL,
+  `student_student_id_1` int(11) DEFAULT NULL,
+  `student_student_id_2` int(11) DEFAULT NULL,
+  `student_student_id_3` int(11) DEFAULT NULL,
+  `request_request_id` int(11) NOT NULL,
+  `score_score_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `group`
---
-
-INSERT INTO `group` (`group_id`, `data`, `name_project`, `info_project`, `check1`, `check2`, `teacher_teacher_id`, `student_student_id_1`, `student_student_id_2`, `student_student_id_3`, `request_request_id`) VALUES
-(1, 'www.googledrive.com', 'App', 'network', 0, 0, 5, 1, 2, 3, 1),
-(2, 'www.googledrive.com', 'BlackBerry', 'ios phone', 0, 0, 4, 3, 1, 2, 2),
-(3, 'www.googledrive.com', 'Cat', 'pet dog and cat', 0, 0, 7, 2, 2, 1, 3),
-(4, 'www.googledrive.com', 'Doctor', 'first aids', 0, 0, 5, 3, 3, 3, 6),
-(5, 'www.googledrive.com', 'Eat', 'apple', 0, 0, 1, 2, 2, 2, 7),
-(8, 'www.googledrive.com', 'Fish', 'flashlight', 0, 0, 6, 1, 12, 14, 10),
-(9, 'www.googledrive.com', 'Girl', 'geography', 0, 0, 3, 17, 5, 6, 11),
-(10, 'www.googledrive.com', 'Hat', 'hilo', 0, 0, 5, 8, 3, 11, 12),
-(11, 'www.googledrive.com', 'Io', 'Integer', 0, 0, 7, 9, 10, 18, 13);
 
 -- --------------------------------------------------------
 
@@ -83,19 +69,19 @@ INSERT INTO `lockbook` (`lock_id`, `lock_adviser`, `lock_commit`) VALUES
 (7, 'www.googledrive.com', 'www.googledrive.com'),
 (8, 'www.googledrive.com', 'www.googledrive.com'),
 (9, 'www.googledrive.com', 'www.googledrive.com'),
-(10, 'www.googledrive.com', 'www.googledrive.com'),
-(11, 'www.googledrive.com', 'www.googledrive.com'),
-(12, 'www.googledrive.com', 'www.googledrive.com'),
-(13, 'www.googledrive.com', 'www.googledrive.com'),
-(14, 'www.googledrive.com', 'www.googledrive.com'),
-(15, 'www.googledrive.com', 'www.googledrive.com'),
-(16, 'www.googledrive.com', 'www.googledrive.com'),
-(17, 'www.googledrive.com', 'www.googledrive.com'),
-(18, 'www.googledrive.com', 'www.googledrive.com'),
-(19, 'www.googledrive.com', 'www.googledrive.com'),
-(20, 'www.googledrive.com', 'www.googledrive.com'),
-(21, 'www.googledrive.com', 'www.googledrive.com'),
-(22, 'www.googledrive.com', 'www.googledrive.com');
+(10, 'www.googledrive.com', 'www.googledrive.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notice`
+--
+
+CREATE TABLE `notice` (
+  `notice_id` int(11) NOT NULL,
+  `topic` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `info_notice` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -111,24 +97,19 @@ CREATE TABLE `request` (
   `req_4` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `request`
+-- Table structure for table `score`
 --
 
-INSERT INTO `request` (`request_id`, `req_1`, `req_2`, `req_3`, `req_4`) VALUES
-(1, 1, 2, 3, 4),
-(2, 1, 2, 3, 4),
-(3, 1, 2, 3, 4),
-(4, 1, 2, 3, 4),
-(5, 1, 2, 3, 4),
-(6, 1, 2, 3, 4),
-(7, 1, 2, 3, 4),
-(8, 1, 2, 3, 4),
-(9, 1, 2, 3, 4),
-(10, 1, 2, 3, 4),
-(11, 1, 2, 3, 4),
-(12, 1, 2, 3, 4),
-(13, 1, 2, 3, 4);
+CREATE TABLE `score` (
+  `score_id` int(11) NOT NULL,
+  `document` int(11) DEFAULT NULL,
+  `knowledge` int(11) DEFAULT NULL,
+  `completly` int(11) DEFAULT NULL,
+  `present` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -149,28 +130,16 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`student_id`, `title`, `fname`, `lname`, `lockbook_lock_id`) VALUES
-(1, 'นาย', 'อติวิชญ์', 'ม่วงศร', 1),
-(2, 'นาย', 'เจตพล', 'บุญลอย', 2),
-(3, 'นางสาว', 'กนิษฐา', 'ม่วงศร', 3),
-(4, 'นางสาว', 'กนิษฐา', 'พุ่มผล', 4),
-(5, 'นาย', 'กรวัติ', 'ถนอมเลี้ยง', 5),
-(6, 'นาย', 'กฤษฎา', 'ชฎารัตน์', 6),
-(7, 'นาย', 'กัญจน์', 'สุวรรณประทีป', 7),
-(8, 'นาย', 'เกรียงไกร', 'กาญจนอักษร', 8),
-(9, 'นาย', 'คมชาญ', 'อุส่าห์ฤทธิ์', 9),
-(10, 'นางสาว', 'เขมจิรา', 'เทพรอด', 10),
-(11, 'นาย', 'ขวัญชัย', 'ทองชาติ', 11),
-(12, 'นาย', 'จรูญวิทย์', 'พูลหน่าย', 12),
-(13, 'นาย', 'จักรพงศ์', 'รัตนสุข', 13),
-(14, 'นาย', 'จักริน ', 'นาควิเชียรชาญ', 14),
-(15, 'นาย', 'จิรพงศ์', 'เมืองแก่น', 15),
-(16, 'นาย', 'จิรพัชร์', 'เหลืองรุ่งเกียรติ', 16),
-(17, 'นาย', 'จิโรจน์', 'สระอุบล', 17),
-(18, 'นาย', 'เจตพล', 'บุญลอย', 18),
-(19, 'นาย', 'เจษฎา', 'ประมวลทรัพย์', 19),
-(20, 'นาย', 'เจษฎา', 'มงคล', 20),
-(21, 'นาย', 'ชยกฤต', 'อิ่มปราง', 21),
-(22, 'นาย', 'ชัยพรรณ์', 'สายชาลี', 22);
+(1, 'Ms.', 'Mack', 'Randolph', 1),
+(2, 'Ms.', 'Raees', 'Gibbons', 2),
+(3, 'Mr.', 'Dora', 'Zhang', 3),
+(4, 'Ms.', 'Humza', 'Parker', 4),
+(5, 'Ms.', 'Cloe', 'Delacruz', 5),
+(6, 'Mr.', 'Milo', 'Nicholson', 6),
+(7, 'Mr.', 'Elysha', 'Mcdaniel', 7),
+(8, 'Mr.', 'Asiyah', 'Grimes', 8),
+(9, 'Mr.', 'Daanish', 'Redfern', 9),
+(10, 'Ms.', 'Enya', 'Wolfe', 10);
 
 -- --------------------------------------------------------
 
@@ -195,14 +164,12 @@ CREATE TABLE `teacher` (
 --
 
 INSERT INTO `teacher` (`teacher_id`, `type`, `title`, `fname`, `lname`, `ability`, `adviser`, `committee`, `email`) VALUES
-(1, NULL, 'รศ.', 'คม', 'ชาญ', 'Network', 6, 5, NULL),
-(2, 1, 'รศ.', 'เธียรกานต์', 'เขตประทุม', 'OS', 4, 5, NULL),
-(3, 2, 'ผศ.', 'นราวิชญ์', 'ธนะไพศาลกีรติ', 'AI', 2, 6, NULL),
-(4, 1, 'รศ.', 'นวพล', 'บ้านไร่', 'Game', 4, 3, NULL),
-(5, 1, 'ดร.', 'นัจกร', 'สุริยวงษ์', 'Data', 5, 2, NULL),
-(6, 1, 'รศ.', 'นันทวัฒน์', 'ศรีสะอาด', 'Image', 3, 8, NULL),
-(7, 1, 'รศ.', 'น้ำทิพย์', 'สายคำผา', 'Unity', 7, 1, NULL),
-(8, NULL, 'ดหกด', 'ดกหด', 'ดก', 'ดกด', 0, 0, NULL);
+(1, 1, 'Mr.', 'Zhang', 'Dora', 'OS', 4, 5, 'DoraZhang@ku.ac.th'),
+(2, 2, 'Mr.', 'Gibbons', 'Raees', 'AI', 2, 6, 'RaeesGibbons@ku.ac.th'),
+(3, 1, 'Ms.', 'Daanish', 'Wolfe', 'Game', 4, 3, 'WolfeDaanish@ku.ac.th'),
+(4, 1, 'Ms.', 'Mcdaniel', 'Cloe?', 'Data', 5, 2, 'Cloe?Mcdaniel@ku.ac.th'),
+(5, 1, 'Mr.', 'Peter', 'Parker', 'Image', 3, 8, 'ParkerPeter@ku.ac.th'),
+(6, 1, 'Mr.', 'Mack?', 'Wolfe', 'Unity', 7, 1, 'WolfeMack?@ku.ac.th');
 
 --
 -- Indexes for dumped tables
@@ -216,8 +183,8 @@ ALTER TABLE `group`
   ADD KEY `fk_group_teacher_idx` (`teacher_teacher_id`),
   ADD KEY `fk_group_student1_idx` (`student_student_id_1`),
   ADD KEY `fk_group_request1_idx` (`request_request_id`),
-  ADD KEY `fk_group_student3` (`student_student_id_3`) USING BTREE,
-  ADD KEY `fk_group_student2` (`student_student_id_2`) USING BTREE;
+  ADD KEY `fk_group_student2_idx` (`student_student_id_2`) USING BTREE,
+  ADD KEY `fk_group_student3_idx` (`student_student_id_3`) USING BTREE;
 
 --
 -- Indexes for table `lockbook`
@@ -226,10 +193,22 @@ ALTER TABLE `lockbook`
   ADD PRIMARY KEY (`lock_id`);
 
 --
+-- Indexes for table `notice`
+--
+ALTER TABLE `notice`
+  ADD PRIMARY KEY (`notice_id`);
+
+--
 -- Indexes for table `request`
 --
 ALTER TABLE `request`
   ADD PRIMARY KEY (`request_id`);
+
+--
+-- Indexes for table `score`
+--
+ALTER TABLE `score`
+  ADD PRIMARY KEY (`score_id`) USING BTREE;
 
 --
 -- Indexes for table `student`
@@ -252,31 +231,43 @@ ALTER TABLE `teacher`
 -- AUTO_INCREMENT for table `group`
 --
 ALTER TABLE `group`
-  MODIFY `group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `group_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `lockbook`
 --
 ALTER TABLE `lockbook`
-  MODIFY `lock_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `lock_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `notice`
+--
+ALTER TABLE `notice`
+  MODIFY `notice_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `request`
 --
 ALTER TABLE `request`
-  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `score`
+--
+ALTER TABLE `score`
+  MODIFY `score_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `teacher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
