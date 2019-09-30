@@ -53,7 +53,7 @@ $topic = "โปรเจคในที่ปรึกษา(teacher)";
 
 <body>
 	<?php
-	$teacher_id = 3; // INPUT WHO TEACHER LOGIN
+	$teacher_id = 5; // INPUT WHO TEACHER LOGIN
 	$show_grp = $show[0];
 	$show_std = $show[1];
 	$group_ids = [];
@@ -76,12 +76,12 @@ $topic = "โปรเจคในที่ปรึกษา(teacher)";
 	// echo "<pre>";
 	// print_r($data);
 	// echo $data[8][3];
-	// $VAR[GROUP][MODE] 
-	// 0 -> ID, 
-	// 1 -> NAME PROJECTM, 
-	// 2 -> TEACHER ID, 
-	// 3 -> STUDENT ID #1, 
-	// 4 -> STUDENT ID #2, 
+	// $VAR[GROUP][MODE]
+	// 0 -> ID,
+	// 1 -> NAME PROJECTM,
+	// 2 -> TEACHER ID,
+	// 3 -> STUDENT ID #1,
+	// 4 -> STUDENT ID #2,
 	// 5 -> STUDENT ID #3
 	?>
 	<div class="container-fluid text-center">
