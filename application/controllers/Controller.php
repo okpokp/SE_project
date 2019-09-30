@@ -329,7 +329,9 @@ class Controller extends CI_Controller
 	}
 	public function infotch_std()
 	{
-		$this->load->view('pages/student/infotch_std');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_teacher();
+		$this->load->view('pages/student/infotch_std', $data);
 	}
 	// Function
 

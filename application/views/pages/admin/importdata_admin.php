@@ -79,30 +79,33 @@ $topic = "นำข้อมูลเข้า(admin)";
 						</div>
 						<!--//////////////////////////////////////////////////-->
 						<div class="row">
-							<div class="col-sm-12">
-								<div class="panel panel-default">
-									<div class="panel-body">
+									<div class="col-sm-12">
+										<div class="panel panel-default">
+											<div class="panel-body">
 
-										<div class="col-sm-6">
-											<h2>นำข้อมูลเข้านิสิต</h2>
-											<input type="file" class="colora" name="" value="">
-											<div>
-												<br><br>
-												<button type="submit" name="" value=""><b>upload</b></button>
-											</div>
-										</div>
-										<div class="col-sm-6">
-											<h2>นำข้อมูลเข้าอาจารย์</h2>
-											<input type="file" class="colora" name="" value="">
-											<div>
-												<br><br>
-												<button type="submit" name="" value=""><b>upload</b></button>
+												<div class="col-sm-6">
+													<h2>นำข้อมูลเข้านิสิต</h2>
+													<input type="file" class="colora" name="" value="">
+													<div>
+														<br><br>
+														<button type="submit" name="" value=""><b>upload</b></button>
+													</div>
+												</div>
+												<!-- ///////////////////////////////// -->
+												<div class="col-sm-6">
+													<h2>นำข้อมูลเข้าอาจารย์</h2>
+													<input type="file" class="colora" name="" value="">
+													<div>
+														<br><br>
+														<button type="submit" name="" value=""><b>upload</b></button>
+													</div>
+												</div>
+												<!-- ///////////////////////////////// -->
 											</div>
 										</div>
 									</div>
-								</div>
-							</div>
 						</div>
+
 					</form>
 				</div>
 			</div>
