@@ -176,7 +176,9 @@ class Controller extends CI_Controller
 	}
 	public function sel_commit_tch()
 	{
-		$this->load->view('pages/teacher/sel_commit_tch');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('pages/teacher/sel_commit_tch', $data);
 	}
 	public function show_adviser_tch()
 	{
@@ -316,6 +318,12 @@ class Controller extends CI_Controller
 				$this->load->view('pages/teacher/create_group', $data);
 			}
 		}
+	}
+	public function cal_sel_commit_tch()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_group();
+		$this->load->view('pages/teacher/sel_commit_tch', $data);
 	}
 
 	/* #################################################################################################################### */

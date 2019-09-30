@@ -65,13 +65,19 @@ $topic = "ประกาศ(teacher)";
 				</div>
 				<div class="container-fluid well">
 					<!-- Body -->
-					<?php foreach ($show->result() as $row) { ?>
-						<form action='<?= base_url('Controller/notice') ?>' method='post'>
-							<button type="submit" class="btn" name="notice_id" value="<?php echo $row->notice_id; ?>">
-								<p class="notice"><?php echo $row->topic ?></p>
-							</button>
-						</form>
-					<?php } ?>
+					<table class="table table-bordered table-striped">
+						<?php foreach ($show->result() as $row) { ?>
+							<tr>
+								<td>
+									<form action='<?= base_url('Controller/notice') ?>' method='post'>
+										<button type="submit" class="btn" name="notice_id" value="<?php echo $row->notice_id; ?>">
+											<p class="notice"><?php echo $row->topic ?></p>
+										</button>
+									</form>
+								</td>
+							</tr>
+						<?php } ?>
+					</table>
 					<!-- Body -->
 				</div>
 			</div>

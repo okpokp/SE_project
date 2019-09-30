@@ -66,7 +66,7 @@ $topic = "กรรมการ(other)";
                 <div class="container-fluid well">
                     <!-- Body -->
                     <?php
-                    if (true) {
+                    if (false) {
                         echo "<div><center><h3>อยู่ระหว่างการดำเนินการ</h3></center</div>";
                     } else {
                         $show_grp = $show[0];
@@ -82,9 +82,9 @@ $topic = "กรรมการ(other)";
                         ?>
                         <table class="table table-bordered table-striped">
                             <tr>
-                                <th>กลุ่ม</th>
-                                <th>กรรมการ</th>
-                                <th>กรรมการ</th>
+                                <th><center>กลุ่ม</center></th>
+                                <th><center>กรรมการ</center></th>
+                                <th><center>กรรมการ</center></th>
                             </tr>
                         <?php
                             for ($i = 0; $i < sizeof($name_projects); $i++) {

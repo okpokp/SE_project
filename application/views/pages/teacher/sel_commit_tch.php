@@ -46,58 +46,69 @@ $topic = "เลือกเป็นกรรมการ(teacher)";
 
 <!--############################################## Header ###########################################################################-->
 <header style="height: 12.7vh">
-	<div id='ui_main'></div>
+    <div id='ui_main'></div>
 </header>
 
 <!--############################################## Body ###########################################################################-->
 
 <body>
-	<div class="container-fluid text-center">
-		<div class="row">
-			<!-- Bar -->
-			<div class="col-sm-2 colora" style="min-height: 87.3vh">
-				<div id='ui_tab'></div>
-			</div>
-			<!-- End Bar -->
-			<div class="col-sm-10 text-left bgimg">
-				<div class="colora" style="padding: 10px">
-					<h2><?php echo $topic ?></h2>
-				</div>
-				<div class="container-fluid well">
-					<!-- Body -->
-                    <form action="<?= base_url('Controller/selcommit_tch') ?>" method='post' style="background-color:white;">
-                        <div class="row">
-                            <div class="col sty_pro sty_member">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label>ชื่อ project</label>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label>ต้องการเป็นกรรมการอันดับที่ </label>
-                                    </div>
-                                </div>
-                                <!-- หัวข้อ -->
-                                <div class="form-row align-items-center">
-                                    <?php for ($i = 1; $i < 11; $i++) { ?>
-                                        <div class="input-group col-sm-6 ">
-                                            <span class="input-group-addon colora">กลุ่มที่ <?php echo $i; ?></span>
-                                            <label type="text" class="form-control" name="msg" placeholder="name_priject"><b>SE za ba zuzu</b></label>
-
-                                        </div>
-
-                                        <div class="col-sm-3 ">
-                                            <!-- <label class="sr-only" for="inlineFormInputName">Name</label> -->
-                                            <input type="text" class="form-control" id="inlineFormInputName" placeholder="โปรดกรอก" style="margin-left: 13px;">
-                                        </div>
-                                        <hr>
-                                    <?php } ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container" style="text-align:center;">
+    <?php
+    $group_ids = array();
+    $name_projects = array();
+    foreach ($show->result() as $row) {
+        array_push($group_ids, $row->group_id);
+        array_push($name_projects, $row->name_project);
+    }
+    ?>
+    <div class="container-fluid text-center">
+        <div class="row">
+            <!-- Bar -->
+            <div class="col-sm-2 colora" style="min-height: 87.3vh">
+                <div id='ui_tab'></div>
+            </div>
+            <!-- End Bar -->
+            <div class="col-sm-10 text-left bgimg">
+                <div class="colora" style="padding: 10px">
+                    <h2><?php echo $topic ?></h2>
+                </div>
+                <div class="container-fluid well">
+                    <!-- Body -->
+                    <form action="<?= base_url('Controller/cal_sel_commit_tch') ?>" method='post'>
+                        <table class='table table-bordered table-striped'>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <center>กลุ่มที่</center>
+                                    </th>
+                                    <th>
+                                        <center>ชื่อ project</center>
+                                    </th>
+                                    <th>
+                                        <center>ต้องการเป็นกรรมการอันดับที่</center>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php for ($i = 0; $i < sizeof($group_ids); $i++) {
+                                    echo "<tr>
+                                    <td class='colora'>$group_ids[$i]</td>
+                                    <td>$name_projects[$i]</td>
+                                    <td><input list='browsers' name='student_student_id_1' class='form-control' value=''></td>
+                                    </tr>";
+                                } ?>
+                            </tbody>
+                        </table>
+                        <datalist id="browsers">
+                            <?php for ($i = 1; $i <= sizeof($group_ids); $i++) {
+                                echo "<tr>
+                                        <td>'<option>$i</option>' ?></td>
+                                    </tr>";
+                            }
+                            ?>
+                        </datalist>
+                        <div>
                             <br>
                             <button name='submit' class="btn colora" value='create_group'>ยืนยัน</button>
-                            <button name='submit' class="btn colora " value='edit_group'>แก้ไข</button>
                         </div>
                     </form>
                     <!-- Body -->

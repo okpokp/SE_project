@@ -15,7 +15,7 @@ commit_show
 </a><br>
 <form action='<?= base_url('Controller/myGroup') ?>' method='post'>
   <button class='btn colora'> กลุ่มของฉัน
-    <input name="group_id" value='3' style='display: none'>
+    <input name="group_id" value='1' style='display: none'>
     <!-- <img src="<?= base_url('./image/img_logout.png') ?>" class="img-circle" height="65" width="65" alt="Avatar"> -->
   </button>
 </form>
