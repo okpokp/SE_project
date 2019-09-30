@@ -94,18 +94,17 @@ $topic = "ข้อมูลอาจารย์(student)";
 							// echo $row->fname;
 						}
 						for ($i = 0; $i < $count; $i++) {
-
 							echo "<tr>
-											<td>
-													" . $teacher[$i], " ", $last[$i] . "
-											</td>
-											<td>
-													" . $ability[$i] . "
-											</td>
-											<td>
-													" . $done[$i], "/8" . "
-											</td>
-									</tr>";
+									<td>
+										" . $teacher[$i], " ", $last[$i] . "
+									</td>
+									<td>
+										" . $ability[$i] . "
+									</td>
+									<td>
+										" . $done[$i] . "/$done[$i]" . "
+									</td>
+								</tr>";
 						}
 						?>
 					</tbody>
@@ -114,7 +113,7 @@ $topic = "ข้อมูลอาจารย์(student)";
 			</div>
 		</div>
 	</div>
-	</body>
+</body>
 <!--############################################## Footer ###########################################################################-->
 
 <footer>
