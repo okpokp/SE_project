@@ -132,7 +132,12 @@ class Controller extends CI_Controller
 	}
 	public function myGroup()
 	{
-		$this->load->view('pages/other/myGroup');
+		$this->load->model('model');
+		$data_grp['show_grp'] = $this->model->m_show_group();
+		$data_std['show_std'] = $this->model->m_show_student();
+		$data_tch['show_tch'] = $this->model->m_show_teacher();
+		$data['show'] = array($data_grp['show_grp'], $data_std['show_std'],$data_tch['show_tch']);
+		$this->load->view('pages/other/myGroup2',$data);
 	}
 	public function notice()
 	{

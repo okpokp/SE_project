@@ -38,6 +38,13 @@ class model extends CI_model
     $this->db->insert($this->db_notice, $data);
   }
 
+ // public function update_info($data)
+ // {
+ //   $user = $arr['user_name'];
+ //   $this->db->where('user_name',$user);
+//    $this->db->update($this->db_group, $data);
+ // }
+
   public function m_show_teacher()
   {
     // $query = $this->db->get('teacher');

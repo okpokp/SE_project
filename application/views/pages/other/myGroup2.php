@@ -3,7 +3,7 @@
 
 <?php
 $web = "KUCPE";
-$topic = "โปรเจคในที่ปรึกษา(teacher)";
+$topic = "กลุ่มโปรเจค(other)";
 
 ?>
 
@@ -29,7 +29,7 @@ $topic = "โปรเจคในที่ปรึกษา(teacher)";
 		$(function() {
 			$('#ui_main').load('<?= base_url('Controller/ui_main') ?>');
 			$('#ui_footer').load('<?= base_url('Controller/ui_footer') ?>');
-			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
+			$('#ui_tab').load('<?= base_url('Controller/ui_tabstd') ?>');
 		})
 	</script>
 	<style media="screen">
@@ -52,11 +52,14 @@ $topic = "โปรเจคในที่ปรึกษา(teacher)";
 <!--############################################## Body ###########################################################################-->
 
 <body>
+
 	<?php
-	$teacher_id = 4; // INPUT WHO TEACHER LOGIN
+	$student_id = 1; // INPUT WHO TEACHER LOGIN
 	$show_grp = $show[0];
 	$show_std = $show[1];
+	$show_tch = $show[2];
 	$group_ids = [];
+	$info_projects=[];
 	$name_projects = [];
 	$teacher_ids = [];
 	$student_id_1s = [];
@@ -64,26 +67,35 @@ $topic = "โปรเจคในที่ปรึกษา(teacher)";
 	$student_id_3s = [];
 	$fname = "";
 	$lname = "";
+	$fname_tch = "";
+	$lname_tch = "";
 	foreach ($show_grp->result() as $row_grp) {
 		array_push($group_ids, $row_grp->group_id);
 		array_push($name_projects, $row_grp->name_project);
+		array_push($info_projects, $row_grp->info_project);
 		array_push($teacher_ids, $row_grp->teacher_teacher_id);
 		array_push($student_id_1s, $row_grp->student_student_id_1);
 		array_push($student_id_2s, $row_grp->student_student_id_2);
 		array_push($student_id_3s, $row_grp->student_student_id_3);
 	}
-	$data = array_map(null, $group_ids, $name_projects, $teacher_ids, $student_id_1s, $student_id_2s, $student_id_3s);
+	$data = array_map(null, $group_ids, $name_projects,$info_projects, $teacher_ids, $student_id_1s, $student_id_2s, $student_id_3s);
 	// echo "<pre>";
 	// print_r($data);
 	// echo $data[8][3];
 	// $VAR[GROUP][MODE] 
 	// 0 -> ID, 
 	// 1 -> NAME PROJECTM, 
-	// 2 -> TEACHER ID, 
-	// 3 -> STUDENT ID #1, 
-	// 4 -> STUDENT ID #2, 
-	// 5 -> STUDENT ID #3
+	// 2 -> Info Project,
+	// 3 -> TEACHER ID, 
+	// 4 -> STUDENT ID #1, 
+	// 5 -> STUDENT ID #2, 
+	// 6 -> STUDENT ID #3
+
+
+
+														
 	?>
+
 	<div class="container-fluid text-center">
 		<div class="row">
 			<!-- Bar -->
@@ -98,37 +110,78 @@ $topic = "โปรเจคในที่ปรึกษา(teacher)";
 				<div class="container-fluid well">
 					<!-- Body -->
 					<form class="needs-validation" novalidate>
+
 						<div class="form-row">
 							<div class="col-sm-6">
 								<div>
 									<table class="table table-bordered positionin">
-										<tbody>
-											<?php for ($i = 0; $i < sizeof($data); $i++) {
-												if ($teacher_id == $data[$i][2]) {
+
+
+										<?php for ($i = 0; $i < sizeof($data); $i++) {
+												if ($student_id == $data[$i][4]) {
 													?>
 													<tr>
-														<td class="colora" style="width: 170px;"><?php echo $data[$i][1] ?></td>
-														<td>
-															<table>
+														<tr class="success">
+															<td class="h_table colora" style="background-color: #7C0000 ">ชื่อโปรเจค</td>
+															<td><?php echo $data[$i][1] ?></td>
+														</tr>
+														<tr class="success">
+															<td class="h_table colora" style="background-color: #7C0000 ">ชื่อถาษาอังกฤษ</td>
+															<td>Project Name</td>
+														</tr>
+														<tr class="success">
+															<td class="h_table colora" style="background-color: #7C0000 ">สมาชิก</td>
+															<td><table>
 																<!-- <tr><td>ชื่อสมาชิก</td></tr> -->
 																<?php
 																		foreach ($show_std->result() as $row_std) {
-																			if ($row_std->student_id == $data[$i][3]) {
-																				echo "<tr><td>" . $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "</td></tr>";
-																			} else if ($row_std->student_id == $data[$i][4]) {
-																				echo "<tr><td>" . $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "</td></tr>";
+																			if ($row_std->student_id == $data[$i][4]) {
+																				echo  $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "<br>" ;
 																			} else if ($row_std->student_id == $data[$i][5]) {
-																				echo "<tr><td>" . $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "</td></tr>";
+																				echo  $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "<br>" ;
+																			} else if ($row_std->student_id == $data[$i][6]) {
+																				echo  $row_std->title . " " . $row_std->fname . " " . $row_std->lname . "<br>";
 																			}
 																		}
 																		?>
-															</table>
-														</td>
-													</tr>
+															</table></td>
+														</tr>
+														<tr class="success">
+															<td class="h_table colora" style="background-color: #7C0000 ">ที่ปรึกษา</td>
+															<td><table>
+																
+																<?php
+																		foreach ($show_tch->result() as $row_tch) {
+																			if ($row_tch->teacher_id == $data[$i][3]) {
+																				echo  $row_tch->title . " " . $row_tch->fname . " " . $row_tch->lname . "<br>" ;
+																			}
+																		}
+																		?>
+															</table></td>
+														</tr>
+
+														<tr class="success">
+															<td class="h_table colora" style="background-color: #7C0000 ">กรรมการ</td>
+															<td><---wait--->
+																
+															</td>
+														</tr>
+
+														<tr class="success">
+															<td class="h_table colora" style="background-color: #7C0000 ">รายละเอียดโปรเจค</td>
+															<td><table>
+																
+																<?php echo $data[$i][2]
+																		?>
+															</table></td>
+														</tr>
+													</tr>	
 											<?php }
 											} ?>
-										</tbody>
-									</table>
+										
+							</table>
+								<div>
+									<button class="btn btn-success positionin " style="margin-top: 20px ">แก้ไข</button>
 								</div>
 							</div>
 						</div>
@@ -148,4 +201,3 @@ $topic = "โปรเจคในที่ปรึกษา(teacher)";
 
 </html>
 
-<!-- ==================== Insert Picture ==================== -->
