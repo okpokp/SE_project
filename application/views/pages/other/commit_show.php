@@ -46,59 +46,62 @@ $topic = "กรรมการ(other)";
 
 <!--############################################## Header ###########################################################################-->
 <header style="height: 12.7vh">
-	<div id='ui_main'></div>
+    <div id='ui_main'></div>
 </header>
 
 <!--############################################## Body ###########################################################################-->
 
 <body>
-	<div class="container-fluid text-center">
-		<div class="row">
-			<!-- Bar -->
-			<div class="col-sm-2 colora" style="min-height: 87.3vh">
-				<div id='ui_tab'></div>
-			</div>
-			<!-- End Bar -->
-			<div class="col-sm-10 text-left bgimg">
-				<div class="colora" style="padding: 10px">
-					<h2><?php echo $topic ?></h2>
-				</div>
-				<div class="container-fluid well">
-					<!-- Body -->
-                    <div>-------------------------อยู่ระหว่างการดำเนินการ-------------------------</div>
+    <div class="container-fluid text-center">
+        <div class="row">
+            <!-- Bar -->
+            <div class="col-sm-2 colora" style="min-height: 87.3vh">
+                <div id='ui_tab'></div>
+            </div>
+            <!-- End Bar -->
+            <div class="col-sm-10 text-left bgimg">
+                <div class="colora" style="padding: 10px">
+                    <h2><?php echo $topic ?></h2>
+                </div>
+                <div class="container-fluid well">
+                    <!-- Body -->
                     <?php
-                    $show_grp = $show[0];
-                    $show_tch = $show[1];
-                    $name_projects = array();
-                    $fnames = array();
-                    foreach ($show_grp->result() as $row_grp) {
-                        array_push($name_projects, $row_grp->name_project);
-                    }
-                    foreach ($show_tch->result() as $row_tch) {
-                        array_push($fnames, $row_tch->fname);
-                    }
-                    ?>
-                    <table class="table table-bordered table-striped">
-                        <tr>
-                            <th>กลุ่ม</th>
-                            <th>กรรมการ</th>
-                            <th>กรรมการ</th>
-                        </tr>
+                    if (true) {
+                        echo "<div><center><h3>อยู่ระหว่างการดำเนินการ</h3></center</div>";
+                    } else {
+                        $show_grp = $show[0];
+                        $show_tch = $show[1];
+                        $name_projects = array();
+                        $fnames = array();
+                        foreach ($show_grp->result() as $row_grp) {
+                            array_push($name_projects, $row_grp->name_project);
+                        }
+                        foreach ($show_tch->result() as $row_tch) {
+                            array_push($fnames, $row_tch->fname);
+                        }
+                        ?>
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>กลุ่ม</th>
+                                <th>กรรมการ</th>
+                                <th>กรรมการ</th>
+                            </tr>
                         <?php
-                        for ($i = 0; $i < sizeof($name_projects); $i++) {
-                            $c = $i;
-                            if ($c >= sizeof($fnames) - 2) {
-                                $c = sizeof($fnames) - (sizeof($fnames) - 2);
-                            }
-                            echo "<tr>
+                            for ($i = 0; $i < sizeof($name_projects); $i++) {
+                                $c = $i;
+                                if ($c >= sizeof($fnames) - 2) {
+                                    $c = sizeof($fnames) - (sizeof($fnames) - 2);
+                                }
+                                echo "<tr>
                             <td>" . $name_projects[$i] . "</td>
                             <td>" . $fnames[$c] . "</td>
                             <td>" . $fnames[$c + 1] . "</td>
-                        </tr>";
+                            </tr>";
+                            }
                         }
                         ?>
-                    </table>
-                    <!-- Body -->
+                        </table>
+                        <!-- Body -->
                 </div>
             </div>
         </div>
@@ -112,5 +115,3 @@ $topic = "กรรมการ(other)";
 <!--############################################## End ###########################################################################-->
 
 </html>
-
-<!-- ==================== Insert Picture ==================== -->

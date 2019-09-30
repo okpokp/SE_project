@@ -2,6 +2,7 @@
 <html lang='en' dir='ltr'>
 
 <!--############################################## Head ###########################################################################-->
+
 <head>
 	<!-- Okp config -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -18,7 +19,7 @@
 	<!-- Latest compiled JavaScript -->
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
 	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
-    <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta charset='utf-8'>
 	<script>
@@ -28,15 +29,15 @@
 			$('#ui_tab').load('<?= base_url('Controller/ui_tabtch') ?>');
 		})
 	</script>
-    <style media="screen">
-        .bgimg {
-            background-image: url('<?= base_url('./image/back_inweb.jpg') ?>');
-            min-height: 100%;
-            background-position: center;
-            background-size: cover;
-            /* z-index: -1; */
-        }
-    </style>
+	<style media="screen">
+		.bgimg {
+			background-image: url('<?= base_url('./image/back_inweb.jpg') ?>');
+			min-height: 100%;
+			background-position: center;
+			background-size: cover;
+			/* z-index: -1; */
+		}
+	</style>
 	<title>Index</title>
 </head>
 <!--############################################## Header ###########################################################################-->
@@ -63,8 +64,6 @@
 				$show_std = $show_com[1];
 				$show_tch = $show_com[2];
 				foreach ($show_grp->result() as $row_grp) {
-					?>
-				<?php
 					echo "
 						<div>
 						<h3>หัวข้อ</h3>
@@ -118,23 +117,19 @@
 				<div>
 					<a href='#'>Document.doc</a>
 				</div>";
-					?>
-				<?php
 					// }
 				}
-				?>
-				<!-- USE ARRAY TO STORE -->
-				<?php
-                        $count = 0;
-                        $student = array();
-                        foreach ($show->result() as $row) {
-                            array_push($student, $row->fname);
-                            $count++;
-                            // echo $row->fname;
-                        }
-                        for ($i = 0; $i < $count; $i++) {
-                            $s = $i + 1;
-                            echo "<tr>
+				// USE ARRAY TO STORE
+				$count = 0;
+				$student = array();
+				foreach ($show->result() as $row) {
+					array_push($student, $row->fname);
+					$count++;
+					// echo $row->fname;
+				}
+				for ($i = 0; $i < $count; $i++) {
+					$s = $i + 1;
+					echo "<tr>
                                 <td>
                                     " . $student[$i] . "
                                 </td>
@@ -142,8 +137,8 @@
                                     <input value='5'>
                                 </td>
                             </tr>";
-                        }
-                        ?>
+				}
+				?>
 				<!-- End Get DB_value -->
 				<!-- End Body -->
 			</div>
