@@ -126,4 +126,16 @@ class model extends CI_model
   //   }
   //   return $query;
   // }
+  public function del($data)
+  {
+    $user= $data['user_name'];
+    $this->db->where('user_name',$user);
+    $this->db->delete($this->logindb,$data);
+  }
+  public function upcolor($arr)
+  {
+    $user = $arr['user_name'];
+    $this->db->where('user_name',$user);
+    $this->db->update($this->logindb,$arr);
+  }
 }
