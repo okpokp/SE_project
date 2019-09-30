@@ -132,7 +132,13 @@ class Controller extends CI_Controller
 	}
 	public function myGroup()
 	{
-		$this->load->view('pages/other/myGroup');
+		$group_id = $this->input->post('group_id');
+		$this->load->model('model');
+		$data_grp['show_grp'] = $this->model->m_show_group_select($group_id);
+		$data_std['show_std'] = $this->model->m_show_student();
+		$data_tch['show_std'] = $this->model->m_show_teacher();
+		$data_com['show_com'] = array($data_grp['show_grp'], $data_std['show_std'], $data_tch['show_std']);
+		$this->load->view('pages/other/myGroup', $data_com);
 	}
 	public function notice()
 	{
@@ -317,7 +323,9 @@ class Controller extends CI_Controller
 	// Pages
 	public function home_std()
 	{
-		$this->load->view('pages/student/home_std');
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_notice();
+		$this->load->view('pages/student/home_std', $data);
 	}
 	public function infotch_std()
 	{

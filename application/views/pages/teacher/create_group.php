@@ -122,7 +122,7 @@ $topic = "สร้างโปรเจค(teacher)";
                                 </datalist>
                             </div>
                         </div>
-                        <div class="container" style="text-align:center;">
+                        <div class="container" style="text-align: center;">
                             <br>
                             <button name='submit' class="btn colora" value='create_group'>ยืนยัน</button>
                             <!-- <button name='submit' class="btn colora " value='edit_group'>แก้ไข</button> -->
