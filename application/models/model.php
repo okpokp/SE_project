@@ -134,8 +134,8 @@ class model extends CI_model
   }
   public function upcolor($arr)
   {
-    $user = $arr['user_name'];
-    $this->db->where('user_name',$user);
-    $this->db->update($this->logindb,$arr);
+    $group_id = $arr['group_id'];
+    $this->db->where('group_id',$group_id);
+    $this->db->update($this->db_group,$arr);
   }
 }
