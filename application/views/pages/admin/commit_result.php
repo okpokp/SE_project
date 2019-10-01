@@ -46,25 +46,25 @@ $topic = "ผลการเลือกกรรมการ(admin)";
 
 <!--############################################## Header ###########################################################################-->
 <header style="height: 12.7vh">
-	<div id='ui_main'></div>
+    <div id='ui_main'></div>
 </header>
 
 <!--############################################## Body ###########################################################################-->
 
 <body>
-	<div class="container-fluid text-center">
-		<div class="row">
-			<!-- Bar -->
-			<div class="col-sm-2 colora" style="min-height: 87.3vh">
-				<div id='ui_tab'></div>
-			</div>
-			<!-- End Bar -->
-			<div class="col-sm-10 text-left bgimg">
-				<div class="colora" style="padding: 10px">
-					<h2><?php echo $topic ?></h2>
-				</div>
-				<div class="container-fluid well">
-					<!-- Body -->
+    <div class="container-fluid text-center">
+        <div class="row">
+            <!-- Bar -->
+            <div class="col-sm-2 colora" style="min-height: 87.3vh">
+                <div id='ui_tab'></div>
+            </div>
+            <!-- End Bar -->
+            <div class="col-sm-10 text-left bgimg">
+                <div class="colora" style="padding: 10px">
+                    <h2><?php echo $topic ?></h2>
+                </div>
+                <div class="container-fluid well">
+                    <!-- Body -->
                     <?php
                     $show_grp = $show[0];
                     $show_tch = $show[1];
@@ -79,9 +79,15 @@ $topic = "ผลการเลือกกรรมการ(admin)";
                     ?>
                     <table class="table table-bordered table-striped">
                         <tr>
-                            <th>กลุ่ม</th>
-                            <th>กรรมการ</th>
-                            <th>กรรมการ</th>
+                            <th>
+                                <center>กลุ่ม</center>
+                            </th>
+                            <th>
+                                <center>กรรมการ</center>
+                            </th>
+                            <th>
+                                <center>กรรมการ</center>
+                            </th>
                         </tr>
                         <?php
                         for ($i = 0; $i < sizeof($name_projects); $i++) {
@@ -97,7 +103,7 @@ $topic = "ผลการเลือกกรรมการ(admin)";
                         }
                         ?>
                     </table>
-                    <button class="btn btn-success">Accept</button>
+                    <button class="btn colora">Accept</button>
                     <!-- Body -->
                 </div>
             </div>
