@@ -112,6 +112,19 @@ class Controller extends CI_Controller
 		$data['show'] = $this->model->m_show_notice();
 		$this->load->view('pages/admin/home_admin', $data);
 	}
+	public function datastd_ad()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_student();
+
+		$this->load->view('pages/admin/datastd_ad',$data);
+	}
+	public function datatch_ad()
+	{
+		$this->load->model('model');
+		$data['show'] = $this->model->m_show_teacher();
+		$this->load->view('pages/admin/datatch_ad',$data);
+	}
 
 	/* #################################################################################################################### */
 	/* ###########################################      OTHER      ######################################################## */
