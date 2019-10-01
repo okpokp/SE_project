@@ -64,37 +64,38 @@ $topic = "ข้อมูลอาจารย์(student)";
 				<div class="colora" style="padding: 10px">
 					<h2><?php echo $topic ?></h2>
 				</div>
-				<table class="table table-bordered table-striped">
-					<thead>
-						<tr>
-							<th>
-								<center>ชื่อ - นามสกุล</center>
-							</th>
-							<th>
-								<center>ความถนัด</center>
-							</th>
-							<th>
-								<center>จำนวนที่รับได้</center>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php
-						$count = 0;
-						$teacher = array();
-						$last = array();
-						$ability = array();
-						$done = array();
-						foreach ($show->result() as $row) {
-							array_push($teacher, $row->fname);
-							array_push($last, $row->lname);
-							array_push($ability, $row->ability);
-							array_push($done, $row->adviser);
-							$count++;
-							// echo $row->fname;
-						}
-						for ($i = 0; $i < $count; $i++) {
-							echo "<tr>
+				<div class="container-fluid well">
+					<table class="table table-bordered table-striped">
+						<thead>
+							<tr>
+								<th>
+									<center>ชื่อ - นามสกุล</center>
+								</th>
+								<th>
+									<center>ความถนัด</center>
+								</th>
+								<th>
+									<center>จำนวนที่รับได้</center>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+							$count = 0;
+							$teacher = array();
+							$last = array();
+							$ability = array();
+							$done = array();
+							foreach ($show->result() as $row) {
+								array_push($teacher, $row->fname);
+								array_push($last, $row->lname);
+								array_push($ability, $row->ability);
+								array_push($done, $row->adviser);
+								$count++;
+								// echo $row->fname;
+							}
+							for ($i = 0; $i < $count; $i++) {
+								echo "<tr>
 									<td>
 										" . $teacher[$i], " ", $last[$i] . "
 									</td>
@@ -105,10 +106,11 @@ $topic = "ข้อมูลอาจารย์(student)";
 										" . $done[$i] . "/$done[$i]" . "
 									</td>
 								</tr>";
-						}
-						?>
-					</tbody>
-				</table>
+							}
+							?>
+						</tbody>
+					</table>
+				</div>
 				<!-- </div> -->
 			</div>
 		</div>
