@@ -53,7 +53,7 @@ $topic = "โปรเจคในที่ปรึกษา(teacher)";
 
 <body>
 	<?php
-	$teacher_id = 5; // INPUT WHO TEACHER LOGIN
+	$teacher_id = 3; // INPUT WHO TEACHER LOGIN
 	$show_grp = $show[0];
 	$show_std = $show[1];
 	$group_ids = [];

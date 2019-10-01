@@ -46,25 +46,25 @@ $topic = "ให้คะแนน(teacher)";
 
 <!--############################################## Header ###########################################################################-->
 <header style="height: 12.7vh">
-	<div id='ui_main'></div>
+    <div id='ui_main'></div>
 </header>
 
 <!--############################################## Body ###########################################################################-->
 
 <body>
-	<div class="container-fluid text-center">
-		<div class="row">
-			<!-- Bar -->
-			<div class="col-sm-2 colora" style="min-height: 87.3vh">
-				<div id='ui_tab'></div>
-			</div>
-			<!-- End Bar -->
-			<div class="col-sm-10 text-left bgimg">
-				<div class="colora" style="padding: 10px">
-					<h2><?php echo $topic ?></h2>
-				</div>
-				<div class="container-fluid well">
-					<!-- Body -->
+    <div class="container-fluid text-center">
+        <div class="row">
+            <!-- Bar -->
+            <div class="col-sm-2 colora" style="min-height: 87.3vh">
+                <div id='ui_tab'></div>
+            </div>
+            <!-- End Bar -->
+            <div class="col-sm-10 text-left bgimg">
+                <div class="colora" style="padding: 10px">
+                    <h2><?php echo $topic ?></h2>
+                </div>
+                <div class="container-fluid well">
+                    <!-- Body -->
                     <select class="form-control">
                         <?php
                         $group_ids = array();
@@ -81,8 +81,12 @@ $topic = "ให้คะแนน(teacher)";
                     </select>
                     <table class="table table-bordered table-striped ">
                         <tr>
-                            <th>หัวข้อ</th>
-                            <th>คะแนน</th>
+                            <th>
+                                <center>หัวข้อ</center>
+                            </th>
+                            <th>
+                                <center>คะแนน</center>
+                            </th>
                         </tr>
                         <tr>
                             <td>คะแนนเล่มโครงงาน</td>
@@ -93,7 +97,7 @@ $topic = "ให้คะแนน(teacher)";
                             <td><input class="form-control" type="text" name="" value="25"></td>
                         </tr>
                         <tr>
-                            <td>ความสมบูรณ์ของชิ</td>
+                            <td>ความสมบูรณ์ของชิ้นงาน</td>
                             <td><input class="form-control" type="text" name="" value="25"></td>
                         </tr>
                         <tr>
@@ -101,11 +105,11 @@ $topic = "ให้คะแนน(teacher)";
                             <td><input class="form-control" type="text" name="" value="25"></td>
                         </tr>
                         <tr>
-                            <td>เกรดที</td>
+                            <td>เกรด</td>
                             <td>A</td>
                         </tr>
                     </table>
-                    <button class="btn btn-success">Accept</button>
+                    <button class="btn colora">Accept</button>
                     <!-- Body -->
                 </div>
             </div>

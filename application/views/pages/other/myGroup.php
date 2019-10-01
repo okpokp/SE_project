@@ -67,6 +67,24 @@ $topic = "กลุ่มของฉัน(other)";
 		array_push($student_ids, $row_grp->student_student_id_2);
 		array_push($student_ids, $row_grp->student_student_id_3);
 	}
+	foreach ($show_std->result() as $row_std) {
+		if ($row_std->student_id == $student_ids[0]) {
+			$student_name_1 = $row_std->fname . $row_std->lname;
+		}
+		else if ($row_std->student_id == $student_ids[1]) {
+			$student_name_2 = $row_std->fname . $row_std->lname;
+		}
+		else if ($row_std->student_id == $student_ids[2]) {
+			$student_name_3 = $row_std->fname . $row_std->lname;
+		}
+	}
+	foreach ($show_tch->result() as $row_tch) { 
+		if ($row_tch->teacher_id == $teacher_id) {
+			$teacher_name = $row_tch->fname . $row_tch->lname;
+			$teacher_email = $row_tch->email;
+		}
+		
+	}
 	?>
 	<div class="container-fluid text-center">
 		<div class="row">
@@ -83,7 +101,7 @@ $topic = "กลุ่มของฉัน(other)";
 					<div class="form-row">
 						<div class="col-sm-6">
 							<?php
-								echo "<div>
+							echo "<div>
 								<table class='table table-bordered table-striped'>
 									<tbody>
 										<tr>
@@ -99,28 +117,28 @@ $topic = "กลุ่มของฉัน(other)";
 									<tbody>
 										<tr>
 											<td class='colora'>ที่ปรึกษา</td>
-											<td>$teacher_id</td>
-											<td>def@somemail.com</td>
+											<td>$teacher_name</td>
+											<td>$teacher_email</td>
 										</tr>
 										<tr>
 											<td class='colora'>กรรมการ</td>
-											<td>Defaultson</td>
-											<td>def@somemail.com</td>
+											<td></td>
+											<td></td>
 										</tr>
 										<tr>
 											<td class='colora'>สมาชิก</td>
-											<td>$student_ids[0]</td>
-											<td>def@somemail.com</td>
+											<td>$student_name_1</td>
+											<td></td>
 										</tr>
 										<tr>
 											<td class='colora'>สมาชิก</td>
-											<td>$student_ids[1]</td>
-											<td>def@somemail.com</td>
+											<td>$student_name_2</td>
+											<td></td>
 										</tr>
 										<tr>
 											<td class='colora'>สมาชิก</td>
-											<td>$student_ids[2]</td>
-											<td>def@somemail.com</td>
+											<td>$student_name_3</td>
+											<td></td>
 										</tr>
 									</tbody>
 								</table>
@@ -130,7 +148,7 @@ $topic = "กลุ่มของฉัน(other)";
 									<table class='table table-bordered table-striped' style='margin-top:0px'>
 										<tbody>
 											<tr style='height: 100px'>
-												<td>Defaultson</td>
+												<td>$info_project</td>
 											</tr>
 									</table>
 								</div>

@@ -67,10 +67,10 @@ $topic = "ผลจัดห้องสอบ(other)";
 					<!-- Body -->
                     <table class="table table-bordered table-striped">
                         <tr>
-                            <th>เวลา</th>
-                            <th>ห้อง 1</th>
-                            <th>ห้อง 2</th>
-                            <th>ห้อง 3</th>
+                            <th><center>เวลา</center></th>
+                            <th><center>ห้อง 1</center></th>
+                            <th><center>ห้อง 2</center></th>
+                            <th><center>ห้อง 3</center></th>
                         </tr>
                         <?php
                         $count = 0;
