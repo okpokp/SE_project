@@ -65,7 +65,7 @@ $topic = "ข้อมูลนิสิต";
 				</div>
 				<div class="container-fluid well">
 					<!-- Body -->
-					<form class="needs-validation" novalidate>
+					<form action="<?= base_url('Controller/datatch_ad') ?>" method='post'>
 						<div class="row">
 							<div class="col-sm-4"></div>
 							<!-- ///////////////////////////////////////////////// -->
@@ -82,13 +82,14 @@ $topic = "ข้อมูลนิสิต";
               <table class="table table-bordered table-striped well">
                 <thead>
                   <tr>
+										<th><center>ID</center></th>
                     <th><center>คำนำหน้า</center></th>
-                    <th><center>ชื่อ-นามสกุล</center></th>
-
+                    <th><center>ชื่อ</center></th>
+										<th><center>นามสกุล</center></th>
                     <th><center>ความถนัด</center></th>
                     <th><center>Email</center></th>
-                    <th><center>Edit</center></th>
-                    <th><center>Delete</center></th>
+                    <!-- <th><center>Edit</center></th>
+                    <th><center>Delete</center></th> -->
                   </tr>
                 </thead>
                 <tbody>
@@ -99,6 +100,7 @@ $topic = "ข้อมูลนิสิต";
     							$lname= array();
     							$ability = array();
     							$email = array();
+									$primary = array();
     							foreach ($show->result() as $row)
     							{
                       array_push($title,$row->title);
@@ -106,39 +108,97 @@ $topic = "ข้อมูลนิสิต";
     									array_push($lname, $row->lname);
     									array_push($ability, $row->ability);
     									array_push($email, $row->email);
+											array_push($primary, $row->teacher_id);
     									$count++;
     									// echo $row->fname;
     							}
+
     							for ($i = 0; $i < $count; $i++)
     							{
 
     									echo "<tr>
+													<td>
+														" . $primary[$i] . "
+													</td>
                           <td>
-                              " . $title[$i] . "
+                            " . $title[$i] . "
                           </td>
     											<td>
-    													" . $fname[$i]," ",$lname[$i] . "
+    													" . $fname[$i] ."
+    											</td>
+													<td>
+    												". $lname[$i]."
     											</td>
     											<td>
-    													" . $ability[$i] . "
+    												" . $ability[$i] . "
     											</td>
     											<td>
     													" . $email[$i] . "
     											</td>
-                          <td>
-    													<button class='btn-primary' >Edit</button>
-    											</td>
-                          <td>
+                          <!--td>
+    													<button type='submit' class='btn-primary' name='up' value='".$primary[$i]."' >Edit</button>
+    											</td-->
+                          <!--td>
     													<button class='btn-danger' >Delete</button>
-    											</td>
+    											</td-->
     									</tr>";
     							}
     							?>
                 </tbody>
               </table>
+							<table class="table table-bordered table-striped well">
+								<thead>
+									<tr>
+										<th><center>ID</center></th>
+										<th><center>คำนำหน้า</center></th>
+										<th><center>ชื่อ</center></th>
+										<th><center>นามสกุล</center></th>
+										<th><center>ความถนัด</center></th>
+										<th><center>Email</center></th>
+										<th><center>Edit</center></th>
+										<th><center>Delete</center></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input type='text' name='ID' value='' >
+										</td>
+										<td>
+											<input type='text' name='titleso' value='' >
+										</td>
+										<td>
+											<input type='text' name='fnameso' value='' >
+										</td>
+										<td>
+											<input type='text' name='lnameso' value='' >
+										</td>
+										<td>
+											<input type='text' name='abilityso' value='' >
+										</td>
+										<td>
+											<input type='text' name='emailso' value='' >
+										</td>
+										<td>
+											<button type='submit' class='btn-primary' name='up' value='up' >Edit</button>
+										</td>
+										<td>
+											<button type='submit' class='btn-danger' name='del' value='del' >Delete</button>
+										</td>
+
+									</tr>
+								</tdbody>
+							</table>
 
 						</div>
 
+<!-- <?php
+echo $count;
+foreach ($show->result() as $row)
+{
+   echo $row->teacher_id;
+}
+?> -->
 					</form>
 				</div>
 			</div>
